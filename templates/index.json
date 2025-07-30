@@ -72,8 +72,6 @@
           "settings": {
             "image": "shopify://shop_images/unsplash_Y_bxfTa_iUA.jpg",
             "heading": "Rings",
-            "subheading": "",
-            "button": "",
             "url": "shopify://collections/all-rings"
           }
         },
@@ -82,8 +80,6 @@
           "settings": {
             "image": "shopify://shop_images/unsplash_-_12be3InkQ.jpg",
             "heading": "Earrings",
-            "subheading": "",
-            "button": "",
             "url": "shopify://collections/all-earrings"
           }
         },
@@ -92,8 +88,6 @@
           "settings": {
             "image": "shopify://shop_images/unsplash_D9vqwfE7YGI.jpg",
             "heading": "Bracelets",
-            "subheading": "",
-            "button": "",
             "url": "shopify://collections/all-bracelets"
           }
         },
@@ -102,8 +96,6 @@
           "settings": {
             "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
             "heading": "Necklaces",
-            "subheading": "",
-            "button": "",
             "url": "shopify://collections/all-pendants"
           }
         }
