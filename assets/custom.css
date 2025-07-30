@@ -67,7 +67,7 @@ slideshow-component .slideshow {
     width: fit-content;
 }
 .header__icons a, header .header__search{
-    width:3rem
+    width: 2.3rem
 }
 .header__search {
     display: none;
