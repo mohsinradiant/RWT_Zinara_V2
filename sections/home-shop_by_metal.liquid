@@ -1,6 +1,20 @@
 <section class="page-width home-shop_by_metal-section">
-  <h2>{{ section.settings.heading }}</h2>
-  <p>{{ section.settings.subheading }}</p>
+  <h2 class="home-shop_by_metal-section-heading">{{ section.settings.heading }}</h2>
+  <p class="home-shop_by_metal-section-subheading">{{ section.settings.subheading }}</p>
+  <div class="home-shop_by_metal-section-blocks_container">
+    {% for block in section.blocks %}
+      <div class="home-shop_by_metal-block">
+        <img
+          src="{{ block.settings.image | image_url }}"
+          class="home-shop_by_metal-block-image lazyload"
+          loading="lazy"
+        >
+        <h3 class="home-shop_by_metal-block-heading">{{ block.settings.heading }}</h3>
+        <p class="home-shop_by_metal-block-subheading">{{ block.settings.subheading }}</p>
+        <a href="{{ block.settings.button }}" class="btn btn-secondary">{{ block.settings.button }}</a>
+      </div>
+    {% endfor %}
+  </div>
 </section>
 
 {% schema %}
