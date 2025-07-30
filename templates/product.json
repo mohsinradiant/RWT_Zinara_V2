@@ -1,0 +1,417 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_aprXn6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "(Inclusive of all taxes and shipping)",
+            "text_style": "body"
+          }
+        },
+        "product_features_badges_8LbYCC": {
+          "type": "product-features-badges",
+          "settings": {}
+        },
+        "pincode_availability_VEqKEh": {
+          "type": "pincode-availability",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "inventory_indicator_QcmNEB": {
+          "type": "inventory-indicator",
+          "settings": {}
+        },
+        "inventory_iiPf7W": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "assistance_buttons_NnwHCV": {
+          "type": "assistance_buttons",
+          "settings": {}
+        },
+        "se_wishlist_engine_product_page_fTBTnd": {
+          "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "text_aprXn6",
+        "product_features_badges_8LbYCC",
+        "pincode_availability_VEqKEh",
+        "variant_picker",
+        "inventory_indicator_QcmNEB",
+        "inventory_iiPf7W",
+        "description",
+        "buy_buttons",
+        "assistance_buttons_NnwHCV",
+        "se_wishlist_engine_product_page_fTBTnd"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "product_page_details_8y4AjM": {
+      "type": "product-page-details",
+      "settings": {
+        "heading": "Product Details"
+      }
+    },
+    "home_benefits_BJVbVJ": {
+      "type": "home-benefits",
+      "blocks": {
+        "tab_mbgxna": {
+          "type": "tab",
+          "settings": {
+            "text": "Lifetime Buy-Back & Exchange",
+            "image": "shopify://shop_images/Vector.png"
+          }
+        },
+        "tab_AYEEN8": {
+          "type": "tab",
+          "settings": {
+            "text": "IGI/SGL Certified Diamonds",
+            "image": "shopify://shop_images/Certificate.png"
+          }
+        },
+        "tab_XeQhd6": {
+          "type": "tab",
+          "settings": {
+            "text": "BIS Hallmarked Gold",
+            "image": "shopify://shop_images/Certificate-1.png"
+          }
+        },
+        "tab_7JNEYz": {
+          "type": "tab",
+          "settings": {
+            "text": "Try at Home",
+            "image": "shopify://shop_images/Vector-1.png"
+          }
+        },
+        "tab_qjzXCB": {
+          "type": "tab",
+          "settings": {
+            "text": "Insured & Free Shipping",
+            "image": "shopify://shop_images/Free_Shipping.png"
+          }
+        },
+        "tab_bHJ89y": {
+          "type": "tab",
+          "settings": {
+            "text": "Ethically Sourced Jewellery",
+            "image": "shopify://shop_images/Wedding_Rings.png"
+          }
+        }
+      },
+      "block_order": [
+        "tab_mbgxna",
+        "tab_AYEEN8",
+        "tab_XeQhd6",
+        "tab_7JNEYz",
+        "tab_qjzXCB",
+        "tab_bHJ89y"
+      ],
+      "settings": {
+        "heading": "Benefits"
+      }
+    },
+    "pdp_image_carousel_76BdGX": {
+      "type": "pdp-image-carousel",
+      "disabled": true,
+      "settings": {}
+    },
+    "1738792743f5d3661f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_qetXF7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_qetXF7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "pdp_tryathome_FpgbpJ": {
+      "type": "pdp-tryathome",
+      "settings": {
+        "heading": "Get your own design",
+        "sub-heading": "Have another design in mind? Something from a website or a magazine perhaps?",
+        "button-1": "Start Designing",
+        "url-1": "/pages/get-your-own-design?view=own-design",
+        "button-2": "",
+        "url-2": "",
+        "image": "shopify://shop_images/jewellery_design.png"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "View Similar",
+        "heading_size": "h2",
+        "products_to_show": 10,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-d156c5aa-1619-482c-ae41-dcf88e5aa9f2",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 40,
+        "padding_bottom": 28
+      }
+    },
+    "home_testimonials_zmE9Ch": {
+      "type": "home-testimonials",
+      "blocks": {
+        "image_picker_RjQtQF": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/Sheena_testimonial.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Sheena",
+            "review": "“Their designs are elegant, modern, and unique. The quality of materials is excellent, and you can feel the durability in each piece. Whether for everyday wear or special occasions, their jewellery is both beautiful and well-crafted. Highly recommend!”"
+          }
+        },
+        "image_picker_kWR7cr": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/Pooja_testimonial.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Pooja",
+            "review": "“Pretty ring 🥰,thanku Zinara for this wonderful ring and design.I love this 💖 Thanku for this stylish ring.😊I am so happy 😊”"
+          }
+        },
+        "image_picker_VJyX7G": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/testimonials.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Manavi",
+            "review": "“Huge thanks to Zinara for the prettiest ring 💖 ”"
+          }
+        },
+        "image_picker_KRQyPm": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/Kumkum_testimonial.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Kumkum",
+            "review": "“I found the perfect ring at Zinara—it’s simple, elegant, and beautifully made. It looks premium, but was still within my budget. I’ve been wearing it almost every day!”"
+          }
+        },
+        "image_picker_RhqVm9": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/mysha.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Vasudha",
+            "review": "\"I ordered a set of earrings from Zinara and it exceeded my expectations. The design is elegant and it feels so luxurious. The price was a pleasant surprise too—such great value for such a stunning piece!\""
+          }
+        },
+        "image_picker_GMhzVb": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/Sameeksha_testimonial_5aa98d34-59dc-455d-bccc-09f08406bf8b.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Sameeksha",
+            "review": "“I’ve always found diamond jewellery overwhelming—either too flashy or too expensive. Zinara changed that. I got a beautiful pair of rings that I wear every day. The quality, the elegance, and the service—everything was just perfect.”"
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_RjQtQF",
+        "image_picker_kWR7cr",
+        "image_picker_VJyX7G",
+        "image_picker_KRQyPm",
+        "image_picker_RhqVm9",
+        "image_picker_GMhzVb"
+      ],
+      "settings": {
+        "heading": "Our customer stories!"
+      }
+    },
+    "collapsible_content_cmfTNX": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_fqJAEL": {
+          "type": "collapsible_row",
+          "repeater": "{{ product.metafields.content.frequently_asked_questions.value }}",
+          "settings": {
+            "heading": "{{ block.repeater.title.value }}",
+            "icon": "none",
+            "row_content": "<p>{{ block.repeater.description.value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Da4QDE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are lab grown diamonds?",
+            "icon": "none",
+            "row_content": "<p>A lab grown diamond is a diamond that is produced in a controlled laboratory environment and advanced technological processes that replicate the natural conditions under which diamonds form in the Earth's mantle. Lab grown diamonds are chemically, physically, and optically identical to natural diamonds. They have reduced environmental and ethical concerns associated with diamond mining.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qq3dMn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are lab grown diamonds real?",
+            "icon": "none",
+            "row_content": "<p>Yes, lab grown diamonds are real diamonds. Any diamond is classified as diamond based on its chemical composition and crystalline structure. Lab grown diamonds have the same chemical composition, physical properties, and crystal structure as natural diamonds. Hence, they are real diamonds.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_iQ3Ki3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you tell the difference between lab grown diamonds and natural diamonds?",
+            "icon": "none",
+            "row_content": "<p>Lab grown diamonds appear identical to natural diamonds and can’t be distinguished by the naked eye and with standard microscopic tools. Trained jewellers and experts can’t also tell the difference between them. They can only be distinguished from natural diamonds using specialized equipment that can detect the specific growth patterns and inclusions characteristic of their origin.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DdnCfX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are ZINARA lab grown diamonds graded and certified?",
+            "icon": "none",
+            "row_content": "<p>Yes, lab grown diamonds are graded and certified by the same gemological laboratories that evaluate natural diamonds. Renowned organizations like GIA, IGI, and SGL provide these certifications. The grading process for lab grown diamonds is identical to that for natural diamonds, ensuring transparency and quality assurance. All lab grown diamonds used in jewellery offered by ZINARA are graded and certified by these laboratory organizations.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8q6Ezm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you deliver pan India?",
+            "icon": "none",
+            "row_content": "<p>Currently, we deliver to select cities within India. To check if we deliver to your area, please enter your pincode or city on the product page. We apologize if delivery services are unavailable in your region. Be assured, we’re working to get our services in our city as well.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wpBBTX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is ID proof required for delivery?",
+            "icon": "none",
+            "row_content": "<p>Some logistics partners may request ID proof, especially for high-value shipments, to ensure secure delivery.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3UzfLJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What payment options are available?",
+            "icon": "none",
+            "row_content": "<p>Payment methods include credit cards, debit cards, net banking, international cards, and cash on delivery. Cash on delivery is available upto INR 35000</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_RPmtAG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I request a live consultation to assist my shopping process?",
+            "icon": "none",
+            "row_content": "<p>Yes, you can request a consultation by writing to <a href=\"mailto:admin@zinara.in\"><span style=\"text-decoration:underline\">admin@zinara.in </span></a>or calling at +91-8851812814. Our team will assist you regarding all queries related to your purchase.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_fqJAEL",
+        "collapsible_row_Da4QDE",
+        "collapsible_row_Qq3dMn",
+        "collapsible_row_iQ3Ki3",
+        "collapsible_row_DdnCfX",
+        "collapsible_row_8q6Ezm",
+        "collapsible_row_wpBBTX",
+        "collapsible_row_3UzfLJ",
+        "collapsible_row_RPmtAG"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_page_details_8y4AjM",
+    "home_benefits_BJVbVJ",
+    "pdp_image_carousel_76BdGX",
+    "1738792743f5d3661f",
+    "pdp_tryathome_FpgbpJ",
+    "related-products",
+    "home_testimonials_zmE9Ch",
+    "collapsible_content_cmfTNX"
+  ]
+}

@@ -1,0 +1,713 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_iE63EG": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_BLKkdp": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/motherdayweb.png",
+            "image_alt": "",
+            "image_mobile": "shopify://shop_images/mothersdaymobile.png",
+            "image_mobile_alt": "",
+            "image_aspect_ratio": true,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "shopify://collections/mothers-day-special-offer",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_HHiCAy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Black_Banner.jpg",
+            "image_alt": "",
+            "image_mobile": "shopify://shop_images/mobile_banner_1.png",
+            "image_mobile_alt": "",
+            "image_aspect_ratio": true,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_ByegG4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/web_banner_2.png",
+            "image_alt": "",
+            "image_mobile": "shopify://shop_images/mobile_banner_2.png",
+            "image_mobile_alt": "",
+            "image_aspect_ratio": true,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_eATNGz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/web_banner_3.png",
+            "image_alt": "",
+            "image_mobile": "shopify://shop_images/mobile_banner_3.png",
+            "image_mobile_alt": "",
+            "image_aspect_ratio": true,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_BLKkdp",
+        "slide_HHiCAy",
+        "slide_ByegG4",
+        "slide_eATNGz"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "home_shop_by_category_jmQhfR": {
+      "type": "home-shop-by-category",
+      "blocks": {
+        "tab_qCGGww": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Rings"
+          }
+        },
+        "tab_qVM7eD": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Earrings"
+          }
+        },
+        "tab_PfgpzQ": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Pendants"
+          }
+        },
+        "tab_qyCRW7": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Bracelets"
+          }
+        },
+        "tab_6iK7P8": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "tab_title": "Necklaces"
+          }
+        },
+        "category_item_UnpUTB": {
+          "type": "category_item",
+          "settings": {
+            "collection": "solitaire-rings",
+            "image": "shopify://shop_images/all_rings_c5fffa42-b6b4-407f-882a-4d981ae44871.png",
+            "text": "Solitaire Rings",
+            "associated_tab": "Rings"
+          }
+        },
+        "category_item_LC3t6F": {
+          "type": "category_item",
+          "settings": {
+            "collection": "daily-wear-rings",
+            "image": "shopify://shop_images/daily_rings_72845c24-9f44-4eda-8ed4-6b511ba9e993.png",
+            "text": "Daily Wear Rings",
+            "associated_tab": "Rings"
+          }
+        },
+        "category_item_GUPLzn": {
+          "type": "category_item",
+          "settings": {
+            "collection": "engagement-rings",
+            "image": "shopify://shop_images/engagement_rings.png",
+            "text": "Engagement Rings",
+            "associated_tab": "Rings"
+          }
+        },
+        "category_item_xqWnqU": {
+          "type": "category_item",
+          "settings": {
+            "collection": "eternity-rings",
+            "image": "shopify://shop_images/eternity_rings.png",
+            "text": "Eternity Rings",
+            "associated_tab": "Rings"
+          }
+        },
+        "category_item_rcUxAD": {
+          "type": "category_item",
+          "settings": {
+            "collection": "studs-1",
+            "image": "shopify://shop_images/studs_earrings.png",
+            "text": "Studs",
+            "associated_tab": "earrings"
+          }
+        },
+        "category_item_VNApYD": {
+          "type": "category_item",
+          "settings": {
+            "collection": "drops-and-danglers",
+            "image": "shopify://shop_images/dangler_earrings.png",
+            "text": "Drops and Danglers",
+            "associated_tab": "earrings"
+          }
+        },
+        "category_item_YH4BgR": {
+          "type": "category_item",
+          "settings": {
+            "collection": "hoops",
+            "image": "shopify://shop_images/hoops_earrings.png",
+            "text": "Hoops",
+            "associated_tab": "earrings"
+          }
+        },
+        "category_item_hcLkcD": {
+          "type": "category_item",
+          "settings": {
+            "collection": "solitaire-earrings",
+            "image": "shopify://shop_images/solitaire_earrings.png",
+            "text": "Solitaire Earrings",
+            "associated_tab": "earrings"
+          }
+        },
+        "category_item_CBxgmw": {
+          "type": "category_item",
+          "settings": {
+            "collection": "daily-wear-pendants",
+            "image": "shopify://shop_images/daily_pendant.png",
+            "text": "Daily Wear Pendants",
+            "associated_tab": "pendants"
+          }
+        },
+        "category_item_pHU3iR": {
+          "type": "category_item",
+          "settings": {
+            "collection": "statement-pendants",
+            "image": "shopify://shop_images/statement_pendant.png",
+            "text": "Statement Pendants",
+            "associated_tab": "pendants"
+          }
+        },
+        "category_item_NAryA4": {
+          "type": "category_item",
+          "settings": {
+            "collection": "solitaire-pendants",
+            "image": "shopify://shop_images/solitaire_pendant.png",
+            "text": "Solitaire Pendants",
+            "associated_tab": "pendants"
+          }
+        },
+        "category_item_eqWHMY": {
+          "type": "category_item",
+          "settings": {
+            "collection": "all-bracelets",
+            "image": "shopify://shop_images/daily_bracelet_78816ac5-cc1d-4ad0-b605-d283397b5bf1.png",
+            "text": "Daily Wear Bracelets",
+            "associated_tab": "bracelets"
+          }
+        },
+        "category_item_ahHa9n": {
+          "type": "category_item",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/solitaire_bracelet.png",
+            "text": "Solitaire Bracelets",
+            "associated_tab": "bracelets"
+          }
+        },
+        "category_item_wEgt9k": {
+          "type": "category_item",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/daily_necklace_0c97cf1f-2601-4e6f-ae76-9e0996a662d1.png",
+            "text": "Daily Wear Necklace",
+            "associated_tab": "necklaces"
+          }
+        },
+        "category_item_zX4pyY": {
+          "type": "category_item",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "text": "Statement Necklaces",
+            "associated_tab": "necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "tab_qCGGww",
+        "tab_qVM7eD",
+        "tab_PfgpzQ",
+        "tab_qyCRW7",
+        "tab_6iK7P8",
+        "category_item_UnpUTB",
+        "category_item_LC3t6F",
+        "category_item_GUPLzn",
+        "category_item_xqWnqU",
+        "category_item_rcUxAD",
+        "category_item_VNApYD",
+        "category_item_YH4BgR",
+        "category_item_hcLkcD",
+        "category_item_CBxgmw",
+        "category_item_pHU3iR",
+        "category_item_NAryA4",
+        "category_item_eqWHMY",
+        "category_item_ahHa9n",
+        "category_item_wEgt9k",
+        "category_item_zX4pyY"
+      ],
+      "settings": {
+        "heading": "Shop by Category"
+      }
+    },
+    "home_shop_by_occasion_WePWCL": {
+      "type": "home-shop-by-occasion",
+      "blocks": {
+        "tab_xLqmkC": {
+          "type": "tab",
+          "settings": {
+            "text": "Daily Hustle",
+            "image": "shopify://shop_images/Daily_Hustle.png",
+            "collection": "daily-hustle"
+          }
+        },
+        "tab_KtkDJe": {
+          "type": "tab",
+          "settings": {
+            "text": "Engagement",
+            "image": "shopify://shop_images/Engagement.png",
+            "collection": "engagement-rings"
+          }
+        },
+        "tab_wgzCbP": {
+          "type": "tab",
+          "settings": {
+            "text": "Social Events",
+            "image": "shopify://shop_images/Social_Event.png",
+            "collection": "social-events"
+          }
+        },
+        "tab_6eXazx": {
+          "type": "tab",
+          "settings": {
+            "text": "Gifting",
+            "image": "shopify://shop_images/Gifting.png",
+            "collection": "gifting"
+          }
+        }
+      },
+      "block_order": [
+        "tab_xLqmkC",
+        "tab_KtkDJe",
+        "tab_wgzCbP",
+        "tab_6eXazx"
+      ],
+      "settings": {
+        "heading": "Shop by Occasion"
+      }
+    },
+    "home_benefits_pbKiTY": {
+      "type": "home-benefits",
+      "blocks": {
+        "tab_7fV9BA": {
+          "type": "tab",
+          "settings": {
+            "text": "Lifetime Buy-Back & Exchange",
+            "image": "shopify://shop_images/Vector.png"
+          }
+        },
+        "tab_iJWKPH": {
+          "type": "tab",
+          "settings": {
+            "text": "IGI/SGL Certified Diamonds",
+            "image": "shopify://shop_images/Certificate.png"
+          }
+        },
+        "tab_TqxtAF": {
+          "type": "tab",
+          "settings": {
+            "text": "BIS Hallmarked Gold",
+            "image": "shopify://shop_images/Certificate-1.png"
+          }
+        },
+        "tab_MM97Qt": {
+          "type": "tab",
+          "settings": {
+            "text": "Try at Home",
+            "image": "shopify://shop_images/Vector-1.png"
+          }
+        },
+        "tab_wb9CEG": {
+          "type": "tab",
+          "settings": {
+            "text": "Insured & Free Shipping",
+            "image": "shopify://shop_images/Free_Shipping.png"
+          }
+        },
+        "tab_yQDX9k": {
+          "type": "tab",
+          "settings": {
+            "text": "Ethically Sourced Jewellery",
+            "image": "shopify://shop_images/Wedding_Rings.png"
+          }
+        }
+      },
+      "block_order": [
+        "tab_7fV9BA",
+        "tab_iJWKPH",
+        "tab_TqxtAF",
+        "tab_MM97Qt",
+        "tab_wb9CEG",
+        "tab_yQDX9k"
+      ],
+      "settings": {
+        "heading": "Zinara Benefits"
+      }
+    },
+    "home_tryathome_UAw34q": {
+      "type": "home-tryathome",
+      "settings": {
+        "heading": "Want to see designs personally?",
+        "sub-heading": "Try designs at home if you're in Delhi NCR - or book a virtual consultation from anywhere else!",
+        "button-1": "Try at Home",
+        "url-1": "shopify://collections/home-trial",
+        "button-2": "",
+        "url-2": "",
+        "image": "shopify://shop_images/try_athome.png"
+      }
+    },
+    "home_image_gallery_carousel_73c7Ep": {
+      "type": "home-image_gallery-carousel",
+      "blocks": {
+        "image_picker_wrD7jz": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_1_47f8f9aa-14f9-47f3-92a3-916f21a1a0b3.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/under-20k"
+          }
+        },
+        "image_picker_gtLymc": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_2.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/office-wear-collection"
+          }
+        },
+        "image_picker_zN3d8M": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_3.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/home-trial"
+          }
+        },
+        "image_picker_8FC4jK": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_4.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/solitaire-collection"
+          }
+        },
+        "image_picker_rwCCJA": {
+          "type": "image_picker",
+          "disabled": true,
+          "settings": {
+            "alt_text": "Carousel Image",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_wrD7jz",
+        "image_picker_gtLymc",
+        "image_picker_zN3d8M",
+        "image_picker_8FC4jK",
+        "image_picker_rwCCJA"
+      ],
+      "settings": {}
+    },
+    "home_own_design_WDng9w": {
+      "type": "home-own_design",
+      "settings": {
+        "heading": "Get your own design",
+        "sub-heading": "Have another design in mind? Something from a website or a magazine perhaps?",
+        "button-1": "Start Designing",
+        "url-1": "/pages/get-your-own-design?view=own-design",
+        "image": "shopify://shop_images/jewellery_design.png"
+      }
+    },
+    "home_testimonials_iX3QWY": {
+      "type": "home-testimonials",
+      "blocks": {
+        "image_picker_D9xDnB": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/Sheena_testimonial.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Sheena",
+            "review": "“Their designs are elegant, modern, and unique. The quality of materials is excellent, and you can feel the durability in each piece. Whether for everyday wear or special occasions, their jewellery is both beautiful and well-crafted. Highly recommend!”"
+          }
+        },
+        "image_picker_nKRGwE": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/Pooja_testimonial.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Pooja",
+            "review": "“Pretty ring 🥰,thanku Zinara for this wonderful ring and design.I love this 💖 Thanku for this stylish ring.😊I am so happy 😊”"
+          }
+        },
+        "image_picker_hQmWqT": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/testimonials.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Manavi",
+            "review": "“Huge thanks to Zinara for the prettiest ring 💖 ”"
+          }
+        },
+        "image_picker_VfkVjb": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/Kumkum_testimonial.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Kumkum",
+            "review": "“I found the perfect ring at Zinara—it’s simple, elegant, and beautifully made. It looks premium, but was still within my budget. I’ve been wearing it almost every day!”"
+          }
+        },
+        "image_picker_Ue9JrQ": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/mysha.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Vasudha",
+            "review": "\"I ordered a set of earrings from Zinara and it exceeded my expectations. The design is elegant and it feels so luxurious. The price was a pleasant surprise too—such great value for such a stunning piece!\""
+          }
+        },
+        "image_picker_pey7c8": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/Sameeksha_testimonial_5aa98d34-59dc-455d-bccc-09f08406bf8b.png",
+            "alt_text": "testimonialcarousel Image",
+            "name": "Sameeksha",
+            "review": "“I’ve always found diamond jewellery overwhelming—either too flashy or too expensive. Zinara changed that. I got a beautiful pair of rings that I wear every day. The quality, the elegance, and the service—everything was just perfect.”"
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_D9xDnB",
+        "image_picker_nKRGwE",
+        "image_picker_hQmWqT",
+        "image_picker_VfkVjb",
+        "image_picker_Ue9JrQ",
+        "image_picker_pey7c8"
+      ],
+      "settings": {
+        "heading": "Our customer stories!"
+      }
+    },
+    "home_about_hDMerC": {
+      "type": "home-about",
+      "settings": {
+        "heading": "About Us",
+        "image": "shopify://shop_images/About_Us_1.png",
+        "image_2": "shopify://shop_images/About_Us_2.png",
+        "image_3": "shopify://shop_images/About_Us_3.png",
+        "content": "Zinara is a lab-grown diamond jewellery brand for women who live life on their own terms. We design everyday pieces that are lightweight, elegant, and easy to wear—whether you’re at work, traveling, or celebrating yourself just because. No rules, no waiting, no special occasion needed. With consciously crafted designs and timeless sparkle, Zinara makes it easy to choose diamonds that fit your style, your pace, and the life you’re creating every day."
+      }
+    },
+    "collapsible_content_AU8NGL": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_3dqmmT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are lab grown diamonds?",
+            "icon": "none",
+            "row_content": "<p>A lab grown diamond is a diamond that is produced in a controlled laboratory environment and advanced technological processes that replicate the natural conditions under which diamonds form in the Earth's mantle. Lab grown diamonds are chemically, physically, and optically identical to natural diamonds. They have reduced environmental and ethical concerns associated with diamond mining.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BajYeE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are lab grown diamonds real?",
+            "icon": "none",
+            "row_content": "<p>Yes, lab grown diamonds are real diamonds. Any diamond is classified as diamond based on its chemical composition and crystalline structure. Lab grown diamonds have the same chemical composition, physical properties, and crystal structure as natural diamonds. Hence, they are real diamonds.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TenACw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you tell the difference between lab grown diamonds and natural diamonds?",
+            "icon": "none",
+            "row_content": "<p>Lab grown diamonds appear identical to natural diamonds and can’t be distinguished by the naked eye and with standard microscopic tools. Trained jewellers and experts can’t also tell the difference between them. They can only be distinguished from natural diamonds using specialized equipment that can detect the specific growth patterns and inclusions characteristic of their synthetic origin</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hNK4me": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are ZINARA lab grown diamonds graded and certified?",
+            "icon": "none",
+            "row_content": "<p>Yes, lab grown diamonds are graded and certified by the same gemological laboratories that evaluate natural diamonds. Renowned organizations like GIA, IGI, and SGL provide these certifications. The grading process for lab grown diamonds is identical to that for natural diamonds, ensuring transparency and quality assurance. All lab grown diamonds used in jewellery offered by ZINARA are graded and certified by these laboratory organizations.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nbL6Lf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you deliver pan India?",
+            "icon": "none",
+            "row_content": "<p>Currently, we deliver to select cities within India. To check if we deliver to your area, please enter your pincode or city on the product page. We apologize if delivery services are unavailable in your region. Be assured, we’re working to get our services in our city as well.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dVg8qh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are there shipping charges?",
+            "icon": "none",
+            "row_content": "<p>Shipping within India is free. For details on return shipping charges, please refer to the <strong>Shipping Policy </strong>section.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tqtBeb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is ID proof required for delivery?",
+            "icon": "none",
+            "row_content": "<p>Some logistics partners may request ID proof, especially for high-value shipments, to ensure secure delivery.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FKXNFF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need to provide a PAN Card?",
+            "icon": "none",
+            "row_content": "<p>Orders exceeding Rs 2 lakhs require PAN card verification. The billing name must match the PAN card for verification.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yYT7tg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What payment options are available?",
+            "icon": "none",
+            "row_content": "<p>Payment methods include credit cards, debit cards, net banking, international cards, and cash on delivery. Cash on Delivery is available for orders up to INR 35000</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tNEUwn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I request a live consultation to assist my shopping process?",
+            "icon": "none",
+            "row_content": "<p>Yes, you can request a consultation by writing to <a href=\"mailto:admin@zinara.in\"><span style=\"text-decoration:underline\">admin@zinara.in </span></a>or calling at +91-8851812814. Our team will assist you regarding all queries related to your purchase.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_3dqmmT",
+        "collapsible_row_BajYeE",
+        "collapsible_row_TenACw",
+        "collapsible_row_hNK4me",
+        "collapsible_row_nbL6Lf",
+        "collapsible_row_dVg8qh",
+        "collapsible_row_tqtBeb",
+        "collapsible_row_FKXNFF",
+        "collapsible_row_yYT7tg",
+        "collapsible_row_tNEUwn"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 52,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "slideshow_iE63EG",
+    "home_shop_by_category_jmQhfR",
+    "home_shop_by_occasion_WePWCL",
+    "home_benefits_pbKiTY",
+    "home_tryathome_UAw34q",
+    "home_image_gallery_carousel_73c7Ep",
+    "home_own_design_WDng9w",
+    "home_testimonials_iX3QWY",
+    "home_about_hDMerC",
+    "collapsible_content_AU8NGL"
+  ]
+}
