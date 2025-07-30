@@ -188,12 +188,6 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
-    <div class="c-menu2">
-      {% for link in linklists.header_menu_2.links %}
-        <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ link.url }}">{{ link.title }}</a>
-       {% endfor %}
-       <a class="scrollable_contact_menu_header header__menu-item list-menu__item link link--text focus-inset" href="">Contact</a>
-    </div>
     </div>
     {%- liquid
       if section.settings.menu != blank
@@ -398,6 +392,13 @@ document.getElementById('cart-icon-bubble').addEventListener('click', async func
 
     </div>
   </header>
+  <div class="header-extra-menus">
+      <div class="c-menu2">
+      {% for link in linklists.header_menu_2.links %}
+        <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ link.url }}">{{ link.title }}</a>
+       {% endfor %}
+       <a class="scrollable_contact_menu_header header__menu-item list-menu__item link link--text focus-inset" href="">Contact</a>
+    </div>
   <div class="c-menu3">
     {% for link in linklists.header_menu_3.links %}
       {% if link.links.size > 0 %}
@@ -416,6 +417,7 @@ document.getElementById('cart-icon-bubble').addEventListener('click', async func
         <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ link.url }}">{{ link.title }}</a>
       {% endif %}
     {% endfor %}
+  </div>
   </div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
