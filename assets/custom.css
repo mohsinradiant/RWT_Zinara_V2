@@ -146,6 +146,11 @@ slideshow-component .slideshow {
     font-weight: 400;
 }
 
+.c-menu2 a:nth-of-type(1),
+.c-menu3 a:nth-of-type(1) {
+    padding-left: 0;
+}
+
 .c-menu2 .header__search span {
     font-size: 1.5rem;
 }
@@ -512,11 +517,13 @@ product-info .price__container span {
     font-size: 2.4rem;
     letter-spacing: 0;
 }
-.prices-container-subheading{
+
+.prices-container-subheading {
     font-weight: 400;
     letter-spacing: normal;
     font-size: 1.3rem;
 }
+
 .collection-hero__title {
     text-wrap: nowrap;
 }
@@ -1193,11 +1200,13 @@ header .menu-drawer {
     transform: translate(-50%, -50%) rotate(45deg) scale(1);
     /* Make tick visible */
 }
-.header-extra-menus{
+
+.header-extra-menus {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 @media(max-width:756px) {
 
     #main-collection-filters .facets-container facet-filters-form .facets__form-vertical #FacetsWrapperDesktop {
