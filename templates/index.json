@@ -64,6 +64,62 @@
         "subheading": "Metal that works for you and makes you feel perfect"
       }
     },
+    "home_shop_by_category_e99mpQ": {
+      "type": "home-shop_by_category",
+      "blocks": {
+        "block_Q64Dq8": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_Y_bxfTa_iUA.jpg",
+            "heading": "Rings",
+            "subheading": "",
+            "button": "",
+            "url": "shopify://collections/all-rings"
+          }
+        },
+        "block_3E6Knd": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_-_12be3InkQ.jpg",
+            "heading": "Earrings",
+            "subheading": "",
+            "button": "",
+            "url": "shopify://collections/all-earrings"
+          }
+        },
+        "block_bmUtTt": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_D9vqwfE7YGI.jpg",
+            "heading": "Bracelets",
+            "subheading": "",
+            "button": "",
+            "url": "shopify://collections/all-bracelets"
+          }
+        },
+        "block_mMAQRU": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "heading": "Necklaces",
+            "subheading": "",
+            "button": "",
+            "url": "shopify://collections/all-pendants"
+          }
+        }
+      },
+      "block_order": [
+        "block_Q64Dq8",
+        "block_3E6Knd",
+        "block_bmUtTt",
+        "block_mMAQRU"
+      ],
+      "name": "Home Shop by Category",
+      "settings": {
+        "heading": "Shop by Category",
+        "subheading": "Experience best in class lab-grown diamonds and gold, and silver jewellery"
+      }
+    },
     "slideshow_iE63EG": {
       "type": "slideshow",
       "blocks": {
@@ -756,6 +812,7 @@
   "order": [
     "home_hero_DNAti7",
     "home_shop_by_metal_D9mhyD",
+    "home_shop_by_category_e99mpQ",
     "slideshow_iE63EG",
     "home_shop_by_category_jmQhfR",
     "home_shop_by_occasion_WePWCL",
