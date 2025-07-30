@@ -146,8 +146,8 @@ slideshow-component .slideshow {
     font-weight: 400;
 }
 
-.c-menu2 a:nth-of-type(1),
-.c-menu3 a:nth-of-type(1) {
+.c-menu2:first-child,
+.c-menu3:first-child {
     padding-left: 0;
 }
 
