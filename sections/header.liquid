@@ -73,6 +73,8 @@
     display: flex;
     align-items: center;
     line-height: calc(1 + 0.3 / var(--font-body-scale));
+      font-family: "Libre Baskerville", serif;
+letter-spacing: 0;
   }
 
   .list-menu__item--link {
@@ -400,13 +402,13 @@ document.getElementById('cart-icon-bubble').addEventListener('click', async func
   </header>
   <div class="page-width header-extra-menus">
       <div class="c-menu2">
-      {% for link in linklists.header_menu_2.links %}
+      {% for link in linklists.header-menu-a.links %}
         <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ link.url }}">{{ link.title }}</a>
        {% endfor %}
-       <a class="scrollable_contact_menu_header header__menu-item list-menu__item link link--text focus-inset" href="">Contact</a>
+       {% comment %} <a class="scrollable_contact_menu_header header__menu-item list-menu__item link link--text focus-inset" href="">Contact</a> {% endcomment %}
     </div>
   <div class="c-menu3">
-    {% for link in linklists.header_menu_3.links %}
+    {% for link in linklists.header-menu-b.links %}
       {% if link.links.size > 0 %}
         <div class="additional_ahref dropdown">
           <a class="header__menu-item list-menu__item link link--text focus-inset dropdown-toggle" href="{{ link.url }}">

@@ -66,9 +66,12 @@ slideshow-component .slideshow {
 .header__icons {
     width: fit-content;
 }
-.header__icons a, header .header__search{
-    width: 2.3rem
+
+.header__icons a,
+header .header__search {
+    width: 2.1rem
 }
+
 .header__search {
     display: none;
 }
@@ -135,7 +138,7 @@ slideshow-component .slideshow {
 .c-menu2 a,
 .c-menu3 a {
     color: #000;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
@@ -151,7 +154,7 @@ slideshow-component .slideshow {
 }
 
 .c-menu3 .dropdown-menu a {
-    padding: 10px 20px;
+    padding: 8px 25px;
 }
 
 .c-menu2 .header__search span {
@@ -214,7 +217,10 @@ slideshow-component .slideshow {
     padding: 10px 20px;
     color: black;
     text-decoration: none;
-    display: block;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0;
 }
 
 .c-menu3 .dropdown-item:hover {
@@ -1208,6 +1214,11 @@ header .menu-drawer {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding-bottom: 20px;
+}
+
+sticky-header {
+    border-bottom: 2px solid #CCCACC;
 }
 
 @media(max-width:756px) {
