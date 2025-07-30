@@ -1,0 +1,43 @@
+<section class="page-width home-hero-section">
+  <img src="{{ section.settings.image | img_url }}" class="home-hero__image lazyload" loading="lazy">
+  <div class="home-hero__content">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.subheading }}</p>
+    <a href="/collections/all" class="btn btn-primary">{{ section.settings.button }}</a>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Home Hero Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Diamonds that Dazzle"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Section Subheading",
+      "default": "For complete peace of mind, choose from our exquisite collection of jewellery, featuring only BIS hallmarked gold and IGI certified lab-grown diamonds. "
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button",
+      "default": "Shop now"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Hero Section"
+    }
+  ]
+}
+{% endschema %}
