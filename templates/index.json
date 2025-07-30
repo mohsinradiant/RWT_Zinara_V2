@@ -28,7 +28,8 @@
             "image": "shopify://shop_images/unsplash_pjrPWwwYx1I.jpg",
             "heading": "Experience our Gold Jewellery",
             "subheading": "18k BIS Hallmarked Gold",
-            "button": "shopify://collections/daily-hustle"
+            "button": "Shop now",
+            "url": "shopify://collections/daily-hustle"
           }
         },
         "block_rHyewm": {
@@ -37,7 +38,8 @@
             "image": "shopify://shop_images/unsplash_UBeNYvk6ED0.jpg",
             "heading": "Experience Silver & Gold Jewellery",
             "subheading": "Silver with 18k gold plated ornaments",
-            "button": "shopify://collections/daily-hustle"
+            "button": "Shop now",
+            "url": "shopify://collections/daily-hustle"
           }
         },
         "block_yTytmE": {
@@ -46,7 +48,8 @@
             "image": "shopify://shop_images/unsplash_TSHxee81Ris.jpg",
             "heading": "Experience our Solitaire Collection",
             "subheading": "Comes with silver and 18k gold options",
-            "button": "shopify://collections/daily-hustle"
+            "button": "Shop now",
+            "url": "shopify://collections/daily-hustle"
           }
         }
       },
