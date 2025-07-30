@@ -1215,6 +1215,9 @@ header .menu-drawer {
     justify-content: space-between;
     width: 100%;
     padding-bottom: 20px;
+}
+
+sticky-header {
     border-bottom: 1px solid #CCCACC;
 }
 
