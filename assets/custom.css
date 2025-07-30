@@ -1215,6 +1215,7 @@ header .menu-drawer {
     justify-content: space-between;
     width: 100%;
     padding-bottom: 20px;
+    border-bottom: 1px solid #CCCACC;
 }
 
 @media(max-width:756px) {
