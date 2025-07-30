@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "home_hero_DNAti7": {
+      "type": "home-hero",
+      "name": "Home Hero Section",
+      "settings": {
+        "image": "shopify://shop_images/unsplash_Z0GZrpwcc5Y.jpg",
+        "heading": "Diamonds that Dazzle",
+        "subheading": "For complete peace of mind, choose from our exquisite collection of jewellery, featuring only BIS hallmarked gold and IGI certified lab-grown diamonds.",
+        "button": "Shop now"
+      }
+    },
     "slideshow_iE63EG": {
       "type": "slideshow",
       "blocks": {
@@ -699,6 +709,7 @@
     }
   },
   "order": [
+    "home_hero_DNAti7",
     "slideshow_iE63EG",
     "home_shop_by_category_jmQhfR",
     "home_shop_by_occasion_WePWCL",
