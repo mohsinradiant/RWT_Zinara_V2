@@ -15,7 +15,10 @@
         >
         <h3 class="home-shop_by_metal-block-heading">{{ block.settings.heading }}</h3>
         <p class="home-shop_by_metal-block-subheading">{{ block.settings.subheading }}</p>
-        <a href="{{ block.settings.url }}" class="btn btn-secondary">{{ block.settings.button }}</a>
+        <p href="{{ block.settings.url }}" class="btn btn-secondary">
+          {{- block.settings.button -}}
+          <span>{{- 'right_arrow_icon.svg' | inline_asset_content -}}</span>
+        </p>
       </div>
     {% endfor %}
   </div>
@@ -65,7 +68,7 @@
     font-weight: 400;
     line-height: 2rem;
   }
-  .home-shop_by_metal-block a {
+  .home-shop_by_metal-block .btn {
     font-size: 1.5rem;
     color: #712242;
     text-decoration: none;
