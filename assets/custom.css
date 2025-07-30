@@ -52,14 +52,7 @@ slideshow-component .slideshow {
 }
 
 .header__icon--search {
-    width: 100% !important;
-    display: flex !important;
-    border-bottom: #00000050 solid 2px;
-    margin-right: 10px;
-    padding-right: 110px;
-    padding-left: 10px;
-    gap: 10px;
-    opacity: .5;
+    width: fit-content;
 }
 
 .header__search .link {
@@ -73,14 +66,14 @@ slideshow-component .slideshow {
 .header__icons {
     width: fit-content;
 }
-
+.header__icons a, header .header__search{
+    width: 2.3rem
+}
 .header__search {
-    width: 100% !important;
     display: none;
 }
 
 .header__search details {
-    width: 100%;
     justify-content: start;
     align-items: start;
     display: flex;
@@ -146,6 +139,21 @@ slideshow-component .slideshow {
     font-weight: 400;
 }
 
+.c-menu2 a:nth-of-type(1),
+.c-menu3 a:nth-of-type(1) {
+    padding-left: 0;
+}
+
+.c-menu2 .additional_ahref:last-of-type,
+.c-menu3 .additional_ahref:last-of-type {
+    padding-right: 0;
+
+}
+
+.c-menu3 .dropdown-menu a {
+    padding: 10px 20px;
+}
+
 .c-menu2 .header__search span {
     font-size: 1.5rem;
 }
@@ -154,7 +162,6 @@ slideshow-component .slideshow {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #F4EEEB;
 }
 
 .home-try-at-home-section-left p {
@@ -513,11 +520,13 @@ product-info .price__container span {
     font-size: 2.4rem;
     letter-spacing: 0;
 }
-.prices-container-subheading{
+
+.prices-container-subheading {
     font-weight: 400;
     letter-spacing: normal;
     font-size: 1.3rem;
 }
+
 .collection-hero__title {
     text-wrap: nowrap;
 }
@@ -1193,6 +1202,12 @@ header .menu-drawer {
     /* Desired tick color */
     transform: translate(-50%, -50%) rotate(45deg) scale(1);
     /* Make tick visible */
+}
+
+.header-extra-menus {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 @media(max-width:756px) {

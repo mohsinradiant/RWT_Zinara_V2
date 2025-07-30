@@ -2,10 +2,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
   rel="stylesheet"
 >
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -265,21 +264,20 @@
   });
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const logoutButton = document.querySelector('.account div a'); // Verify this selector
-  
-  if (logoutButton) {
-    logoutButton.addEventListener('click', function () {
-      // Clear return_url and any other relevant session storage or cookies
-      localStorage.removeItem('return_url');
-      sessionStorage.removeItem('return_url'); // Just in case other storage is being used
-      
-      // Optionally, you can also manually trigger a page reload to ensure no old state persists
-      window.location.reload();
-    });
-  }
-});
+  document.addEventListener('DOMContentLoaded', function () {
+    const logoutButton = document.querySelector('.account div a'); // Verify this selector
 
+    if (logoutButton) {
+      logoutButton.addEventListener('click', function () {
+        // Clear return_url and any other relevant session storage or cookies
+        localStorage.removeItem('return_url');
+        sessionStorage.removeItem('return_url'); // Just in case other storage is being used
+
+        // Optionally, you can also manually trigger a page reload to ensure no old state persists
+        window.location.reload();
+      });
+    }
+  });
 </script>
 
 {% schema %}

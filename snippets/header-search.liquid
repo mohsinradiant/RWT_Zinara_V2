@@ -17,15 +17,17 @@
     >
       <span>
         <span class="svg-wrapper">
-          {{- 'icon-search.svg' | inline_asset_content -}}
+          {{- 'search_icon.svg' | inline_asset_content -}}
         </span>
         <span class="svg-wrapper header__icon-close">
           {{- 'icon-close.svg' | inline_asset_content -}}
         </span>
       </span>
-      <span>
-        Search
-      </span>
+      {% comment %}
+        <span>
+          Search
+        </span>
+      {% endcomment %}
     </summary>
     <div
       class="search-modal modal__content gradient"
