@@ -1,5 +1,9 @@
 <section class="page-width home-hero-section">
-  <img src="{{ section.settings.image | img_url }}" class="home-hero__image lazyload" loading="lazy">
+  <img
+    src="{{ section.settings.image | image_url }}"
+    class="home-hero__image lazyload"
+    loading="lazy"
+  >
   <div class="home-hero__content">
     <h1>{{ section.settings.heading }}</h1>
     <p>{{ section.settings.subheading }}</p>
