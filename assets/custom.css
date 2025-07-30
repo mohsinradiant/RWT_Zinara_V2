@@ -228,6 +228,8 @@ slideshow-component .slideshow {
 .c-menu3 .dropdown a {
     display: flex;
     gap: 3px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
 }
 
 .header-drawer-and-logo {
