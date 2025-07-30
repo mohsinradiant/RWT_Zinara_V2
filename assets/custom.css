@@ -1218,7 +1218,7 @@ header .menu-drawer {
 }
 
 sticky-header {
-    border-bottom: 1px solid #CCCACC;
+    border-bottom: 2px solid #CCCACC;
 }
 
 @media(max-width:756px) {
