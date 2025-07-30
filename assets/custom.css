@@ -66,9 +66,12 @@ slideshow-component .slideshow {
 .header__icons {
     width: fit-content;
 }
-.header__icons a, header .header__search{
+
+.header__icons a,
+header .header__search {
     width: 2.3rem
 }
+
 .header__search {
     display: none;
 }
@@ -151,7 +154,7 @@ slideshow-component .slideshow {
 }
 
 .c-menu3 .dropdown-menu a {
-    padding: 10px 20px;
+    padding: 8px 25px;
 }
 
 .c-menu2 .header__search span {
@@ -214,9 +217,10 @@ slideshow-component .slideshow {
     padding: 10px 20px;
     color: black;
     text-decoration: none;
-    display: block;      font-family: "Montserrat", sans-serif;
-      font-weight: 300;
-
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0;
 }
 
 .c-menu3 .dropdown-item:hover {
