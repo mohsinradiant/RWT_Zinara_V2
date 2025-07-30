@@ -112,6 +112,54 @@
         "subheading": "Experience best in class lab-grown diamonds and gold, and silver jewellery"
       }
     },
+    "home_shop_by_category_xRd7wT": {
+      "type": "home-shop_by_category",
+      "blocks": {
+        "block_iDp34K": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_Y_bxfTa_iUA.jpg",
+            "heading": "Daily wear",
+            "url": "shopify://collections/all-rings"
+          }
+        },
+        "block_46988k": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_-_12be3InkQ.jpg",
+            "heading": "Engagement",
+            "url": "shopify://collections/all-earrings"
+          }
+        },
+        "block_aiiqNM": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_D9vqwfE7YGI.jpg",
+            "heading": "Social events",
+            "url": "shopify://collections/all-bracelets"
+          }
+        },
+        "block_EcmD49": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "heading": "Gifting",
+            "url": "shopify://collections/all-pendants"
+          }
+        }
+      },
+      "block_order": [
+        "block_iDp34K",
+        "block_46988k",
+        "block_aiiqNM",
+        "block_EcmD49"
+      ],
+      "name": "Home Shop by Category",
+      "settings": {
+        "heading": "Shop by Occassion",
+        "subheading": "Find the perfect piece for every milestone and memory"
+      }
+    },
     "slideshow_iE63EG": {
       "type": "slideshow",
       "blocks": {
@@ -805,6 +853,7 @@
     "home_hero_DNAti7",
     "home_shop_by_metal_D9mhyD",
     "home_shop_by_category_e99mpQ",
+    "home_shop_by_category_xRd7wT",
     "slideshow_iE63EG",
     "home_shop_by_category_jmQhfR",
     "home_shop_by_occasion_WePWCL",
