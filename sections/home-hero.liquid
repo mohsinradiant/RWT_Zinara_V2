@@ -3,7 +3,12 @@
     src="{{ section.settings.image | image_url }}"
     class="home-hero__image lazyload"
     loading="lazy"
+    width="{{ section.settings.image.width }}"
+    height="{{ section.settings.image.height }}"
+    alt=""
+    style="aspect-ratio: {{ section.settings.image.aspect_ratio }};"
   >
+
   <div class="home-hero__content">
     <h1>{{ section.settings.heading }}</h1>
     <p>{{ section.settings.subheading }}</p>
