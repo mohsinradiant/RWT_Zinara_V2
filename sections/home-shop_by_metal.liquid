@@ -5,11 +5,6 @@
   "name": "Home Shop by Metal",
   "settings": [
     {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Hero Image"
-    },
-    {
       "type": "text",
       "id": "heading",
       "label": "Section Heading",
@@ -20,12 +15,35 @@
       "id": "subheading",
       "label": "Section Subheading",
       "default": "For complete peace of mind, choose from our exquisite collection of jewellery, featuring only BIS hallmarked gold and IGI certified lab-grown diamonds. "
-    },
+    }
+  ],
+  "blocks": [
     {
-      "type": "text",
-      "id": "button",
-      "label": "Button",
-      "default": "Shop now"
+      "type": "block",
+      "name": "Metal Type",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+
+        {
+          "type": "url",
+          "id": "button",
+          "label": "Button"
+        }
+      ]
     }
   ],
   "presets": [
