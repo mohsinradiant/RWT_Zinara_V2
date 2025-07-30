@@ -52,13 +52,9 @@ slideshow-component .slideshow {
 }
 
 .header__icon--search {
-    width: 100% !important;
-    display: flex !important;
-    border-bottom: #00000050 solid 2px;
     margin-right: 10px;
+    width: fit-content;
     padding-left: 10px;
-    gap: 10px;
-    opacity: .5;
 }
 
 .header__search .link {
