@@ -3,24 +3,22 @@
   <p class="home-shop_by_metal-section-subheading">{{ section.settings.subheading }}</p>
   <div class="home-shop_by_metal-section-blocks_container">
     {% for block in section.blocks %}
-      <a href="{{ block.settings.url }}">
-        <div class="home-shop_by_metal-block">
-          <img
-            src="{{ block.settings.image | image_url }}"
-            class="home-shop_by_metal-block-image lazyload"
-            loading="lazy"
-            width="{{ block.settings.image.width }}"
-            height="{{ block.settings.image.height }}"
-            alt=""
-            style="aspect-ratio: {{ block.settings.image.aspect_ratio }};"
-          >
-          <h3 class="home-shop_by_metal-block-heading">{{ block.settings.heading }}</h3>
-          <p class="home-shop_by_metal-block-subheading">{{ block.settings.subheading }}</p>
-          <p class="btn btn-secondary">
-            {{- block.settings.button -}}
-            <span>{{- 'right_arrow_icon.svg' | inline_asset_content -}}</span>
-          </p>
-        </div>
+      <a class="home-shop_by_metal-block" href="{{ block.settings.url }}">
+        <img
+          src="{{ block.settings.image | image_url }}"
+          class="home-shop_by_metal-block-image lazyload"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          alt=""
+          style="aspect-ratio: {{ block.settings.image.aspect_ratio }};"
+        >
+        <h3 class="home-shop_by_metal-block-heading">{{ block.settings.heading }}</h3>
+        <p class="home-shop_by_metal-block-subheading">{{ block.settings.subheading }}</p>
+        <p class="btn btn-secondary">
+          {{- block.settings.button -}}
+          <span>{{- 'right_arrow_icon.svg' | inline_asset_content -}}</span>
+        </p>
       </a>
     {% endfor %}
   </div>
