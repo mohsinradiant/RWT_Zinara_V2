@@ -52,9 +52,7 @@ slideshow-component .slideshow {
 }
 
 .header__icon--search {
-    margin-right: 10px;
     width: fit-content;
-    padding-left: 10px;
 }
 
 .header__search .link {
@@ -70,12 +68,10 @@ slideshow-component .slideshow {
 }
 
 .header__search {
-    width: 100% !important;
     display: none;
 }
 
 .header__search details {
-    width: 100%;
     justify-content: start;
     align-items: start;
     display: flex;
