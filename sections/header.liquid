@@ -405,7 +405,7 @@ document.getElementById('cart-icon-bubble').addEventListener('click', async func
       {% for link in linklists.header-menu-a.links %}
         <a class="header__menu-item list-menu__item link link--text focus-inset" href="{{ link.url }}">{{ link.title }}</a>
        {% endfor %}
-       <a class="scrollable_contact_menu_header header__menu-item list-menu__item link link--text focus-inset" href="">Contact</a>
+       {% comment %} <a class="scrollable_contact_menu_header header__menu-item list-menu__item link link--text focus-inset" href="">Contact</a> {% endcomment %}
     </div>
   <div class="c-menu3">
     {% for link in linklists.header_menu_3.links %}
