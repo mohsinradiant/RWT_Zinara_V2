@@ -1194,7 +1194,11 @@ header .menu-drawer {
     transform: translate(-50%, -50%) rotate(45deg) scale(1);
     /* Make tick visible */
 }
-
+.header-extra-menus{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 @media(max-width:756px) {
 
     #main-collection-filters .facets-container facet-filters-form .facets__form-vertical #FacetsWrapperDesktop {
