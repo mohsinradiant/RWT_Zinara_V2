@@ -1,0 +1,76 @@
+<section class="page-width home-shop_by_metal-section">
+  <h2 class="home-shop_by_metal-section-heading">{{ section.settings.heading }}</h2>
+  <p class="home-shop_by_metal-section-subheading">{{ section.settings.subheading }}</p>
+  <div class="home-shop_by_metal-section-blocks_container">
+    {% for block in section.blocks %}
+      <div class="home-shop_by_metal-block">
+        <img
+          src="{{ block.settings.image | image_url }}"
+          class="home-shop_by_metal-block-image lazyload"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          alt=""
+          style="aspect-ratio: {{ block.settings.image.aspect_ratio }};"
+        >
+        <h3 class="home-shop_by_metal-block-heading">{{ block.settings.heading }}</h3>
+        <p class="home-shop_by_metal-block-subheading">{{ block.settings.subheading }}</p>
+        <a href="{{ block.settings.button }}" class="btn btn-secondary">{{ block.settings.button }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home Shop by Metal",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Shop by Metal"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Section Subheading",
+      "default": "Metal that works for you and makes you feel perfect"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Metal Type",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+
+        {
+          "type": "url",
+          "id": "button",
+          "label": "Button"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Shop by Metal"
+    }
+  ]
+}
+{% endschema %}
