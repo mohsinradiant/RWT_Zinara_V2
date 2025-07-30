@@ -15,7 +15,7 @@
         >
         <h3 class="home-shop_by_metal-block-heading">{{ block.settings.heading }}</h3>
         <p class="home-shop_by_metal-block-subheading">{{ block.settings.subheading }}</p>
-        <a href="{{ block.settings.button }}" class="btn btn-secondary">{{ block.settings.button }}</a>
+        <a href="{{ block.settings.url }}" class="btn btn-secondary">{{ block.settings.button }}</a>
       </div>
     {% endfor %}
   </div>
@@ -58,11 +58,15 @@
           "id": "subheading",
           "label": "Subheading"
         },
-
         {
-          "type": "url",
+          "type": "text",
           "id": "button",
           "label": "Button"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
         }
       ]
     }
