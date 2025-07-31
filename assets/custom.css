@@ -532,11 +532,14 @@ product-info .price__container span {
     letter-spacing: normal;
     font-size: 1.3rem;
 }
-.product-card-specs{
+
+.product-card-specs {
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0;
+    margin-bottom: 25px;
 }
+
 .price__container {
     font-family: var(--font-heading-family);
 }
@@ -806,8 +809,8 @@ body.no-scroll {
 }
 
 .product-card-wrapper .card__content .full-unstyled-link {
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-size: 1.55rem;
+    font-weight: 400;
     letter-spacing: 0;
     font-family: "Montserrat", sans-serif;
 }

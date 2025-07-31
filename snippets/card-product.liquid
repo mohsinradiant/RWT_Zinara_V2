@@ -207,7 +207,9 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
-            <p class="product-card-specs">{{ card_product.metafields.custom.product_card_specs_caption }}</p>
+            {% if card_product.metafields.custom.product_card_specs_caption != null %}
+              <p class="product-card-specs">{{ card_product.metafields.custom.product_card_specs_caption }}</p>
+            {% endif %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
                 {% liquid
