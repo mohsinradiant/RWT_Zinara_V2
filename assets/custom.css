@@ -532,7 +532,11 @@ product-info .price__container span {
     letter-spacing: normal;
     font-size: 1.3rem;
 }
-
+.product-card-specs{
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0;
+}
 .price__container {
     font-family: var(--font-heading-family);
 }
