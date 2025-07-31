@@ -1,67 +1,78 @@
 <section class="page-width zinara_experience-section">
-  <h2 class="home-zinara_experience-section-heading">{{ section.settings.heading }}</h2>
-  <div class="home-zinara_experience-section-blocks_container">
-    {% for block in section.blocks %}
-      <div class="home-zinara_experience-block">
-        <img
-          src="{{ block.settings.image | image_url }}"
-          class="home-zinara_experience-block-image lazyload"
-          loading="lazy"
-          width="{{ block.settings.image.width }}"
-          height="{{ block.settings.image.height }}"
-          alt=""
-          style="aspect-ratio: {{ block.settings.image.aspect_ratio }};"
-        >
-        <h3 class="home-zinara_experience-block-heading">{{ block.settings.heading }}</h3>
-        <p class="home-zinara_experience-block-subheading">{{ block.settings.subheading }}</p>
-      </div>
-    {% endfor %}
+  <div class="zinara_experience-section-inner">
+    <h2 class="home-zinara_experience-section-heading">{{ section.settings.heading }}</h2>
+    <div class="home-zinara_experience-section-blocks_container">
+      {% for block in section.blocks %}
+        <div class="home-zinara_experience-block">
+          <img
+            src="{{ block.settings.image | image_url }}"
+            class="home-zinara_experience-block-image lazyload"
+            loading="lazy"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+            alt=""
+            style="aspect-ratio: {{ block.settings.image.aspect_ratio }};"
+          >
+          <h3 class="home-zinara_experience-block-heading">{{ block.settings.heading }}</h3>
+          <p class="home-zinara_experience-block-subheading">{{ block.settings.subheading }}</p>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
 <style>
-  .home-zinara_experience-section {
+  .zinara_experience-section {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .zinara_experience-section-inner {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    letter-spacing: 0;
-    margin-bottom: 60px;
-    letter-spacing: 0;
+    background-color: #f9f7f9;
+    padding: 50px;
   }
   .home-zinara_experience-section-heading {
     font-weight: 400;
     color: #000;
+    letter-spacing: 0 !important;
     font-size: 2.2rem;
-    margin: 0;
+    margin: 0 0 50px;
   }
   .home-zinara_experience-section-blocks_container {
     display: flex;
     justify-content: center;
     align-items: start;
-    gap: 40px;
+    gap: 20px;
   }
   .home-zinara_experience-block {
-    width: 26%;
+    width: 100%;
     text-decoration: none;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .home-zinara_experience-block-image {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 40px;
     display: flex;
   }
   .home-zinara_experience-block-heading {
     font-weight: 400;
-    font-size: 2rem;
+    letter-spacing: 0 !important;
+    font-size: 1.3rem;
     text-decoration: none;
     margin: 40px 0 0;
     color: #000;
   }
   .home-zinara_experience-block-subheading {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 5px 0 20px;
     font-weight: 400;
     text-decoration: none;
-    line-height: 2rem;
+    letter-spacing: 0 !important;
+    line-height: 1.8rem;
     color: #000;
   }
 </style>
@@ -95,11 +106,6 @@
           "type": "text",
           "id": "subheading",
           "label": "Subheading"
-        },
-        {
-          "type": "text",
-          "id": "button",
-          "label": "Button"
         }
       ]
     }
