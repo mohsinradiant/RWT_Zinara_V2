@@ -1,5 +1,22 @@
 <section class="page-width zinara_experience-section">
   <h2 class="home-zinara_experience-section-heading">{{ section.settings.heading }}</h2>
+  <div class="home-zinara_experience-section-blocks_container">
+    {% for block in section.blocks %}
+      <div class="home-zinara_experience-block">
+        <img
+          src="{{ block.settings.image | image_url }}"
+          class="home-shop_by_metal-block-image lazyload"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          alt=""
+          style="aspect-ratio: {{ block.settings.image.aspect_ratio }};"
+        >
+        <h3 class="home-shop_by_metal-block-heading">{{ block.settings.heading }}</h3>
+        <p class="home-shop_by_metal-block-subheading">{{ block.settings.subheading }}</p>
+      </div>
+    {% endfor %}
+  </div>
 </section>
 {% schema %}
 {
