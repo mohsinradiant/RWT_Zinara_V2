@@ -112,6 +112,67 @@
         "subheading": "Experience best in class lab-grown diamonds and gold, and silver jewellery"
       }
     },
+    "zinara_experience_strip_GDHYPh": {
+      "type": "zinara_experience_strip",
+      "blocks": {
+        "block_Kmhdkd": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_28.png",
+            "heading": "Lifetime buyback & exchange",
+            "subheading": "We offer lifetime buyback and exchange on all Zinara orders",
+            "button": ""
+          }
+        },
+        "block_rHr3fm": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_29.png",
+            "heading": "IGI/SGL certified",
+            "subheading": "All our grown diamonds are IGI/SGL certified ensuring top quality",
+            "button": ""
+          }
+        },
+        "block_PKMGPR": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_30.png",
+            "heading": "BIS Hallmarked Gold",
+            "subheading": "We use BIS Hallmarked Gold for all our products",
+            "button": ""
+          }
+        },
+        "block_tFHwqD": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_31.png",
+            "heading": "Try at home",
+            "subheading": "We’re happy to help you with virtual an in-home trials",
+            "button": ""
+          }
+        },
+        "block_ddpqQk": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_32.png",
+            "heading": "Insured & free shipping",
+            "subheading": "All your orders and delivered free of cost and are insured",
+            "button": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_Kmhdkd",
+        "block_rHr3fm",
+        "block_PKMGPR",
+        "block_tFHwqD",
+        "block_ddpqQk"
+      ],
+      "name": "Zinara Experience Strip",
+      "settings": {
+        "heading": "Shop by Metal"
+      }
+    },
     "home_shop_by_category_xRd7wT": {
       "type": "home-shop_by_category",
       "blocks": {
@@ -901,6 +962,7 @@
     "home_hero_DNAti7",
     "home_shop_by_metal_D9mhyD",
     "home_shop_by_category_e99mpQ",
+    "zinara_experience_strip_GDHYPh",
     "home_shop_by_category_xRd7wT",
     "home_shop_by_category_XPFUnn",
     "slideshow_iE63EG",
