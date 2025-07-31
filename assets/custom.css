@@ -807,8 +807,9 @@ body.no-scroll {
 
 .product-card-wrapper .card__content .full-unstyled-link {
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 .facets .disclosure-has-popup[open]>summary+* {
