@@ -112,6 +112,59 @@
         "subheading": "Experience best in class lab-grown diamonds and gold, and silver jewellery"
       }
     },
+    "home_image_gallery_carousel_73c7Ep": {
+      "type": "home-image_gallery-carousel",
+      "blocks": {
+        "image_picker_wrD7jz": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_1_47f8f9aa-14f9-47f3-92a3-916f21a1a0b3.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/under-20k"
+          }
+        },
+        "image_picker_gtLymc": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_2.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/office-wear-collection"
+          }
+        },
+        "image_picker_zN3d8M": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_3.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/home-trial"
+          }
+        },
+        "image_picker_8FC4jK": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_4.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/solitaire-collection"
+          }
+        },
+        "image_picker_rwCCJA": {
+          "type": "image_picker",
+          "disabled": true,
+          "settings": {
+            "alt_text": "Carousel Image",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_wrD7jz",
+        "image_picker_gtLymc",
+        "image_picker_zN3d8M",
+        "image_picker_8FC4jK",
+        "image_picker_rwCCJA"
+      ],
+      "settings": {}
+    },
     "zinara_experience_strip_GDHYPh": {
       "type": "zinara_experience_strip",
       "blocks": {
@@ -363,6 +416,7 @@
         "slide_ByegG4",
         "slide_eATNGz"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -568,6 +622,7 @@
         "category_item_wEgt9k",
         "category_item_zX4pyY"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Shop by Category"
       }
@@ -614,6 +669,7 @@
         "tab_wgzCbP",
         "tab_6eXazx"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Shop by Occasion"
       }
@@ -672,6 +728,7 @@
         "tab_wb9CEG",
         "tab_yQDX9k"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Zinara Benefits"
       }
@@ -687,59 +744,6 @@
         "url-2": "",
         "image": "shopify://shop_images/try_athome.png"
       }
-    },
-    "home_image_gallery_carousel_73c7Ep": {
-      "type": "home-image_gallery-carousel",
-      "blocks": {
-        "image_picker_wrD7jz": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify://shop_images/banner_2_1_47f8f9aa-14f9-47f3-92a3-916f21a1a0b3.png",
-            "alt_text": "Carousel Image",
-            "url": "shopify://collections/under-20k"
-          }
-        },
-        "image_picker_gtLymc": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify://shop_images/banner_2_2.png",
-            "alt_text": "Carousel Image",
-            "url": "shopify://collections/office-wear-collection"
-          }
-        },
-        "image_picker_zN3d8M": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify://shop_images/banner_2_3.png",
-            "alt_text": "Carousel Image",
-            "url": "shopify://collections/home-trial"
-          }
-        },
-        "image_picker_8FC4jK": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify://shop_images/banner_2_4.png",
-            "alt_text": "Carousel Image",
-            "url": "shopify://collections/solitaire-collection"
-          }
-        },
-        "image_picker_rwCCJA": {
-          "type": "image_picker",
-          "disabled": true,
-          "settings": {
-            "alt_text": "Carousel Image",
-            "url": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_wrD7jz",
-        "image_picker_gtLymc",
-        "image_picker_zN3d8M",
-        "image_picker_8FC4jK",
-        "image_picker_rwCCJA"
-      ],
-      "settings": {}
     },
     "home_own_design_WDng9w": {
       "type": "home-own_design",
@@ -957,15 +961,15 @@
     "home_hero_DNAti7",
     "home_shop_by_metal_D9mhyD",
     "home_shop_by_category_e99mpQ",
+    "home_image_gallery_carousel_73c7Ep",
     "zinara_experience_strip_GDHYPh",
     "home_shop_by_category_xRd7wT",
-    "home_shop_by_category_XPFUnn",
     "slideshow_iE63EG",
     "home_shop_by_category_jmQhfR",
     "home_shop_by_occasion_WePWCL",
     "home_benefits_pbKiTY",
     "home_tryathome_UAw34q",
-    "home_image_gallery_carousel_73c7Ep",
+    "home_shop_by_category_XPFUnn",
     "home_own_design_WDng9w",
     "home_testimonials_iX3QWY",
     "home_about_hDMerC",
