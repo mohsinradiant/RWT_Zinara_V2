@@ -521,7 +521,8 @@ product-info .product__title h1 {
 }
 
 product-info .price__container span {
-    font-family: var(--font-heading-family);    font-weight: 600;
+    font-family: var(--font-heading-family);
+    font-weight: 600;
     font-size: 2.4rem;
     letter-spacing: 0;
 }
@@ -530,6 +531,10 @@ product-info .price__container span {
     font-weight: 400;
     letter-spacing: normal;
     font-size: 1.3rem;
+}
+
+.price__container {
+    font-family: var(--font-heading-family);
 }
 
 .collection-hero__title {
