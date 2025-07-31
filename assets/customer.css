@@ -15,8 +15,7 @@
 .customer>h1,
 .customer__title {
   margin-top: 0;
-  font-family: "Quicksand", serif;
-  ;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -29,7 +28,7 @@
   border: #610c27 solid 1px;
   color: #610c27;
   padding: 7px 60px;
-  font-family: 'Quicksand';
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   text-decoration: none;
   display: flex;
@@ -40,8 +39,7 @@
 
 :is(.account, .order) p {
   font-weight: 600;
-  font-family: "Quicksand", serif;
-  ;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0;
   line-height: 2.3rem;
 }
