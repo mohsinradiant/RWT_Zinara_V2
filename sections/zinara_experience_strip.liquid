@@ -5,15 +5,15 @@
       <div class="home-zinara_experience-block">
         <img
           src="{{ block.settings.image | image_url }}"
-          class="home-shop_by_metal-block-image lazyload"
+          class="home-zinara_experience-block-image lazyload"
           loading="lazy"
           width="{{ block.settings.image.width }}"
           height="{{ block.settings.image.height }}"
           alt=""
           style="aspect-ratio: {{ block.settings.image.aspect_ratio }};"
         >
-        <h3 class="home-shop_by_metal-block-heading">{{ block.settings.heading }}</h3>
-        <p class="home-shop_by_metal-block-subheading">{{ block.settings.subheading }}</p>
+        <h3 class="home-zinara_experience-block-heading">{{ block.settings.heading }}</h3>
+        <p class="home-zinara_experience-block-subheading">{{ block.settings.subheading }}</p>
       </div>
     {% endfor %}
   </div>
@@ -53,11 +53,6 @@
           "type": "text",
           "id": "button",
           "label": "Button"
-        },
-        {
-          "type": "url",
-          "id": "url",
-          "label": "URL"
         }
       ]
     }
