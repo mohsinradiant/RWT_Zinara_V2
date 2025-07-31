@@ -91,7 +91,7 @@ flex-direction: column;
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
   color: rgba(var(--color-foreground), 0.75);
-  font-family: 'Quicksand';
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 1.8rem;
 }
