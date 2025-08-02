@@ -16,17 +16,16 @@
           "type": "title",
           "settings": {}
         },
+        "text_GipLTP": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_card_specs_caption.value }}jhjh",
+            "text_style": "body"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
-        },
-        "text_aprXn6": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "(Inclusive of all taxes and shipping)",
-            "text_style": "body"
-          }
         },
         "product_features_badges_8LbYCC": {
           "type": "product-features-badges",
@@ -78,8 +77,8 @@
       },
       "block_order": [
         "title",
+        "text_GipLTP",
         "price",
-        "text_aprXn6",
         "product_features_badges_8LbYCC",
         "pincode_availability_VEqKEh",
         "variant_picker",
