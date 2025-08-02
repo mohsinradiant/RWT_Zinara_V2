@@ -514,14 +514,14 @@ product-info media-gallery {
 }
 
 product-info .product__title h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-heading-family);
     font-weight: 400;
     font-size: 1.6rem;
     letter-spacing: 0;
 }
 
 product-info .price__container span {
-    font-family: var(--font-heading-family);
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 2.4rem;
     letter-spacing: 0;
