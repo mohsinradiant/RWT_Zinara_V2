@@ -197,18 +197,20 @@
     <script>
       function moveWishlist() {
         const wishlistEngine = document.querySelector('.wishlist-engine');
-        const productTitleContainer = document.querySelector('.product-info .product__title');
-        const h1 = productTitleContainer ? productTitleContainer.querySelector('h1') : null;
+        const productTitle = document.querySelector('.product-info .product__title');
+        const h1 = productTitle?.querySelector('h1');
 
-        if (wishlistEngine && productTitleContainer && h1) {
-          // Insert wishlistEngine after h1 inside product__title
-          h1.insertAdjacentElement('afterend', wishlistEngine);
-          return true;
+        if (wishlistEngine && productTitle && h1) {
+          // Avoid inserting it multiple times
+          if (!productTitle.contains(wishlistEngine)) {
+            h1.insertAdjacentElement('afterend', wishlistEngine);
+            return true;
+          }
         }
-
         return false;
       }
 
+      // Try once immediately
       if (!moveWishlist()) {
         const observer = new MutationObserver(() => {
           if (moveWishlist()) {
@@ -216,7 +218,10 @@
           }
         });
 
-        observer.observe(document.body, { childList: true, subtree: true });
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
       }
     </script>
 
