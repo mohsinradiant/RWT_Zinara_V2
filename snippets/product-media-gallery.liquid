@@ -200,20 +200,33 @@
         const productTitle = document.querySelector('.product-info .product__title');
         const h1 = productTitle?.querySelector('h1');
 
+        console.log('Trying to move wishlist...');
+        console.log('wishlistEngine found:', !!wishlistEngine);
+        console.log('productTitle found:', !!productTitle);
+        console.log('h1 found:', !!h1);
+
         if (wishlistEngine && productTitle && h1) {
-          // Avoid inserting it multiple times
+          // Check if it's already moved
           if (!productTitle.contains(wishlistEngine)) {
             h1.insertAdjacentElement('afterend', wishlistEngine);
+            console.log('✅ wishlist-engine moved after <h1>');
+            return true;
+          } else {
+            console.log('⚠️ wishlist-engine already inside .product__title');
             return true;
           }
         }
+
+        console.log('❌ Required elements not found yet');
         return false;
       }
 
       // Try once immediately
       if (!moveWishlist()) {
+        console.log('Setting up MutationObserver...');
         const observer = new MutationObserver(() => {
           if (moveWishlist()) {
+            console.log('✅ MutationObserver: wishlist moved, disconnecting observer.');
             observer.disconnect();
           }
         });
@@ -222,6 +235,8 @@
           childList: true,
           subtree: true,
         });
+      } else {
+        console.log('✅ wishlist moved on initial attempt');
       }
     </script>
 
