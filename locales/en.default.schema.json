@@ -758,9 +758,6 @@
           },
           "options__3": {
             "label": "Uppercase"
-          },
-          "options__4": {
-            "label": "Caption"
           }
         },
         "collection": {
@@ -862,9 +859,6 @@
               },
               "options__3": {
                 "label": "Uppercase"
-              },
-              "options__4": {
-                "label": "Caption"
               }
             }
           }
@@ -927,9 +921,6 @@
               },
               "options__3": {
                 "label": "Uppercase"
-              },
-              "options__4": {
-                "label": "Caption"
               }
             }
           }
@@ -1326,9 +1317,6 @@
               "options__3": {
                 "label": "Uppercase"
               },
-              "options__4": {
-                "label": "Caption"
-              },
               "label": "Text style"
             }
           }
@@ -1479,9 +1467,6 @@
               },
               "options__2": {
                 "label": "Uppercase"
-              },
-              "options__3": {
-                "label": "Caption"
               }
             },
             "caption_size": {
@@ -2009,9 +1994,6 @@
               },
               "options__3": {
                 "label": "Uppercase"
-              },
-              "options__4": {
-                "label": "Caption"
               }
             }
           }
@@ -2035,9 +2017,6 @@
               },
               "options__3": {
                 "label": "Uppercase"
-              },
-              "options__4": {
-                "label": "Caption"
               }
             },
             "inventory_threshold": {
@@ -2111,9 +2090,6 @@
               },
               "options__3": {
                 "label": "Uppercase"
-              },
-              "options__4": {
-                "label": "Caption"
               }
             }
           }
@@ -2967,9 +2943,6 @@
               },
               "options__2": {
                 "label": "Uppercase"
-              },
-              "options__3": {
-                "label": "Caption"
               }
             },
             "caption_size": {
