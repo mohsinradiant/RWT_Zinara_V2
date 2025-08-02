@@ -197,24 +197,22 @@
     <script>
       function moveWishlist() {
         const wishlistEngine = document.querySelector('.wishlist-engine');
-        const shareContainer = document.querySelector('.product-overlay-share_wishlist');
-        const shareImage = shareContainer ? shareContainer.querySelector('img') : null;
+        const productTitleContainer = document.querySelector('.product-info .product__title');
+        const h1 = productTitleContainer ? productTitleContainer.querySelector('h1') : null;
 
-        if (wishlistEngine && shareContainer && shareImage) {
-          // Insert wishlist-engine before the existing image
-          shareContainer.insertBefore(wishlistEngine, shareImage);
-          // console.log('Wishlist moved before the image successfully!');
-          return true; // Indicate success
+        if (wishlistEngine && productTitleContainer && h1) {
+          // Insert wishlistEngine after h1 inside product__title
+          h1.insertAdjacentElement('afterend', wishlistEngine);
+          return true;
         }
-        return false; // Not found yet
+
+        return false;
       }
 
-      // Try moving immediately if already present
       if (!moveWishlist()) {
-        // Use MutationObserver to detect changes in DOM
         const observer = new MutationObserver(() => {
           if (moveWishlist()) {
-            observer.disconnect(); // Stop observing once found and moved
+            observer.disconnect();
           }
         });
 
