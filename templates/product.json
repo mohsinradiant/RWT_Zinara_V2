@@ -19,7 +19,7 @@
         "text_GipLTP": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.product_card_specs_caption.value }}jhjh",
+            "text": "{{ product.metafields.custom.product_card_specs_caption.value }}Silver",
             "text_style": "caption"
           }
         },
