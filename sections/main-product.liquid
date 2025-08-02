@@ -90,7 +90,7 @@
                 {% render block %}
               {%- when 'text' -%}
                 <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle {% elsif block.settings.text_style == 'caption' %} main-product_text-style_caption{% endif %}"
+                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% elsif block.settings.text_style == 'caption' %} main-product_text-style_caption{% endif %}"
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
