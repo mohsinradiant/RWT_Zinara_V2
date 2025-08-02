@@ -250,6 +250,7 @@ a.product__text {
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: start;
 }
 
 .product__title>* {
