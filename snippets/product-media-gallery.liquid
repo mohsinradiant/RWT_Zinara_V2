@@ -195,71 +195,52 @@
       });
     </script>
     <script>
-      function getCustomHeartSVG(isAdded) {
-        return `
-      <svg class="custom-heart ${
-        isAdded ? 'added' : ''
-      }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" fill="${isAdded ? '#b81c1c' : '#712242'}">
-        <path d="M9.00078 15.7502L8.45078 15.2502C6.83411 13.7669 5.49661 12.5002 4.43828 11.4502C3.37995 10.4002 2.54661 9.47936 1.93828 8.6877C1.32995 7.89603 0.904948 7.18353 0.663281 6.5502C0.421615 5.91686 0.300781 5.28353 0.300781 4.6502C0.300781 3.46686 0.704948 2.47103 1.51328 1.6627C2.32161 0.854362 3.31745 0.450195 4.50078 0.450195C5.38411 0.450195 6.20911 0.687695 6.97578 1.1627C7.74245 1.6377 8.41745 2.33353 9.00078 3.2502C9.58412 2.33353 10.2591 1.6377 11.0258 1.1627C11.7924 0.687695 12.6174 0.450195 13.5008 0.450195C14.6841 0.450195 15.6799 0.854362 16.4883 1.6627C17.2966 2.47103 17.7008 3.46686 17.7008 4.6502C17.7008 5.28353 17.5799 5.91686 17.3383 6.5502C17.0966 7.18353 16.6716 7.89603 16.0633 8.6877C15.4549 9.47936 14.6258 10.4002 13.5758 11.4502C12.5258 12.5002 11.1841 13.7669 9.55078 15.2502L9.00078 15.7502Z" />
-      </svg>
-    `;
-      }
-
-      function updateWishlistIcon(wishlistEngine) {
-        const isAdded = wishlistEngine.getAttribute('data-added') === 'true';
-        wishlistEngine.innerHTML = getCustomHeartSVG(isAdded);
-
-        const heart = wishlistEngine.querySelector('.custom-heart');
-        if (heart) {
-          heart.style.cursor = 'pointer';
-          heart.addEventListener('click', () => {
-            const isNowAdded = heart.classList.toggle('added');
-            heart.setAttribute('fill', isNowAdded ? '#b81c1c' : '#712242');
-            // Optional: update attribute if your system depends on it
-            wishlistEngine.setAttribute('data-added', isNowAdded);
-          });
-        }
-      }
-
       function moveWishlist() {
         const wishlistEngine = document.querySelector('.wishlist-engine');
         const productTitle = document.querySelector('product-info .product__title');
         const h1 = productTitle?.querySelector('h1');
 
+        console.log('Trying to move wishlist...');
+        console.log('wishlistEngine found:', !!wishlistEngine);
+        console.log('productTitle found:', !!productTitle);
+        console.log('h1 found:', !!h1);
+
         if (wishlistEngine && productTitle && h1) {
+          // Check if it's already moved
           if (!productTitle.contains(wishlistEngine)) {
             h1.insertAdjacentElement('afterend', wishlistEngine);
-            console.log('✅ Moved .wishlist-engine after <h1>');
+            console.log('✅ wishlist-engine moved after <h1>');
+            return true;
+          } else {
+            console.log('⚠️ wishlist-engine already inside .product__title');
+            return true;
           }
-
-          updateWishlistIcon(wishlistEngine);
-          console.log('✅ Wishlist icon updated');
-          return true;
         }
 
-        console.log('❌ Required elements not found. Will retry...');
+        console.log('❌ Required elements not found yet');
         return false;
       }
 
+      // Try once immediately
       if (!moveWishlist()) {
+        console.log('Setting up MutationObserver...');
         const observer = new MutationObserver(() => {
           if (moveWishlist()) {
-            console.log('✅ MutationObserver: Moved wishlist and updated icon');
+            console.log('✅ MutationObserver: wishlist moved, disconnecting observer.');
             observer.disconnect();
           }
         });
 
-        observer.observe(document.body, { childList: true, subtree: true });
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
       } else {
-        console.log('✅ Wishlist updated on first try');
+        console.log('✅ wishlist moved on initial attempt');
       }
     </script>
 
     <style>
-      .wishlist-engine .wishlist-icon svg {
-        display: none !important;
-      }
-
       .wishlist-engine-button {
         padding: 0 !important;
       }
