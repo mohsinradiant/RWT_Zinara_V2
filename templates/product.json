@@ -20,7 +20,7 @@
           "type": "text",
           "settings": {
             "text": "{{ product.metafields.custom.product_card_specs_caption.value }}jhjh",
-            "text_style": "body"
+            "text_style": "caption"
           }
         },
         "price": {
