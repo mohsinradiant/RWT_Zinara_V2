@@ -674,6 +674,8 @@ product-info variant-selects img {
     color: #000;
     line-height: 2rem;
     text-wrap: nowrap;
+    display: flex;
+    height: fit-content;
 }
 
 .product-form__buttons button {
