@@ -75,7 +75,7 @@
                         checked
                       {% endif %}
                     >
-                    {% render 'swatch', swatch: value, shape: block.settings.swatch_shape %}
+                    {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
                   </label>
                 {% endfor %}
               </div>
