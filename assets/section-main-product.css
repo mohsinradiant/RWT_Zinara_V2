@@ -188,10 +188,6 @@ product-info {
   align-items: center;
 }
 
-.product-form__input .svg-wrapper {
-  right: 1.5rem;
-}
-
 .product-form__submit {
   margin-bottom: 1rem;
 }
