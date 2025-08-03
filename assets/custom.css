@@ -669,6 +669,11 @@ product-info variant-selects img {
 .variant-dropdown-option-name-span {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    color: #000;
+    line-height: 2rem;
+    text-wrap: nowrap;
 }
 
 .product-form__buttons button {
