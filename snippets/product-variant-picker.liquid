@@ -62,14 +62,16 @@
           <div class="select">
             <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
 
-            {%- if picker_type == 'swatch_dropdown' -%}
-              <span
-                data-selected-value
-                class="dropdown-swatch"
-              >
-                {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
-              </span>
-            {%- endif -%}
+            {% comment %}
+              {%- if picker_type == 'swatch_dropdown' -%}
+                <span
+                  data-selected-value
+                  class="dropdown-swatch"
+                >
+                  {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+                </span>
+              {%- endif -%}
+            {% endcomment %}
             <select
               id="Option-{{ section.id }}-{{ forloop.index0 }}"
               class="select__select"
