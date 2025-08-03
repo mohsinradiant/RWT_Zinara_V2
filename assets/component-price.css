@@ -95,6 +95,7 @@ flex-direction: column;
   color: rgba(var(--color-foreground), 0.75);
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
+  color: #CCCACC;
 }
 
 .unit-price {
