@@ -30,6 +30,7 @@
 
 .price:not(.price--show-badge) .price-item--last:last-of-type {
   margin: 0;
+  color: #712242;
 }
 .price--large{
   width: fit-content;
