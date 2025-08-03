@@ -1705,6 +1705,11 @@ details[open]>.share-button__fallback {
 
 .product-form__input .select__select {
   padding: 0;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: end;
+  text-align: right;
 }
 
 /* Field */
