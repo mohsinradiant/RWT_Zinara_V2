@@ -19,7 +19,7 @@
         "text_GipLTP": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.custom.product_card_specs_caption.value }}Silver",
+            "text": "{{ product.metafields.custom.product_card_specs_caption.value }}",
             "text_style": "caption"
           }
         },
@@ -31,16 +31,16 @@
           "type": "product-features-badges",
           "settings": {}
         },
-        "pincode_availability_VEqKEh": {
-          "type": "pincode-availability",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "dropdown",
             "swatch_shape": "circle"
           }
+        },
+        "pincode_availability_VEqKEh": {
+          "type": "pincode-availability",
+          "settings": {}
         },
         "inventory_indicator_QcmNEB": {
           "type": "inventory-indicator",
@@ -80,8 +80,8 @@
         "text_GipLTP",
         "price",
         "product_features_badges_8LbYCC",
-        "pincode_availability_VEqKEh",
         "variant_picker",
+        "pincode_availability_VEqKEh",
         "inventory_indicator_QcmNEB",
         "inventory_iiPf7W",
         "description",
