@@ -666,6 +666,11 @@ product-info variant-selects img {
     cursor: pointer;
 }
 
+.variant-dropdown-option-name-span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
 .product-form__buttons button {
     display: flex;
     gap: 10px;
