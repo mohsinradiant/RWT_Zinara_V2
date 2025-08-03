@@ -62,6 +62,7 @@
           {% assign option_name_normalized = option.name | downcase | strip %}
           {% if option_name_normalized == 'choose your color' %}
             <div class="swatches-wrapper">
+              <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
               {% for value in option.values %}
                 <label class="swatch-label{% if is_selected %} selected{% endif %}">
                   <input
