@@ -53,16 +53,33 @@
           %}
         </fieldset>
       {%- else -%}
-        <!--
-          <div class="product-form__input product-form__input--dropdown">
-            {% comment %}
-              <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-                {{ option.name }}
-              </label>
-            {% endcomment %}
+        <div class="product-form__input product-form__input--dropdown">
+          {% comment %}
+            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+              {{ option.name }}
+            </label>
+          {% endcomment %}
+          {% assign option_name_normalized = option.name | downcase | strip %}
+          {% if option_name_normalized == 'choose your color' %}
+            <div class="swatches-wrapper">
+              {% for value in option.values %}
+                <label class="swatch-label{% if is_selected %} selected{% endif %}">
+                  <input
+                    type="radio"
+                    name="options[{{ option.name | escape }}]"
+                    value="{{ value | escape }}"
+                    form="{{ product_form_id }}"
+                    {% if value.selected %}
+                      checked
+                    {% endif %}
+                  >
+                  {% render 'swatch', swatch: value, shape: block.settings.swatch_shape %}
+                </label>
+              {% endfor %}
+            </div>
+          {% else %}
             <div class="select">
               <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
-
               {% comment %}
                 {%- if picker_type == 'swatch_dropdown' -%}
                   <span
@@ -91,41 +108,8 @@
                 <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_16.png?v=1744182659">
               </span>
             </div>
-          </div>
-        -->
-        {% assign option_name_normalized = option.name | downcase | strip %}
-        {% if option_name_normalized == 'choose your color' %}
-          <div class="swatches-wrapper">
-            {% for value in option.values %}
-              <label class="swatch-label{% if is_selected %} selected{% endif %}">
-                <input
-                  type="radio"
-                  name="options[{{ option.name | escape }}]"
-                  value="{{ value | escape }}"
-                  form="{{ product_form_id }}"
-                  {% if value.selected %}
-                    checked
-                  {% endif %}
-                >
-                {% render 'swatch', swatch: value, shape: block.settings.swatch_shape %}
-              </label>
-            {% endfor %}
-          </div>
-        {% else %}
-          <select
-            id="Option-{{ section.id }}-{{ forloop.index0 }}"
-            class="select__select"
-            name="options[{{ option.name | escape }}]"
-            form="{{ product_form_id }}"
-          >
-            {% render 'product-variant-options',
-              product: product,
-              option: option,
-              block: block,
-              picker_type: picker_type
-            %}
-          </select>
-        {% endif %}
+          {% endif %}
+        </div>
       {%- endif -%}
     {%- endfor -%}
     <script type="application/json" data-selected-variant>
