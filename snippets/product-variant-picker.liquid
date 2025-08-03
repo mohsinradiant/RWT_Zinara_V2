@@ -97,14 +97,13 @@
         {% if option_name_normalized == 'choose your color' %}
           <div class="swatches-wrapper">
             {% for value in option.values %}
-              {% assign is_selected = value == option.selected_value %}
               <label class="swatch-label{% if is_selected %} selected{% endif %}">
                 <input
                   type="radio"
                   name="options[{{ option.name | escape }}]"
                   value="{{ value | escape }}"
                   form="{{ product_form_id }}"
-                  {% if is_selected %}
+                  {% if value.selected %}
                     checked
                   {% endif %}
                 >
