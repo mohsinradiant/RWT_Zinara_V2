@@ -54,9 +54,9 @@
   <div class="product-overlay-share_wishlist">
     <img
       class="product-share-image"
-      src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_21.png?v=1744183091"
+      src=""
       alt="Share"
-      style="cursor: pointer;"
+      style="cursor: pointer; display:none;"
     >
   </div>
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
@@ -197,28 +197,46 @@
     <script>
       function moveWishlist() {
         const wishlistEngine = document.querySelector('.wishlist-engine');
-        const shareContainer = document.querySelector('.product-overlay-share_wishlist');
-        const shareImage = shareContainer ? shareContainer.querySelector('img') : null;
+        const productTitle = document.querySelector('product-info .product__title');
+        const h1 = productTitle?.querySelector('h1');
 
-        if (wishlistEngine && shareContainer && shareImage) {
-          // Insert wishlist-engine before the existing image
-          shareContainer.insertBefore(wishlistEngine, shareImage);
-          // console.log('Wishlist moved before the image successfully!');
-          return true; // Indicate success
+        console.log('Trying to move wishlist...');
+        console.log('wishlistEngine found:', !!wishlistEngine);
+        console.log('productTitle found:', !!productTitle);
+        console.log('h1 found:', !!h1);
+
+        if (wishlistEngine && productTitle && h1) {
+          // Check if it's already moved
+          if (!productTitle.contains(wishlistEngine)) {
+            h1.insertAdjacentElement('afterend', wishlistEngine);
+            console.log('✅ wishlist-engine moved after <h1>');
+            return true;
+          } else {
+            console.log('⚠️ wishlist-engine already inside .product__title');
+            return true;
+          }
         }
-        return false; // Not found yet
+
+        console.log('❌ Required elements not found yet');
+        return false;
       }
 
-      // Try moving immediately if already present
+      // Try once immediately
       if (!moveWishlist()) {
-        // Use MutationObserver to detect changes in DOM
+        console.log('Setting up MutationObserver...');
         const observer = new MutationObserver(() => {
           if (moveWishlist()) {
-            observer.disconnect(); // Stop observing once found and moved
+            console.log('✅ MutationObserver: wishlist moved, disconnecting observer.');
+            observer.disconnect();
           }
         });
 
-        observer.observe(document.body, { childList: true, subtree: true });
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      } else {
+        console.log('✅ wishlist moved on initial attempt');
       }
     </script>
 
@@ -227,7 +245,7 @@
         padding: 0 !important;
       }
       .wishlist-engine {
-        width: 90% !important;
+        width: 20px !important;
         height: auto !important;
       }
       .wishlist-engine-button,

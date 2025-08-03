@@ -1,7 +1,7 @@
 {
     "editor.defaultFormatter": null,
     "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[liquid]": {
         "editor.defaultFormatter": "Shopify.theme-check-vscode"
