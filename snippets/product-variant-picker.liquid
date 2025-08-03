@@ -60,6 +60,10 @@
             </label>
           {% endcomment %}
           <div class="select">
+            <span>
+              {{ option.name }}
+            </span>
+
             {% comment %}
               {%- if picker_type == 'swatch_dropdown' -%}
                 <span
@@ -76,9 +80,6 @@
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
-              <span>
-                {{ option.name }}
-              </span>
               {% render 'product-variant-options',
                 product: product,
                 option: option,
