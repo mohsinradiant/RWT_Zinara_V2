@@ -93,7 +93,8 @@
             </div>
           </div>
         -->
-        {% if option.name == 'Choose your color' %}
+        {% assign option_name_normalized = option.name | downcase | strip %}
+        {% if option_name_normalized == 'choose your color' %}
           <div class="swatches-wrapper">
             {% for value in option.values %}
               {% assign is_selected = value == option.selected_value %}
