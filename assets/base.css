@@ -1703,6 +1703,10 @@ details[open]>.share-button__fallback {
   min-height: calc(var(--inputs-border-width) * 2);
 }
 
+.product-form__input .select__select {
+  padding: 0;
+}
+
 /* Field */
 
 .field {
