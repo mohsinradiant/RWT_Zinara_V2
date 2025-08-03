@@ -612,7 +612,7 @@ product-info variant-selects .select:after,
 product-info variant-selects .select:hover {
     border: none !important;
     box-shadow: none !important;
-    background: #610C270D;
+    background: transparent;
 }
 
 product-info variant-selects select {
