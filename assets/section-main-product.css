@@ -183,6 +183,9 @@ product-info {
 
 .product-form__input .select {
   max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .product-form__input .svg-wrapper {
