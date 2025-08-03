@@ -678,6 +678,14 @@ product-info variant-selects img {
     height: fit-content;
 }
 
+.swatch-label-container {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
 .product-form__buttons button {
     display: flex;
     gap: 10px;
