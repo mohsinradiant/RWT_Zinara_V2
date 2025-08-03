@@ -53,44 +53,79 @@
           %}
         </fieldset>
       {%- else -%}
-        <div class="product-form__input product-form__input--dropdown">
-          {% comment %}
-            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-              {{ option.name }}
-            </label>
-          {% endcomment %}
-          <div class="select">
-            <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
-
+        <!--
+          <div class="product-form__input product-form__input--dropdown">
             {% comment %}
-              {%- if picker_type == 'swatch_dropdown' -%}
-                <span
-                  data-selected-value
-                  class="dropdown-swatch"
-                >
-                  {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
-                </span>
-              {%- endif -%}
+              <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                {{ option.name }}
+              </label>
             {% endcomment %}
-            <select
-              id="Option-{{ section.id }}-{{ forloop.index0 }}"
-              class="select__select"
-              name="options[{{ option.name | escape }}]"
-              form="{{ product_form_id }}"
-            >
-              {% render 'product-variant-options',
-                product: product,
-                option: option,
-                block: block,
-                picker_type: picker_type
-              %}
-            </select>
-            <span class="svg-wrapper">
-              {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
-              <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_16.png?v=1744182659">
-            </span>
+            <div class="select">
+              <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
+
+              {% comment %}
+                {%- if picker_type == 'swatch_dropdown' -%}
+                  <span
+                    data-selected-value
+                    class="dropdown-swatch"
+                  >
+                    {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+                  </span>
+                {%- endif -%}
+              {% endcomment %}
+              <select
+                id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                class="select__select"
+                name="options[{{ option.name | escape }}]"
+                form="{{ product_form_id }}"
+              >
+                {% render 'product-variant-options',
+                  product: product,
+                  option: option,
+                  block: block,
+                  picker_type: picker_type
+                %}
+              </select>
+              <span class="svg-wrapper">
+                {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
+                <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_16.png?v=1744182659">
+              </span>
+            </div>
           </div>
-        </div>
+        -->
+        {% if option.name == 'Color' %}
+          <div class="swatches-wrapper">
+            {% for value in option.values %}
+              {% assign is_selected = value == option.selected_value %}
+              <label class="swatch-label{% if is_selected %} selected{% endif %}">
+                <input
+                  type="radio"
+                  name="options[{{ option.name | escape }}]"
+                  value="{{ value | escape }}"
+                  form="{{ product_form_id }}"
+                  {% if is_selected %}
+                    checked
+                  {% endif %}
+                >
+                {% render 'swatch', swatch: value, shape: block.settings.swatch_shape %}
+              </label>
+            {% endfor %}
+          </div>
+        {% else %}
+          <select
+            id="Option-{{ section.id }}-{{ forloop.index0 }}"
+            class="select__select"
+            name="options[{{ option.name | escape }}]"
+            form="{{ product_form_id }}"
+          >
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type
+            %}
+          </select>
+        {% endif %}
       {%- endif -%}
     {%- endfor -%}
     <script type="application/json" data-selected-variant>
