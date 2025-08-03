@@ -678,6 +678,13 @@ product-info variant-selects img {
     height: fit-content;
 }
 
+.swatches-wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .swatch-label-container {
     display: flex;
     width: fit-content;
