@@ -627,7 +627,7 @@ product-info variant-selects img {
 
 .product-form__input--dropdown {
     margin: 0 !important;
-    min-width: 100%;
+    min-width: 100% !important;
 }
 
 .Variant-type-label {
