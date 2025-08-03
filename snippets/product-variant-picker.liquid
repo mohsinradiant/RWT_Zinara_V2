@@ -65,17 +65,19 @@
               <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
               <div class="swatch-label-container">
                 {% for value in option.values %}
+                  {% assign is_selected = value == option.selected_value %}
+
                   <label class="swatch-label{% if is_selected %} selected{% endif %}">
                     <input
                       type="radio"
                       name="options[{{ option.name | escape }}]"
                       value="{{ value | escape }}"
                       form="{{ product_form_id }}"
-                      {% if value.selected %}
+                      {% if is_selected %}
                         checked
                       {% endif %}
                     >
-                    {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+                    {% render 'swatch', swatch: value, shape: block.settings.swatch_shape %}
                   </label>
                 {% endfor %}
               </div>
