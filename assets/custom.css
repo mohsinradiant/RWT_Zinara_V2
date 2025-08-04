@@ -542,6 +542,8 @@ product-info .price__container span {
     display: flex;
     justify-content: space-between;
     align-items: start;
+    background: #F9F7F9;
+    padding: 15px 30px;
 }
 
 .prices-container-subheading {
