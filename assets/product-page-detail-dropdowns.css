@@ -130,6 +130,13 @@
 .product-page-details-list_content {
   opacity: 0.6;
 }
+.price-breakdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.product-page-details-list_header.active .price-breakdown-icon {
+  transform: rotate(180deg);
+}
 
 @media (max-width: 1100px) {
   .product-page-details-container {
