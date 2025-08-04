@@ -96,9 +96,13 @@
 }
 
 .product-page-details-list_heading_1 {
-  font-size: 1.6rem;
-  font-weight: 600;
   margin: 10px 0 0 !important;
+  cursor: pointer;
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
 .product-page-details-list_content {
