@@ -697,7 +697,9 @@ product-info variant-selects img {
     bottom: 0;
     transform: translateY(0);
 }
-
+.swatch-label.selected .swatch{
+    opacity: .1;
+}
 .product-form__buttons button {
     display: flex;
     gap: 10px;
