@@ -107,7 +107,8 @@
       {% if option_disabled -%}
         {{- 'products.product.value_unavailable' | t: option_value: value -}}
       {%- else -%}
-        <span class="Variant-type-label">{{ option.name }}</span>: {{ value }}
+        {% comment %} <span class="Variant-type-label">{{ option.name }}</span>: {{ value }} {% endcomment %}
+        {{ value }}
       {%- endif %}
     </option>
   {%- endif -%}
