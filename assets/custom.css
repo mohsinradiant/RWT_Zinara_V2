@@ -577,7 +577,7 @@ product-info .price__container span {
     line-height: 1.2;
     font-size: 1.2rem;
     font-family: var(--font-heading-family);
-    margin:0;
+    margin: 0;
 }
 
 .prices-container-subheading {
@@ -686,8 +686,7 @@ product-info variant-selects img {
 }
 
 .product-form__buttons {
-    display: flex
-;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
@@ -698,7 +697,11 @@ product-info variant-selects img {
 .product-form__buttons button {
     width: 100%;
     margin: 0;
-    padding: 10px 0;
+    padding: 15px 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
 }
 
 .try-at-home-button {
@@ -832,13 +835,13 @@ body.no-scroll {
 }
 
 .pincode-availability-checker-container {
-display: flex
-;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 25px 0 0;
     border: solid 1px #00000050;
-    padding: 10px;}
+    padding: 10px;
+}
 
 .pincode-availability-left {
     display: flex;
@@ -944,8 +947,7 @@ display: flex
 }
 
 .price-breakdown-container {
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
@@ -1107,7 +1109,8 @@ display: flex
     background: #610c27;
     padding: .4rem 3rem;
     width: 100%;
-    text-align: center;}
+    text-align: center;
+}
 
 .price-breakdown-list .price_discount {
     background: #f6f3f1;
@@ -1257,12 +1260,19 @@ header .menu-drawer {
 }
 
 .assisstance_buttons_images_container a {
+    width: calc(50% - 5px);
     text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #610c27;
+    border: solid 1px #610c27;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .assistance_button_heading {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
@@ -1270,9 +1280,10 @@ header .menu-drawer {
 
 .assisstance_buttons_images_container {
     display: flex;
-    justify-content: start;
-    align-items: start;
-    gap: 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
 .assisstance_buttons_image_container {

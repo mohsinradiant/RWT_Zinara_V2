@@ -4,6 +4,7 @@ product-info {
 
 .product {
   margin: 0;
+  letter-spacing: 0;
 }
 
 .product.grid {
