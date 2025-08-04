@@ -595,7 +595,7 @@ product-info variant-selects {
     flex-wrap: wrap;
     justify-content: start;
     align-items: start;
-    gap: 2%;
+    gap: 12px;
     margin: 1rem 0;
 }
 
