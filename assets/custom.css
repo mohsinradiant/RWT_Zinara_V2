@@ -542,8 +542,9 @@ product-info .price__container span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #F9F7F9;
+    background: #f9f7f9;
     padding: 15px 30px;
+    gap: 20px;
 }
 
 .pdp-brand-usp-block {
@@ -574,6 +575,7 @@ product-info .price__container span {
     letter-spacing: 0;
     line-height: 1.3;
     font-size: 1.3rem;
+    font-family: var(--font-heading-family)
 }
 
 .prices-container-subheading {
