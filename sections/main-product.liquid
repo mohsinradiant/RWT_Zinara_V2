@@ -117,82 +117,86 @@
                     show_badges: false,
                     price_class: 'price--large'
                   -%}
-                  {% comment %} <div class="price-breakdown-container">
-                    <span>Price Breakdown</span>
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_20.png?v=1744182823"
-                      alt="Dropdown Icon"
-                      class="price-breakdown-icon"
-                    >
-                  </div> {% endcomment %}
+                  {% comment %}
+                    <div class="price-breakdown-container">
+                      <span>Price Breakdown</span>
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_20.png?v=1744182823"
+                        alt="Dropdown Icon"
+                        class="price-breakdown-icon"
+                      >
+                    </div>
+                  {% endcomment %}
                 </div>
-                {% comment %} <div class="price-breakdown-popup" id="popup">
-                  {% assign selected_variant_id = request.query.variant %}
-                  {% assign selected_variant = product.variants | where: 'id', selected_variant_id | first %}
-                  {% if selected_variant == null %}
-                    {% assign selected_variant = product.variants.first %}
-                  {% endif %}
+                {% comment %}
+                  <div class="price-breakdown-popup" id="popup">
+                    {% assign selected_variant_id = request.query.variant %}
+                    {% assign selected_variant = product.variants | where: 'id', selected_variant_id | first %}
+                    {% if selected_variant == null %}
+                      {% assign selected_variant = product.variants.first %}
+                    {% endif %}
 
-                  <ul class="price-breakdown-list" id="price-breakdown-list">
-                    {% if product.selected_or_first_available_variant.metafields.content.price_breakdown_json.value
-                        != null
-                    %}
-                      {% for item in product.selected_or_first_available_variant.metafields.content.price_breakdown_json.value %}
-                        <li>
-                          <div class="price_breakdown-left_container">
-                            <div class="price_breakdown-left_container_top">
-                              <span>{{ item.title }}</span>
+                    <ul class="price-breakdown-list" id="price-breakdown-list">
+                      {% if product.selected_or_first_available_variant.metafields.content.price_breakdown_json.value
+                          != null
+                      %}
+                        {% for item in product.selected_or_first_available_variant.metafields.content.price_breakdown_json.value %}
+                          <li>
+                            <div class="price_breakdown-left_container">
+                              <div class="price_breakdown-left_container_top">
+                                <span>{{ item.title }}</span>
 
-                              {% if item.compare_at_price and item.selling_price %}
-                                {% assign compare_at_price = item.compare_at_price | times: 1.0 %}
-                                {% assign selling_price = item.selling_price | times: 1.0 %}
-                                {% assign price_difference = compare_at_price | minus: selling_price %}
-                                {% assign percentage_difference = price_difference
-                                  | divided_by: compare_at_price
-                                  | times: 100.0
-                                  | round
-                                %}
-                                {% if percentage_difference > 0 %}
-                                  <span class="price_discount">{{ percentage_difference }}% off</span>
+                                {% if item.compare_at_price and item.selling_price %}
+                                  {% assign compare_at_price = item.compare_at_price | times: 1.0 %}
+                                  {% assign selling_price = item.selling_price | times: 1.0 %}
+                                  {% assign price_difference = compare_at_price | minus: selling_price %}
+                                  {% assign percentage_difference = price_difference
+                                    | divided_by: compare_at_price
+                                    | times: 100.0
+                                    | round
+                                  %}
+                                  {% if percentage_difference > 0 %}
+                                    <span class="price_discount">{{ percentage_difference }}% off</span>
+                                  {% endif %}
                                 {% endif %}
+                              </div>
+                              <div class="price_breakdown-left_container_bottom">
+                                <p>{{ item.subtitle_1 }}</p>
+                                <p>{{ item.subtitle_2 }}</p>
+                              </div>
+                            </div>
+                            <div class="price_breakdown-right_container">
+                              {% if item.selling_price %}
+                                <span>
+                                  ₹{{ item.selling_price | money_without_trailing_zeros | times: 100 | remove: '.0' }}
+                                </span>
+                              {% endif %}
+
+                              {% if item.compare_at_price
+                                and item.compare_at_price != 0
+                                and item.compare_at_price != null
+                                and item.compare_at_price != item.selling_price
+                              %}
+                                <span class="price_breakdown_compare_at_price">
+                                  ₹{{ item.compare_at_price | money_without_trailing_zeros | times: 100 | remove: '.0' }}
+                                </span>
                               {% endif %}
                             </div>
-                            <div class="price_breakdown-left_container_bottom">
-                              <p>{{ item.subtitle_1 }}</p>
-                              <p>{{ item.subtitle_2 }}</p>
-                            </div>
-                          </div>
-                          <div class="price_breakdown-right_container">
-                            {% if item.selling_price %}
-                              <span>
-                                ₹{{ item.selling_price | money_without_trailing_zeros | times: 100 | remove: '.0' }}
-                              </span>
-                            {% endif %}
+                          </li>
+                        {% endfor %}
 
-                            {% if item.compare_at_price
-                              and item.compare_at_price != 0
-                              and item.compare_at_price != null
-                              and item.compare_at_price != item.selling_price
-                            %}
-                              <span class="price_breakdown_compare_at_price">
-                                ₹{{ item.compare_at_price | money_without_trailing_zeros | times: 100 | remove: '.0' }}
-                              </span>
-                            {% endif %}
-                          </div>
+                        <li class="price-breakdown-total">
+                          <span>Total Cost</span>
+                          <span>₹{{ product.selected_or_first_available_variant.price | divided_by: 100 }}</span>
                         </li>
-                      {% endfor %}
+                      {% else %}
+                        <li>No price breakdown available for this variant.</li>
+                      {% endif %}
+                    </ul>
 
-                      <li class="price-breakdown-total">
-                        <span>Total Cost</span>
-                        <span>₹{{ product.selected_or_first_available_variant.price | divided_by: 100 }}</span>
-                      </li>
-                    {% else %}
-                      <li>No price breakdown available for this variant.</li>
-                    {% endif %}
-                  </ul>
-
-                  <div class="price-breakdown-close-btn">Close</div>
-                </div> {% endcomment %}
+                    <div class="price-breakdown-close-btn">Close</div>
+                  </div>
+                {% endcomment %}
 
                 <div id="overlay" style="display:none;"></div>
 
@@ -935,12 +939,12 @@
                 </div>
               {%- when 'price-breakdown-dropdown' -%}
                 <div class="price-breakdown-container">
-                    <span>Price Breakup</span>
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698"
-                      alt="Dropdown Icon"
-                      class="price-breakdown-icon"
-                    >
+                  <span>Price Breakup</span>
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698"
+                    alt="Dropdown Icon"
+                    class="price-breakdown-icon"
+                  >
                 </div>
                 <div class="price-breakdown-popup" id="popup">
                   {% assign selected_variant_id = request.query.variant %}
@@ -1009,7 +1013,7 @@
 
                   <div class="price-breakdown-close-btn">Close</div>
                 </div>
-                {%- when 'pincode-availability' -%}
+              {%- when 'pincode-availability' -%}
                 <div class="pincode-availability-checker-container">
                   <div class="pincode-availability-left">
                     {% comment %} <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Location_1.png?v=1744183003"> {% endcomment %}
@@ -2934,7 +2938,7 @@
       {% break %}
     {% endif %}
   {% endfor %}
- {%- render 'buy-buttons',
+  {%- render 'buy-buttons',
     product: product,
     product_form_id: product_form_id,
     section_id: section.id,
@@ -3360,7 +3364,7 @@
     function moveButton(buttonId) {
       const button = document.getElementById(buttonId);
       if (window.innerWidth > 756 && button && productFormButtons) {
-        productFormButtons.insertAdjacentElement('afterbegin', button);
+        productFormButtons.insertAdjacentElement('beforeend', button);
       }
     }
 
