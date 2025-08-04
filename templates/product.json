@@ -64,16 +64,16 @@
           "type": "description",
           "settings": {}
         },
+        "price_breakdown_dropdown_EyiwWU": {
+          "type": "price-breakdown-dropdown",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
-        },
-        "price_breakdown_dropdown_EyiwWU": {
-          "type": "price-breakdown-dropdown",
-          "settings": {}
         },
         "assistance_buttons_NnwHCV": {
           "type": "assistance_buttons",
@@ -95,8 +95,8 @@
         "inventory_indicator_QcmNEB",
         "inventory_iiPf7W",
         "description",
-        "buy_buttons",
         "price_breakdown_dropdown_EyiwWU",
+        "buy_buttons",
         "assistance_buttons_NnwHCV",
         "se_wishlist_engine_product_page_fTBTnd"
       ],
