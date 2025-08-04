@@ -65,7 +65,11 @@
               <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
               <div class="swatch-label-container">
                 {% for value in option.values %}
-                  {% assign is_selected = value == option.selected_value %}
+                  {% assign is_selected = false %}
+                  {% if value == option.selected_value %}
+                    {% assign is_selected = true %}
+                  {% endif %}
+
                   {% assign value_index = forloop.index0 %}
                   {% assign swatch_data = option.values[value_index].swatch %}
 
