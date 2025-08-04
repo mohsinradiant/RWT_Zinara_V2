@@ -1028,7 +1028,7 @@
                             class="price-breakdown-icon"
                           >
                         </div>
-                        <div class="product-page-details-list_body" style="display: none;">
+                        <div class="product-page-details-list_body collapsible">
                           {% for list_1 in product.selected_or_first_available_variant.metafields.content.product_details_list_1_json.value %}
                             <div class="product-page-details-list-container">
                               <p class="product-page-details-list_heading">{{ list_1.heading }}</p>
@@ -1052,7 +1052,7 @@
                             class="price-breakdown-icon"
                           >
                         </div>
-                        <div class="product-page-details-list_body" style="display: none;">
+                        <div class="product-page-details-list_body collapsible">
                           {% for list_2 in product.selected_or_first_available_variant.metafields.content.product_details_list_2_json.value %}
                             <div class="product-page-details-list-container">
                               <p class="product-page-details-list_heading">{{ list_2.heading }}</p>
@@ -1124,11 +1124,17 @@
                   document.querySelectorAll('.product-page-details-list_header').forEach((header) => {
                     header.addEventListener('click', () => {
                       const body = header.nextElementSibling;
-                      const isOpen = header.classList.toggle('active');
-                      body.style.display = isOpen ? 'block' : 'none';
+                      const isExpanded = header.classList.toggle('active');
+
+                      if (isExpanded) {
+                        body.style.maxHeight = body.scrollHeight + 'px';
+                      } else {
+                        body.style.maxHeight = '0';
+                      }
                     });
                   });
                 </script>
+
               {%- when 'pincode-availability' -%}
                 <div class="pincode-availability-checker-container">
                   <div class="pincode-availability-left">
