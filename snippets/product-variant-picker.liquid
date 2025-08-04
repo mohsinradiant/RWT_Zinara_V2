@@ -70,8 +70,8 @@
                     {% assign is_selected = true %}
                   {% endif %}
 
-                  {% assign value_index = forloop.index0 %}
-                  {% assign swatch_data = option.values[value_index].swatch %}
+                  {%- assign value_index = forloop.index0 -%}
+                  {%- assign swatch_data = option.values[value_index].swatch -%}
 
                   <label class="swatch-label{% if is_selected %} selected{% endif %}">
                     <input
