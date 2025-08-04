@@ -92,9 +92,17 @@ header .header__search {
 
 .section-heading,
 .collapsible-content__heading,
-.jdgm-rev-widg__title,
-.related-products__heading {
+.jdgm-rev-widg__title {
     text-align: left !important;
+    margin-bottom: 40px !important;
+    margin-top: 0 !important;
+    font-size: 3rem !important;
+    font-weight: 500 !important;
+}
+
+
+.related-products__heading {
+    text-align: center !important;
     margin-bottom: 40px !important;
     margin-top: 0 !important;
     font-size: 3rem !important;
