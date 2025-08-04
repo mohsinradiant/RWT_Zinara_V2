@@ -87,7 +87,7 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .product-page-details-list-parent {
