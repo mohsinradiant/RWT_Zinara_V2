@@ -61,8 +61,13 @@
           {% endcomment %}
           {% assign option_name_normalized = option.name | downcase | strip %}
           {% if option_name_normalized == 'choose your color' %}
-            <div class="swatches-wrapper">
-              <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
+            <fieldset class="js product-form__input product-form__input--swatch">
+              <legend class="form__label">
+                {{ option.name }}:
+                <span data-selected-value>
+                  {{- option.selected_value -}}
+                </span>
+              </legend>
               <div class="swatch-label-container">
                 {% for value in option.values %}
                   {% assign is_selected = false %}
@@ -107,7 +112,7 @@
                   </label>
                 {% endfor %}
               </div>
-            </div>
+            </fieldset>
           {% else %}
             <div class="select">
               <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
