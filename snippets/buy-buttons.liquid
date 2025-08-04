@@ -83,7 +83,7 @@
               disabled
             {% endif %}
           >
-            <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Shopping_Cart.png?v=1744183053">
+            {% comment %} <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Shopping_Cart.png?v=1744183053"> {% endcomment %}
             <span>
               {%- if product.selected_or_first_available_variant == null -%}
                 {{ 'products.product.unavailable' | t }}
