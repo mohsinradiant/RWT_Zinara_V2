@@ -134,12 +134,16 @@ variant-selects {
 
 /* Custom styles for Swatch display type */
 .product-form__input--swatch {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: unset;
-  min-width: unset;
-  width: 100%;
-}
+    display: flex
+;
+    max-width: unset;
+    min-width: unset;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;}
 
 .product-form__input--swatch .swatch-input__input+.swatch-input__label {
   --swatch-input--size: 3.6rem;
