@@ -80,7 +80,8 @@
   width: 100%;
   min-width: 100%;
   height: fit-content;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .product-page-details-list_body {
