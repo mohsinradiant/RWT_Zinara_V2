@@ -550,6 +550,7 @@ product-info .price__container span {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .pdp-brand-usp-block img {
