@@ -1094,18 +1094,17 @@ display: flex
 }
 
 .price-breakdown-close-btn {
-    margin: 10px 20px 20px;
+    margin: 18px 0 0;
     cursor: pointer;
     color: #fff;
-    font-family: "Montserrat", sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     letter-spacing: 0;
     font-size: 1.4rem;
-    background: #610C27;
+    background: #610c27;
     padding: .4rem 3rem;
-    width: calc(100% - 40px);
-    text-align: center;
-}
+    width: 100%;
+    text-align: center;}
 
 .price-breakdown-list .price_discount {
     background: #eae3e1;
