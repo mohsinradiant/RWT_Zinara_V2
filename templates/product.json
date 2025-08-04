@@ -243,38 +243,6 @@
         "heading": "The Zinara Experience"
       }
     },
-    "pdp_image_carousel_76BdGX": {
-      "type": "pdp-image-carousel",
-      "disabled": true,
-      "settings": {}
-    },
-    "1738792743f5d3661f": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_qetXF7": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_qetXF7"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "pdp_tryathome_FpgbpJ": {
-      "type": "pdp-tryathome",
-      "settings": {
-        "heading": "Get your own design",
-        "sub-heading": "Have another design in mind? Something from a website or a magazine perhaps?",
-        "button-1": "Start Designing",
-        "url-1": "/pages/get-your-own-design?view=own-design",
-        "button-2": "",
-        "url-2": "",
-        "image": "shopify://shop_images/jewellery_design.png"
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -291,6 +259,18 @@
         "columns_mobile": "2",
         "padding_top": 40,
         "padding_bottom": 28
+      }
+    },
+    "pdp_tryathome_FpgbpJ": {
+      "type": "pdp-tryathome",
+      "settings": {
+        "heading": "Get your own design",
+        "sub-heading": "Have another design in mind? Something from a website or a magazine perhaps?",
+        "button-1": "Start Designing",
+        "url-1": "/pages/get-your-own-design?view=own-design",
+        "button-2": "",
+        "url-2": "",
+        "image": "shopify://shop_images/jewellery_design.png"
       }
     },
     "home_testimonials_zmE9Ch": {
@@ -360,7 +340,27 @@
         "image_picker_GMhzVb"
       ],
       "settings": {
-        "heading": "Our customer stories!"
+        "heading": "Testimonials"
+      }
+    },
+    "pdp_image_carousel_76BdGX": {
+      "type": "pdp-image-carousel",
+      "disabled": true,
+      "settings": {}
+    },
+    "1738792743f5d3661f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_qetXF7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_qetXF7"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "collapsible_content_cmfTNX": {
@@ -481,11 +481,11 @@
     "product_page_details_8y4AjM",
     "home_benefits_BJVbVJ",
     "zinara_experience_strip_6YExDg",
+    "related-products",
+    "pdp_tryathome_FpgbpJ",
+    "home_testimonials_zmE9Ch",
     "pdp_image_carousel_76BdGX",
     "1738792743f5d3661f",
-    "pdp_tryathome_FpgbpJ",
-    "related-products",
-    "home_testimonials_zmE9Ch",
     "collapsible_content_cmfTNX"
   ]
 }
