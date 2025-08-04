@@ -869,10 +869,10 @@ display: flex
 .pincode-availability-checker-container button {
     border: none;
     background: transparent;
-    color: #712242;
-    text-decoration: underline;
+    color: #71224250;
+    /* text-decoration: underline; */
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0;
     font-size: 1.3rem;
     cursor: pointer;
