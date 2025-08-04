@@ -686,15 +686,16 @@ product-info variant-selects img {
 }
 
 .swatch-label-container {
-    display: flex;
+    display: flex
+;
     width: fit-content;
     justify-content: center;
     align-items: center;
     gap: 7px;
     position: absolute;
     right: 0;
-    top: 0;
-    transform: translateY(-50%);
+    bottom: 0;
+    transform: translateY(0);
 }
 
 .product-form__buttons button {
