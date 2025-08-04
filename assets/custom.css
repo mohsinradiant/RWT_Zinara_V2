@@ -545,7 +545,15 @@ product-info .price__container span {
     background: #F9F7F9;
     padding: 15px 30px;
 }
-
+.pdp-brand-usp-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pdp-brand-usp-block img{
+        height: 20px;
+    width: auto;
+}
 .prices-container-subheading {
     font-weight: 400;
     letter-spacing: normal;
