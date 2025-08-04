@@ -94,7 +94,11 @@
   font-weight: 600;
   margin-bottom: 10px !important;
 }
-
+.product-page-details-list_heading_1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 10px 0 0 !important;
+}
 .product-page-details-list_content {
   text-align: right;
 }
