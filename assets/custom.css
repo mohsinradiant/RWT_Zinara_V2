@@ -859,6 +859,8 @@ display: flex
     letter-spacing: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .pincode-availability-left input::placeholder {
