@@ -1020,7 +1020,10 @@
                   <div class="product-page-details-container">
                     <div class="product-page-details-parent">
                       <div class="product-page-details-parent-child product-page-details-parent-child_1">
+                        <div class="product-page-details-list_header">
                         <p class="product-page-details-list_heading_1">METAL INFO</p>
+                        <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698" alt="Dropdown Icon" class="price-breakdown-icon">
+                        </div>
                         {% for list_1 in product.selected_or_first_available_variant.metafields.content.product_details_list_1_json.value %}
                           <div class="product-page-details-list-container">
                             <p class="product-page-details-list_heading">{{ list_1.heading }}</p>
@@ -1034,7 +1037,10 @@
                         {% endfor %}
                       </div>
                       <div class="product-page-details-parent-child product-page-details-parent-child_2">
+                        <div class="product-page-details-list_header">
                         <p class="product-page-details-list_heading_1">STONE INFO</p>
+                        <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698" alt="Dropdown Icon" class="price-breakdown-icon">
+                        </div>
                         {% for list_2 in product.selected_or_first_available_variant.metafields.content.product_details_list_2_json.value %}
                           <div class="product-page-details-list-container">
                             <p class="product-page-details-list_heading">{{ list_2.heading }}</p>

@@ -102,7 +102,10 @@
 .product-page-details-list_content {
   text-align: right;
 }
-
+.product-page-details-list_header{
+  display:flex;
+  justify-content: space-between;
+}
 .product-page-details-list_title,
 .product-page-details-list_content {
   font-size: 1.4rem;
