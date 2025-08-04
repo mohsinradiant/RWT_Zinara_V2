@@ -1018,45 +1018,52 @@
                 {% if product.selected_or_first_available_variant.metafields.content.product_details_list_1_json != null
                 %}
                   <div class="product-page-details-container">
-                    <h2 class="page-width section-heading">{{ section.settings.heading }}</h2>
-                    <div class="page-width product-page-details-parent">
+                    <div class="product-page-details-parent">
                       <div class="product-page-details-parent-child product-page-details-parent-child_1">
-                        {% for list_1 in product.selected_or_first_available_variant.metafields.content.product_details_list_1_json.value %}
-                          <div class="product-page-details-list-container">
-                            <p class="product-page-details-list_heading">{{ list_1.heading }}</p>
-                            {% for list_item_1 in list_1.items %}
-                              <div class="product-page-details-list-parent">
-                                <p class="product-page-details-list_title">{{ list_item_1.label }}</p>
-                                <p class="product-page-details-list_content">{{ list_item_1.value }}</p>
-                              </div>
-                            {% endfor %}
-                          </div>
-                        {% endfor %}
+                        <div class="product-page-details-list_header">
+                          <p class="product-page-details-list_heading_1">METAL INFO</p>
+                          <img
+                            src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698"
+                            alt="Dropdown Icon"
+                            class="price-breakdown-icon"
+                          >
+                        </div>
+                        <div class="product-page-details-list_body collapsible">
+                          {% for list_1 in product.selected_or_first_available_variant.metafields.content.product_details_list_1_json.value %}
+                            <div class="product-page-details-list-container">
+                              <p class="product-page-details-list_heading">{{ list_1.heading }}</p>
+                              {% for list_item_1 in list_1.items %}
+                                <div class="product-page-details-list-parent">
+                                  <p class="product-page-details-list_title">{{ list_item_1.label }}</p>
+                                  <p class="product-page-details-list_content">{{ list_item_1.value }}</p>
+                                </div>
+                              {% endfor %}
+                            </div>
+                          {% endfor %}
+                        </div>
                       </div>
                       <div class="product-page-details-parent-child product-page-details-parent-child_2">
-                        {% for list_2 in product.selected_or_first_available_variant.metafields.content.product_details_list_2_json.value %}
-                          <div class="product-page-details-list-container">
-                            <p class="product-page-details-list_heading">{{ list_2.heading }}</p>
-                            {% for list_item_2 in list_2.items %}
-                              <div class="product-page-details-list-parent">
-                                <p class="product-page-details-list_title">{{ list_item_2.label }}</p>
-                                <p class="product-page-details-list_content">{{ list_item_2.value }}</p>
-                              </div>
-                            {% endfor %}
-                          </div>
-                        {% endfor %}
-                        {% comment %}
-                          <div class="product_details_stone_info_tabs">
-                            <div class="product_details_stone_info_tab">
-                              <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_19.png?v=1739429819">
-                              <p>Cut</p>
+                        <div class="product-page-details-list_header">
+                          <p class="product-page-details-list_heading_1">STONE INFO</p>
+                          <img
+                            src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698"
+                            alt="Dropdown Icon"
+                            class="price-breakdown-icon"
+                          >
+                        </div>
+                        <div class="product-page-details-list_body collapsible">
+                          {% for list_2 in product.selected_or_first_available_variant.metafields.content.product_details_list_2_json.value %}
+                            <div class="product-page-details-list-container">
+                              <p class="product-page-details-list_heading">{{ list_2.heading }}</p>
+                              {% for list_item_2 in list_2.items %}
+                                <div class="product-page-details-list-parent">
+                                  <p class="product-page-details-list_title">{{ list_item_2.label }}</p>
+                                  <p class="product-page-details-list_content">{{ list_item_2.value }}</p>
+                                </div>
+                              {% endfor %}
                             </div>
-                            <div class="product_details_stone_info_tab">
-                              <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_19.png?v=1739429819">
-                              <p>Color/Clarity</p>
-                            </div>
-                          </div>
-                        {% endcomment %}
+                          {% endfor %}
+                        </div>
                       </div>
                       <div class="product-page-details-parent-child product-page-details-parent-child_2">
                         {% for list_3 in product.selected_or_first_available_variant.metafields.content.product_details_list_3_json.value %}
@@ -1108,9 +1115,37 @@
                           </div>
                         {% endcomment %}
                       </div>
+                      <div class="product-page-details-parent-child product-page-details-parent-child_1">
+                        <div class="product-page-details-list_header">
+                          <p class="product-page-details-list_heading_1">PRODUCT INFO</p>
+                          <img
+                            src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698"
+                            alt="Dropdown Icon"
+                            class="price-breakdown-icon"
+                          >
+                        </div>
+                        <div class="product-page-details-list_body collapsible">
+                          <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601469.jpg?v=1754308974">
+                        </div>
+                      </div>
                     </div>
                   </div>
                 {% endif %}
+                <script>
+                  document.querySelectorAll('.product-page-details-list_header').forEach((header) => {
+                    header.addEventListener('click', () => {
+                      const body = header.nextElementSibling;
+                      const isExpanded = header.classList.toggle('active');
+
+                      if (isExpanded) {
+                        body.style.maxHeight = body.scrollHeight + 'px';
+                      } else {
+                        body.style.maxHeight = '0';
+                      }
+                    });
+                  });
+                </script>
+
               {%- when 'pincode-availability' -%}
                 <div class="pincode-availability-checker-container">
                   <div class="pincode-availability-left">
@@ -5212,7 +5247,7 @@
       "name": "Price Breakdown Dropdown"
     },
     {
-            "type": "details-dropdown",
+      "type": "details-dropdown",
       "name": "Details Dropdown"
     }
   ],
