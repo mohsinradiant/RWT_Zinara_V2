@@ -698,8 +698,8 @@ product-info variant-selects img {
     transform: translateY(0);
 }
 .swatch-label.selected .swatch{
-    border: 2px solid #610C2750;
-}
+border: 1px solid #610C27;
+    scale: 1.2;}
 .product-form__buttons button {
     display: flex;
     gap: 10px;
