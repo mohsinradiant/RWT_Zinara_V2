@@ -686,9 +686,12 @@ product-info variant-selects img {
 }
 
 .product-form__buttons {
-    display: flex;
+    display: flex
+;
     justify-content: center;
-    gap: 2%;
+    flex-direction: column;
+    gap: 10px;
+    max-width: unset !important;
 }
 
 .try-at-home-button,
