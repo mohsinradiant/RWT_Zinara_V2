@@ -89,7 +89,9 @@
   align-items: center;
   gap: 70px;
 }
-
+.product-page-details-list-parent p{
+  line-height: 1.5;
+}
 .product-page-details-list_heading {
     margin-bottom: 10px !important;
     font-size: 1.4rem;
