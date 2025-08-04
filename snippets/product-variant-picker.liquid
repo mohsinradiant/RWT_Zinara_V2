@@ -65,7 +65,6 @@
               <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
               <div class="swatch-label-container">
                 {% for value in option.values %}
-                  <p>{{ value }}</p>
                   {% assign is_selected = false %}
                   {% if value == option.selected_value %}
                     {% assign is_selected = true %}
