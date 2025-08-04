@@ -130,6 +130,19 @@
 .product-page-details-list_content {
   opacity: 0.6;
 }
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.product-page-details-list_header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .price-breakdown-icon {
   transition: transform 0.3s ease;
 }
