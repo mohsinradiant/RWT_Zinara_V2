@@ -81,20 +81,29 @@
   height: fit-content;
 }
 
+.product-page-details-list_body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
 .product-page-details-list-parent {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 70px;
 }
-.product-page-details-list-parent p{
+
+.product-page-details-list-parent p {
   line-height: 2.2;
 }
+
 .product-page-details-list_heading {
-    margin-bottom: 10px !important;
-    font-size: 1.4rem;
-    font-weight: 500 !important;
-    line-height: 3.4rem;
+  margin-bottom: 10px !important;
+  font-size: 1.4rem;
+  font-weight: 500 !important;
+  line-height: 3.4rem;
 }
 
 .product-page-details-list_heading_1 {
@@ -128,6 +137,7 @@
 .product-page-details-list_content {
   opacity: 0.6;
 }
+
 .collapsible {
   max-height: 0;
   overflow: hidden;
