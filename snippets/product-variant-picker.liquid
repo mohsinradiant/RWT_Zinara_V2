@@ -61,25 +61,13 @@
           {% endcomment %}
           {% assign option_name_normalized = option.name | downcase | strip %}
           {% if option_name_normalized == 'choose your color' %}
-            <div class="swatches-wrapper">
-              <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
-              <div class="swatch-label-container">
-                {% for value in option.values %}
-                  {% if value == option.selected_value %}
-                    {% assign is_selected = true %}
-                  {% else %}
-                    {% assign is_selected = false %}
-                  {% endif %}
+            <span
+              data-selected-value
+              class="dropdown-swatch"
+            >
+              {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+            </span>
 
-                  <span
-                    data-selected-value
-                    class="dropdown-swatch"
-                  >
-                    {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
-                  </span>
-                {% endfor %}
-              </div>
-            </div>
           {% else %}
             <div class="select">
               <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
