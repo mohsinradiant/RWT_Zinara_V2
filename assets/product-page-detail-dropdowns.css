@@ -90,9 +90,10 @@
 }
 
 .product-page-details-list_heading {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 10px !important;
+    margin-bottom: 10px !important;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 3.4rem;
 }
 
 .product-page-details-list_heading_1 {
