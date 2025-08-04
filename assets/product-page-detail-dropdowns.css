@@ -85,8 +85,9 @@
 .product-page-details-list_body {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
+  margin-top: 20px;
 }
 
 .product-page-details-list-parent {
@@ -94,10 +95,6 @@
   justify-content: space-between;
   align-items: center;
   gap: 70px;
-}
-
-.product-page-details-list-parent p {
-  line-height: 2.2;
 }
 
 .product-page-details-list_heading {
