@@ -861,7 +861,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
              function moveButton(buttonId) {
                const button = document.getElementById(buttonId);
                if (window.innerWidth > 756 && button && productFormButtons) {
-                 productFormButtons.insertAdjacentElement('afterbegin', button);
+                 productFormButtons.insertAdjacentElement('beforeend', button);
                }
              }
       
