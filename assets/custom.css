@@ -698,6 +698,9 @@ product-info variant-selects img {
     width: 100%;
     margin: 0;
     padding: 10px 0;
+        font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 .try-at-home-button {
@@ -709,9 +712,6 @@ product-info variant-selects img {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 1.6rem;
-    font-weight: 400;
-    letter-spacing: 0;
 }
 
 .variant-dropdown-option-name-span {
