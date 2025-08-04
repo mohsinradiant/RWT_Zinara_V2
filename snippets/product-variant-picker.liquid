@@ -64,9 +64,11 @@
             <fieldset class="js product-form__input product-form__input--swatch">
               <legend class="variant-dropdown-option-name-span">
                 {{ option.name }}:
-                <span data-selected-value>
-                  {{- option.selected_value -}}
-                </span>
+                {% comment %}
+                  <span data-selected-value>
+                    {{- option.selected_value -}}
+                  </span>
+                {% endcomment %}
               </legend>
               <div class="swatch-label-container">
                 {% for value in option.values %}
