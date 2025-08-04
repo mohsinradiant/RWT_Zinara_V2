@@ -75,9 +75,6 @@
                   {%- capture input_id -%}
                     {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
                   {%- endcapture -%}
-                  {%- capture input_name -%}
-                    {{ option.name }}-{{ option.position }}
-                  {%- endcapture -%}
                   {%- liquid
                     assign option_disabled = true
                     if value.available
@@ -93,7 +90,7 @@
                     <input
                       type="radio"
                       id="{{ input_id }}"
-                      name="{{ input_name | escape }}"
+                      name="options[{{ option.name | escape }}]"
                       value="{{ value | escape }}"
                       form="{{ product_form_id }}"
                       {% if is_selected %}
