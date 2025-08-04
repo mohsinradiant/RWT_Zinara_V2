@@ -1261,7 +1261,7 @@ header .menu-drawer {
 
 .assisstance_buttons_images_container a {
     text-decoration: none;
-    width: 50%;
+    width: calc(50% - 5px);
 }
 
 .assistance_button_heading {
