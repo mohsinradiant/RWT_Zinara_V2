@@ -118,7 +118,7 @@
         "hide_variants": true,
         "enable_video_looping": true,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 32
       }
     },
     "product_page_details_8y4AjM": {
@@ -182,28 +182,83 @@
         "tab_qjzXCB",
         "tab_bHJ89y"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Benefits"
       }
     },
-    "pdp_image_carousel_76BdGX": {
-      "type": "pdp-image-carousel",
-      "disabled": true,
-      "settings": {}
-    },
-    "1738792743f5d3661f": {
-      "type": "apps",
+    "zinara_experience_strip_6YExDg": {
+      "type": "zinara_experience_strip",
       "blocks": {
-        "judge_me_reviews_review_widget_qetXF7": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+        "block_R8twqf": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_28.png",
+            "heading": "Lifetime buyback & exchange",
+            "subheading": "We offer lifetime buyback and exchange on all Zinara orders"
+          }
+        },
+        "block_FGVLDx": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_29.png",
+            "heading": "IGI/SGL certified",
+            "subheading": "All our grown diamonds are IGI/SGL certified ensuring top quality"
+          }
+        },
+        "block_yPz4fU": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_30.png",
+            "heading": "BIS Hallmarked Gold",
+            "subheading": "We use BIS Hallmarked Gold for all our products"
+          }
+        },
+        "block_acUzEf": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_31.png",
+            "heading": "Try at home",
+            "subheading": "We’re happy to help you with virtual an in-home trials"
+          }
+        },
+        "block_RVANR4": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_32.png",
+            "heading": "Insured & free shipping",
+            "subheading": "All your orders and delivered free of cost and are insured"
+          }
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_qetXF7"
+        "block_R8twqf",
+        "block_FGVLDx",
+        "block_yPz4fU",
+        "block_acUzEf",
+        "block_RVANR4"
       ],
+      "name": "Zinara Experience Strip",
       "settings": {
-        "include_margins": true
+        "heading": "The Zinara Experience"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "View Similar",
+        "heading_size": "h2",
+        "products_to_show": 10,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-6c93e2fc-3aa7-4682-a176-b96389e5e81e",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 40,
+        "padding_bottom": 28
       }
     },
     "pdp_tryathome_FpgbpJ": {
@@ -216,24 +271,6 @@
         "button-2": "",
         "url-2": "",
         "image": "shopify://shop_images/jewellery_design.png"
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "View Similar",
-        "heading_size": "h2",
-        "products_to_show": 10,
-        "columns_desktop": 3,
-        "color_scheme": "scheme-d156c5aa-1619-482c-ae41-dcf88e5aa9f2",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 40,
-        "padding_bottom": 28
       }
     },
     "home_testimonials_zmE9Ch": {
@@ -303,7 +340,27 @@
         "image_picker_GMhzVb"
       ],
       "settings": {
-        "heading": "Our customer stories!"
+        "heading": "Testimonials"
+      }
+    },
+    "pdp_image_carousel_76BdGX": {
+      "type": "pdp-image-carousel",
+      "disabled": true,
+      "settings": {}
+    },
+    "1738792743f5d3661f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_qetXF7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_qetXF7"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "collapsible_content_cmfTNX": {
@@ -415,7 +472,7 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     }
   },
@@ -423,11 +480,12 @@
     "main",
     "product_page_details_8y4AjM",
     "home_benefits_BJVbVJ",
+    "zinara_experience_strip_6YExDg",
+    "related-products",
+    "pdp_tryathome_FpgbpJ",
+    "home_testimonials_zmE9Ch",
     "pdp_image_carousel_76BdGX",
     "1738792743f5d3661f",
-    "pdp_tryathome_FpgbpJ",
-    "related-products",
-    "home_testimonials_zmE9Ch",
     "collapsible_content_cmfTNX"
   ]
 }
