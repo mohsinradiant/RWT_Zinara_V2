@@ -79,6 +79,10 @@
           "type": "assistance_buttons",
           "settings": {}
         },
+        "details_dropdown_P4zhGG": {
+          "type": "details-dropdown",
+          "settings": {}
+        },
         "se_wishlist_engine_product_page_fTBTnd": {
           "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
           "settings": {}
@@ -98,6 +102,7 @@
         "price_breakdown_dropdown_EyiwWU",
         "buy_buttons",
         "assistance_buttons_NnwHCV",
+        "details_dropdown_P4zhGG",
         "se_wishlist_engine_product_page_fTBTnd"
       ],
       "settings": {
@@ -118,6 +123,7 @@
     },
     "product_page_details_8y4AjM": {
       "type": "product-page-details",
+      "disabled": true,
       "settings": {
         "heading": "Product Details"
       }
