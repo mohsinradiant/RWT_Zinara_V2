@@ -90,6 +90,18 @@
   width: 100%;
 }
 
+.product-page-details-list_body-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.product-page-details-list_body-product-info img {
+  width: 100%;
+  height: auto;
+}
+
 .product-page-details-list-parent {
   display: flex;
   justify-content: space-between;
