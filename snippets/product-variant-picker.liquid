@@ -65,11 +65,9 @@
               <span class="variant-dropdown-option-name-span"> {{ option.name }}: </span>
               <div class="swatch-label-container">
                 {% for value in option.values %}
-                  {% if value == option.selected_value %}
-                    {% assign is_selected = true %}
-                  {% else %}
-                    {% assign is_selected = false %}
-                  {% endif %}
+                  {% assign is_selected = value == option.selected_value %}
+                  {% assign value_index = forloop.index0 %}
+                  {% assign swatch_data = option.values[value_index].swatch %}
 
                   <label class="swatch-label{% if is_selected %} selected{% endif %}">
                     <input
@@ -81,11 +79,8 @@
                         checked
                       {% endif %}
                     >
-                    <span
-                      data-selected-value
-                      class="dropdown-swatch"
-                    >
-{% render 'swatch', swatch: value, shape: block.settings.swatch_shape %}
+                    <span data-selected-value class="dropdown-swatch">
+                      {% render 'swatch', swatch: swatch_data, shape: block.settings.swatch_shape %}
                     </span>
                   </label>
                 {% endfor %}
