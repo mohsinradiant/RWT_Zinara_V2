@@ -1073,8 +1073,8 @@ display: flex
 .price-breakdown-total {
     font-weight: bold;
     font-size: 16px;
-    border-top: 1px solid #610C27;
-    padding-top: 5px;
+    /* border-top: 1px solid #610C27;
+    padding-top: 5px; */
 }
 
 .remove-item-button img {
