@@ -535,6 +535,7 @@ product-info .price__container span {
     font-weight: 500;
     font-size: 2.4rem;
     letter-spacing: 0;
+    line-height: .8;
 }
 
 .prices-container-subheading {
