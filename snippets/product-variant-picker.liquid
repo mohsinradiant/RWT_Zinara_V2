@@ -81,7 +81,12 @@
                         checked
                       {% endif %}
                     >
-                    {% render 'swatch', swatch: value, shape: block.settings.swatch_shape %}
+                    <span
+                      data-selected-value
+                      class="dropdown-swatch"
+                    >
+                      {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+                    </span>
                   </label>
                 {% endfor %}
               </div>
