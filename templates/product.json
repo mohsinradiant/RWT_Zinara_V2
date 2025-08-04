@@ -71,6 +71,10 @@
             "show_gift_card_recipient": true
           }
         },
+        "price_breakdown_dropdown_EyiwWU": {
+          "type": "price-breakdown-dropdown",
+          "settings": {}
+        },
         "assistance_buttons_NnwHCV": {
           "type": "assistance_buttons",
           "settings": {}
@@ -92,6 +96,7 @@
         "inventory_iiPf7W",
         "description",
         "buy_buttons",
+        "price_breakdown_dropdown_EyiwWU",
         "assistance_buttons_NnwHCV",
         "se_wishlist_engine_product_page_fTBTnd"
       ],
