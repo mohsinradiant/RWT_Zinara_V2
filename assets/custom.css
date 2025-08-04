@@ -862,7 +862,7 @@ display: flex
 }
 
 .pincode-availability-left input::placeholder {
-    color: #71224280;
+    color: #000;
     font-size: 1.4rem;
 }
 
