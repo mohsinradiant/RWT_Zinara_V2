@@ -1710,6 +1710,7 @@ details[open]>.share-button__fallback {
   align-items: center;
   justify-content: end;
   text-align: right;
+  height: fit-content;
 }
 
 /* Field */
