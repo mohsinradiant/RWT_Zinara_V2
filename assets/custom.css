@@ -535,6 +535,7 @@ product-info .price__container span {
     font-weight: 500;
     font-size: 2.4rem;
     letter-spacing: 0;
+    line-height: .8;
 }
 
 .prices-container-subheading {
@@ -676,6 +677,7 @@ product-info variant-selects img {
     text-wrap: nowrap;
     display: flex;
     height: fit-content;
+    padding: 0;
 }
 
 .swatches-wrapper {
@@ -686,13 +688,20 @@ product-info variant-selects img {
 }
 
 .swatch-label-container {
-    display: flex;
+    display: flex
+;
     width: fit-content;
     justify-content: center;
     align-items: center;
     gap: 7px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(0);
 }
-
+.swatch-label.selected .swatch{
+border: 1px solid #610C27;
+    scale: 1.2;}
 .product-form__buttons button {
     display: flex;
     gap: 10px;
