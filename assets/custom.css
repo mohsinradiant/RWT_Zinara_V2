@@ -541,7 +541,7 @@ product-info .price__container span {
 .pdp-brand-usps-container {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     background: #F9F7F9;
     padding: 15px 30px;
 }
