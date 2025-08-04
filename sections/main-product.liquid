@@ -1020,9 +1020,10 @@
                   <div class="product-page-details-container">
                     <div class="product-page-details-parent">
                       <div class="product-page-details-parent-child product-page-details-parent-child_1">
+                        <p class="product-page-details-list_heading">METAL INFO</p>
                         {% for list_1 in product.selected_or_first_available_variant.metafields.content.product_details_list_1_json.value %}
                           <div class="product-page-details-list-container">
-                            <p class="product-page-details-list_heading">METAL INFO</p>
+                            <p class="product-page-details-list_heading">{{ list_1.heading }}</p>
                             {% for list_item_1 in list_1.items %}
                               <div class="product-page-details-list-parent">
                                 <p class="product-page-details-list_title">{{ list_item_1.label }}</p>
@@ -1033,9 +1034,10 @@
                         {% endfor %}
                       </div>
                       <div class="product-page-details-parent-child product-page-details-parent-child_2">
+                        <p class="product-page-details-list_heading">STONE INFO</p>
                         {% for list_2 in product.selected_or_first_available_variant.metafields.content.product_details_list_2_json.value %}
                           <div class="product-page-details-list-container">
-                            <p class="product-page-details-list_heading">STONE INFO</p>
+                            <p class="product-page-details-list_heading">{{ list_2.heading }}</p>
                             {% for list_item_2 in list_2.items %}
                               <div class="product-page-details-list-parent">
                                 <p class="product-page-details-list_title">{{ list_item_2.label }}</p>
@@ -5211,7 +5213,7 @@
       "name": "Price Breakdown Dropdown"
     },
     {
-            "type": "details-dropdown",
+      "type": "details-dropdown",
       "name": "Details Dropdown"
     }
   ],
