@@ -676,6 +676,7 @@ product-info variant-selects img {
     text-wrap: nowrap;
     display: flex;
     height: fit-content;
+    padding: 0;
 }
 
 .swatches-wrapper {
