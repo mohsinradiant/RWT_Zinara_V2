@@ -218,7 +218,7 @@
       ],
       "name": "Zinara Experience Strip",
       "settings": {
-        "heading": "Shop by Metal"
+        "heading": "The Zinara Experience"
       }
     },
     "home_shop_by_category_xRd7wT": {
@@ -267,54 +267,6 @@
       "settings": {
         "heading": "Shop by Occassion",
         "subheading": "Find the perfect piece for every milestone and memory"
-      }
-    },
-    "home_shop_by_category_XPFUnn": {
-      "type": "home-shop_by_category",
-      "blocks": {
-        "block_TyAJxa": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/unsplash_Y_bxfTa_iUA.jpg",
-            "heading": "Under 5k",
-            "url": "shopify://collections/all-rings"
-          }
-        },
-        "block_zgCwV4": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/unsplash_-_12be3InkQ.jpg",
-            "heading": "From 6k to 10k",
-            "url": "shopify://collections/all-earrings"
-          }
-        },
-        "block_Xqcg6e": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/unsplash_D9vqwfE7YGI.jpg",
-            "heading": "From 11k to 15k",
-            "url": "shopify://collections/all-bracelets"
-          }
-        },
-        "block_EVXQRt": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
-            "heading": "From 16k to 20k",
-            "url": "shopify://collections/all-pendants"
-          }
-        }
-      },
-      "block_order": [
-        "block_TyAJxa",
-        "block_zgCwV4",
-        "block_Xqcg6e",
-        "block_EVXQRt"
-      ],
-      "name": "Home Shop by Category",
-      "settings": {
-        "heading": "Gifting by Zinara",
-        "subheading": "Find the perfect gift and delight your loved ones"
       }
     },
     "slideshow_iE63EG": {
@@ -743,6 +695,54 @@
         "button-2": "",
         "url-2": "",
         "image": "shopify://shop_images/try_athome.png"
+      }
+    },
+    "home_shop_by_category_XPFUnn": {
+      "type": "home-shop_by_category",
+      "blocks": {
+        "block_TyAJxa": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_Y_bxfTa_iUA.jpg",
+            "heading": "Under 5k",
+            "url": "shopify://collections/all-rings"
+          }
+        },
+        "block_zgCwV4": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_-_12be3InkQ.jpg",
+            "heading": "From 6k to 10k",
+            "url": "shopify://collections/all-earrings"
+          }
+        },
+        "block_Xqcg6e": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash_D9vqwfE7YGI.jpg",
+            "heading": "From 11k to 15k",
+            "url": "shopify://collections/all-bracelets"
+          }
+        },
+        "block_EVXQRt": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "heading": "From 16k to 20k",
+            "url": "shopify://collections/all-pendants"
+          }
+        }
+      },
+      "block_order": [
+        "block_TyAJxa",
+        "block_zgCwV4",
+        "block_Xqcg6e",
+        "block_EVXQRt"
+      ],
+      "name": "Home Shop by Category",
+      "settings": {
+        "heading": "Gifting by Zinara",
+        "subheading": "Find the perfect gift and delight your loved ones"
       }
     },
     "home_own_design_WDng9w": {
