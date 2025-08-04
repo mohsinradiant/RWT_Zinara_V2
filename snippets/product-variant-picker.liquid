@@ -72,16 +72,28 @@
 
                   {%- assign value_index = forloop.index0 -%}
                   {%- assign swatch_data = option.values[value_index].swatch -%}
+                  {%- capture input_id -%}
+                    {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
+                  {%- endcapture -%}
+                  {%- capture input_name -%}
+                    {{ option.name }}-{{ option.position }}
+                  {%- endcapture -%}
+                  {%- capture input_dataset -%}
+                    data-product-url="{{ value.product_url }}"
+                    data-option-value-id="{{ value.id }}"
+                  {%- endcapture -%}
 
                   <label class="swatch-label{% if is_selected %} selected{% endif %}">
                     <input
                       type="radio"
-                      name="options[{{ option.name | escape }}]"
+                      id="{{ input_id }}"
+                      name="{{ input_name | escape }}"
                       value="{{ value | escape }}"
                       form="{{ product_form_id }}"
                       {% if is_selected %}
                         checked
                       {% endif %}
+                      {{ input_dataset }}
                     >
                     <span data-selected-value class="dropdown-swatch">
                       {% render 'swatch', swatch: swatch_data, shape: block.settings.swatch_shape %}
