@@ -1260,12 +1260,14 @@ header .menu-drawer {
 }
 
 .assisstance_buttons_images_container a {
-    text-decoration: none;
     width: calc(50% - 5px);
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 400;
-    color: #610C27;
+    color: #610c27;
+    border: solid 1px #610c27;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .assistance_button_heading {
