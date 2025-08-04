@@ -117,16 +117,16 @@
                     show_badges: false,
                     price_class: 'price--large'
                   -%}
-                  <div class="price-breakdown-container">
+                  {% comment %} <div class="price-breakdown-container">
                     <span>Price Breakdown</span>
                     <img
                       src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_20.png?v=1744182823"
                       alt="Dropdown Icon"
                       class="price-breakdown-icon"
                     >
-                  </div>
+                  </div> {% endcomment %}
                 </div>
-                <div class="price-breakdown-popup" id="popup">
+                {% comment %} <div class="price-breakdown-popup" id="popup">
                   {% assign selected_variant_id = request.query.variant %}
                   {% assign selected_variant = product.variants | where: 'id', selected_variant_id | first %}
                   {% if selected_variant == null %}
@@ -192,7 +192,7 @@
                   </ul>
 
                   <div class="price-breakdown-close-btn">Close</div>
-                </div>
+                </div> {% endcomment %}
 
                 <div id="overlay" style="display:none;"></div>
 
