@@ -691,6 +691,10 @@ product-info variant-selects img {
     justify-content: center;
     align-items: center;
     gap: 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
 }
 
 .product-form__buttons button {
