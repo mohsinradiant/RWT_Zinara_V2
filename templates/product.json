@@ -182,8 +182,65 @@
         "tab_qjzXCB",
         "tab_bHJ89y"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Benefits"
+      }
+    },
+    "zinara_experience_strip_6YExDg": {
+      "type": "zinara_experience_strip",
+      "blocks": {
+        "block_R8twqf": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_28.png",
+            "heading": "Lifetime buyback & exchange",
+            "subheading": "We offer lifetime buyback and exchange on all Zinara orders"
+          }
+        },
+        "block_FGVLDx": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_29.png",
+            "heading": "IGI/SGL certified",
+            "subheading": "All our grown diamonds are IGI/SGL certified ensuring top quality"
+          }
+        },
+        "block_yPz4fU": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_30.png",
+            "heading": "BIS Hallmarked Gold",
+            "subheading": "We use BIS Hallmarked Gold for all our products"
+          }
+        },
+        "block_acUzEf": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_31.png",
+            "heading": "Try at home",
+            "subheading": "We’re happy to help you with virtual an in-home trials"
+          }
+        },
+        "block_RVANR4": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Vector_32.png",
+            "heading": "Insured & free shipping",
+            "subheading": "All your orders and delivered free of cost and are insured"
+          }
+        }
+      },
+      "block_order": [
+        "block_R8twqf",
+        "block_FGVLDx",
+        "block_yPz4fU",
+        "block_acUzEf",
+        "block_RVANR4"
+      ],
+      "name": "Zinara Experience Strip",
+      "settings": {
+        "heading": "The Zinara Experience"
       }
     },
     "pdp_image_carousel_76BdGX": {
@@ -423,6 +480,7 @@
     "main",
     "product_page_details_8y4AjM",
     "home_benefits_BJVbVJ",
+    "zinara_experience_strip_6YExDg",
     "pdp_image_carousel_76BdGX",
     "1738792743f5d3661f",
     "pdp_tryathome_FpgbpJ",
