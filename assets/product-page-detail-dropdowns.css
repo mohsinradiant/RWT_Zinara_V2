@@ -67,7 +67,7 @@
 }
 
 .product-page-details-container p {
-  margin: 0;
+  margin: 0 !important;
   color: black;
   letter-spacing: 0;
   font-weight: 400;
