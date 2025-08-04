@@ -558,6 +558,16 @@ product-info .price__container span {
     width: auto;
 }
 
+.pdp-brand-usp-block hr {
+    display: flex;
+    border: none;
+    height: 30px;
+    width: 1px;
+    background: #00000050;
+    margin: 0;
+    padding: 0;
+}
+
 .pdp-brand-usp-text {
     text-align: center;
     color: #000;
