@@ -1355,7 +1355,9 @@ sticky-header {
 }
 
 @media(max-width:756px) {
-
+.header-extra-menus{
+    padding: 0;
+}
     #main-collection-filters .facets-container facet-filters-form .facets__form-vertical #FacetsWrapperDesktop {
         overflow-x: auto !important;
     }
