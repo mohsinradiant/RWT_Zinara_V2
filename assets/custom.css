@@ -57,6 +57,7 @@ slideshow-component .slideshow {
 
 .header__search .link {
     text-decoration: none !important;
+    width: fit-content;
 }
 
 .header__icon--search .svg-wrapper {
@@ -1355,6 +1356,29 @@ sticky-header {
 }
 
 @media(max-width:756px) {
+    .price-breakdown-container {
+        margin-top: 30px;
+    }
+
+    .pdp-brand-usp-text {
+        font-size: 1.1rem;
+
+    }
+
+    .pdp-brand-usps-container {
+        padding: 15px 10px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
+    .variant-dropdown-option-name-span,
+    product-info variant-selects select {
+        font-size: 1.5rem !important;
+    }
+
+    .header-extra-menus {
+        padding: 0;
+    }
 
     #main-collection-filters .facets-container facet-filters-form .facets__form-vertical #FacetsWrapperDesktop {
         overflow-x: auto !important;
@@ -1380,8 +1404,12 @@ sticky-header {
 }
 
 @media (max-width: 756px) {
+    .main-product_text-style_caption {
+        font-size: 1.6rem;
+    }
+
     product-info .product__title h1 {
-        font-size: 1.4rem;
+        font-size: 2.5rem;
     }
 
     product-info .price__container span {
@@ -1697,7 +1725,7 @@ sticky-header {
 
     header .header__search {
         display: block;
-        width: fit-content !important;
+        /* width: fit-content !important; */
     }
 
     header .header__icon--search {

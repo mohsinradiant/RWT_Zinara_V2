@@ -30,6 +30,7 @@
     text-align: center;
     letter-spacing: 0;
     margin-bottom: 60px;
+    margin-top: 60px;
     letter-spacing: 0;
   }
   .home-shop_by_metal-section-heading {
@@ -96,6 +97,35 @@
   .home-shop_by_metal-block .btn span svg {
     width: 100%;
     height: 100%;
+  }
+  @media (max-width: 756px) {
+    .home-shop_by_metal-section-heading {
+      font-size: 2.5rem;
+    }
+    .home-shop_by_metal-section-subheading {
+      font-size: 1.75rem;
+      width: 90%;
+    }
+    .home-shop_by_metal-section {
+      align-items: center;
+      justify-content: center;
+    }
+    .home-shop_by_metal-section-blocks_container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .home-shop_by_metal-block {
+      width: 65%;
+    }
+    .home-shop_by_metal-block-subheading {
+      font-size: 1.5rem;
+      margin: 5px 0 12px;
+    }
+    .home-shop_by_metal-block .btn {
+      font-size: 1.6rem;
+      margin-top: 0;
+    }
   }
 </style>
 {% schema %}

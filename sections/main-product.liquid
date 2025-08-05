@@ -2835,14 +2835,20 @@
               .product__info-container .product__title {
                 order: 1;
               }
-              .product__info-container .product__info-container-price-container {
+              .main-product_text-style_caption {
                 order: 2;
               }
-              .product__info-container .price-breakdown-popup {
+              .product__info-container .product__info-container-price-container {
                 order: 3;
+                margin-top: 10px;
               }
+              // .product__info-container .price-breakdown-popup {
+              //   order: 3;
+              // }
               .product__info-container .product-features-badges-container {
                 order: 4;
+                margin-top: 6px;
+                margin-bottom: 6px;
               }
               .product__info-container .product__description-container {
                 order: 5;
@@ -2850,15 +2856,17 @@
               }
               .product__info-container variant-selects {
                 order: 6;
-                overflow-x: auto;
-                flex-wrap: nowrap;
                 width: 100%;
                 gap: 13px;
+                flex-direction: column;
               }
-              .product__info-container .product__inventory {
+              .pdp-brand-usps-container {
                 order: 7;
-                margin-top: 0;
               }
+              // .product__info-container .product__inventory {
+              //   order: 7;
+              //   margin-top: 0;
+              // }
               .product__info-container .product-form__input--dropdown {
                 flex: unset;
               }
@@ -2877,9 +2885,18 @@
                 order: 11;
                 margin-bottom: 0;
               }
-              .product__info-container .assistance_buttons_container {
+              .price-breakdown-container {
                 order: 12;
-                margin-top: 35px;
+              }
+              .price-breakdown-popup {
+                order: 13;
+              }
+              .product__info-container .assistance_buttons_container {
+                order: 14;
+                margin-top: 30px;
+              }
+              .product-page-details-container {
+                order: 15;
               }
               .assistance_button_heading {
                 font-size: 1.4rem;
@@ -2972,9 +2989,9 @@
                 line-height: 2rem !important;
                 margin: 0 !important;
               }
-              .product__info-container .product-form__input .select {
-                width: fit-content;
-              }
+              // .product__info-container .product-form__input .select {
+              //   width: fit-content;
+              // }
               .product__info-container .product__description {
                 width: fit-content;
               }
