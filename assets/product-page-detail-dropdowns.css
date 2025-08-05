@@ -202,6 +202,7 @@
 
 @media (max-width: 756px) {
   .product-page-details-container {
+    margin-top: 30px;
     margin-bottom: 30px;
   }
 }
