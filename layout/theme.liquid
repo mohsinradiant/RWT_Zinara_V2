@@ -916,7 +916,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
                 const loginUrl = `/account/login?return_url=${encodeURIComponent(videoTrialUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(videoTrialUrl)}`;
                 window.location.href = loginUrl;
               } else {
-                window.location.href = videoTrialUrl;
+                showVideoTrialForm();
               }
             });
 
@@ -928,9 +928,74 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
                 window.location.href = tryAtHomeUrl;
               }
             });
+                    }
+
+          // Video Trial Form Popup
+          function showVideoTrialForm() {
+            const modal = document.getElementById('videoTrialFormModal');
+            if (modal) {
+              modal.style.display = 'flex';
+            }
           }
-      
-             // Button submit logic
+
+          function hideVideoTrialForm() {
+            const modal = document.getElementById('videoTrialFormModal');
+            if (modal) {
+              modal.style.display = 'none';
+              // Reset form
+              document.getElementById('videoTrialName').value = '';
+              document.getElementById('videoTrialMobile').value = '';
+            }
+          }
+
+          function submitVideoTrialForm() {
+            const name = document.getElementById('videoTrialName').value.trim();
+            const mobile = document.getElementById('videoTrialMobile').value.trim();
+            const pincode = localStorage.getItem('user_tryathomepincode') || '';
+            
+            if (!name || !mobile) {
+              alert('Please fill in both name and mobile number.');
+              return;
+            }
+
+            if (mobile.length !== 10 || !/^\d+$/.test(mobile)) {
+              alert('Please enter a valid 10-digit mobile number.');
+              return;
+            }
+
+            // Store data in Google Sheet
+            const formData = {
+              name: name,
+              mobile: mobile,
+              pincode: pincode,
+              pincodeAvailable: validPincodes.includes(pincode) ? 'Available' : 'Not Available',
+              timestamp: new Date().toISOString(),
+              productHandle: '{{ product.handle }}'
+            };
+
+            // Send to Google Apps Script
+            fetch('https://script.google.com/macros/s/YOUR_GOOGLE_APPS_SCRIPT_ID/exec', {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData)
+            })
+            .then(() => {
+              // Proceed with video trial booking
+              const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
+              window.location.href = videoTrialUrl;
+            })
+            .catch((error) => {
+              console.error('Error submitting form:', error);
+              // Still proceed with video trial booking even if sheet storage fails
+              const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
+              window.location.href = videoTrialUrl;
+            });
+          }
+
+          // Button submit logic
              function handlePincodeCheck() {
           submitButton.addEventListener('click', () => {
             const zipcode = zipcodeInput.value.trim();
@@ -1408,6 +1473,179 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
     });
   });
 </script>
+
+    {% comment %} Video Trial Form Modal {% endcomment %}
+    <div id="videoTrialFormModal" class="video-trial-modal" style="display: none;">
+      <div class="video-trial-modal-content">
+        <div class="video-trial-modal-header">
+          <h3>Book Video Trial</h3>
+          <button class="video-trial-close-btn" onclick="hideVideoTrialForm()">&times;</button>
+        </div>
+        <div class="video-trial-modal-body">
+          <p>Please provide your details to proceed with the video trial booking.</p>
+          <form id="videoTrialForm" onsubmit="event.preventDefault(); submitVideoTrialForm();">
+            <div class="form-group">
+              <label for="videoTrialName">Full Name *</label>
+              <input type="text" id="videoTrialName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="videoTrialMobile">Mobile Number *</label>
+              <input type="tel" id="videoTrialMobile" required placeholder="Enter 10-digit mobile number" maxlength="10">
+            </div>
+            <div class="form-actions">
+              <button type="button" class="cancel-btn" onclick="hideVideoTrialForm()">Cancel</button>
+              <button type="submit" class="proceed-btn">Proceed with Booking</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .video-trial-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .video-trial-modal-content {
+        background: white;
+        border-radius: 8px;
+        padding: 0;
+        max-width: 500px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .video-trial-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px 0 20px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .video-trial-modal-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .video-trial-close-btn {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .video-trial-close-btn:hover {
+        color: #333;
+      }
+
+      .video-trial-modal-body {
+        padding: 20px;
+      }
+
+      .video-trial-modal-body p {
+        margin-bottom: 20px;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+
+      .form-group input:focus {
+        outline: none;
+        border-color: #007cba;
+        box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
+      }
+
+      .form-actions {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-end;
+        margin-top: 30px;
+      }
+
+      .cancel-btn, .proceed-btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .cancel-btn {
+        background-color: #f8f9fa;
+        color: #666;
+        border: 1px solid #ddd;
+      }
+
+      .cancel-btn:hover {
+        background-color: #e9ecef;
+      }
+
+      .proceed-btn {
+        background-color: #007cba;
+        color: white;
+      }
+
+      .proceed-btn:hover {
+        background-color: #005a8b;
+      }
+
+      @media (max-width: 768px) {
+        .video-trial-modal-content {
+          width: 95%;
+          margin: 20px;
+        }
+        
+        .form-actions {
+          flex-direction: column;
+        }
+        
+        .cancel-btn, .proceed-btn {
+          width: 100%;
+        }
+      }
+    </style>
 
     {% comment %} Whatsapp Floater {% endcomment %}
     <script
