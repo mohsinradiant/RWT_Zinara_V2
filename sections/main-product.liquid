@@ -3423,27 +3423,43 @@
     }
 
     // Handle redirection using provided pincode
-    function handleDirectRedirect(zipcode) {
-      const tryAtHomeUrl = `/pages/try-at-home?view=try-at-home&product_handle={{ product.handle }}`;
-      const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
+function handleDirectRedirect(zipcode) {
+  const tryAtHomeUrl = `/pages/try-at-home?view=try-at-home&product_handle={{ product.handle }}`;
+  const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
 
-      if (!isLoggedIn()) {
-        const targetUrl = validPincodes.includes(zipcode) ? tryAtHomeUrl : videoTrialUrl;
-        const loginUrl = `/account/login?return_url=${encodeURIComponent(targetUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(targetUrl)}`;
-        window.location.href = loginUrl;
-        return;
-      }
+  if (!isLoggedIn()) {
+    const targetUrl = validPincodes.includes(zipcode) ? tryAtHomeUrl : videoTrialUrl;
+    const loginUrl = `/account/login?return_url=${encodeURIComponent(targetUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(targetUrl)}`;
+    window.location.href = loginUrl;
+    return;
+  }
 
-      if (validPincodes.includes(zipcode)) {
-        res.textContent = 'Available';
-        res.className = 'try-at-home-pincode-result available';
-        window.location.href = tryAtHomeUrl;
-      } else {
-        res.textContent = 'Pincode Not Available';
-        res.className = 'try-at-home-pincode-result unavailable';
-        window.location.href = videoTrialUrl;
-      }
-    }
+  // Show buttons instead of redirecting
+  res.innerHTML = '';
+  res.className = 'try-at-home-pincode-result available';
+
+  const videoBtn = document.createElement('button');
+  videoBtn.textContent = 'Video Trial';
+  videoBtn.className = 'video-trial-btn';
+  videoBtn.addEventListener('click', () => {
+    window.location.href = videoTrialUrl;
+  });
+
+  res.appendChild(videoBtn);
+
+  if (validPincodes.includes(zipcode)) {
+    const homeBtn = document.createElement('button');
+    homeBtn.textContent = 'Home Trial';
+    homeBtn.className = 'home-trial-btn';
+    homeBtn.addEventListener('click', () => {
+      window.location.href = tryAtHomeUrl;
+    });
+
+    res.appendChild(homeBtn);
+  } else {
+    res.classList.add('unavailable');
+  }
+}
 
     // ✨ MODIFIED: Enhanced togglePopup logic to check for global pincode
     function togglePopup(buttonId) {
