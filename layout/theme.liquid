@@ -1615,16 +1615,17 @@ margin-bottom: 20px;
 
       .form-group input:focus {
         outline: none;
-        border-color: #007cba;
+        border-color: #712242;
         box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
       }
 
       .form-actions {
-        display: flex;
-        gap: 12px;
-        justify-content: flex-end;
-        margin-top: 30px;
-      }
+display: flex
+;
+    gap: 12px;
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    width: 100%;      }
 
       .cancel-btn, .proceed-btn {
         padding: 12px 24px;
@@ -1647,12 +1648,12 @@ margin-bottom: 20px;
       }
 
       .proceed-btn {
-        background-color: #007cba;
+        background-color: #712242;
         color: white;
       }
 
       .proceed-btn:hover {
-        background-color: #005a8b;
+        background-color: #712242;
       }
 
       @media (max-width: 768px) {
