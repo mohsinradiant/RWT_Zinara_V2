@@ -1356,9 +1356,14 @@ sticky-header {
 }
 
 @media(max-width:756px) {
-.header-extra-menus{
-    padding: 0;
-}
+    .variant-dropdown-option-name-span, product-info variant-selects select {
+        font-size: 1.5rem !important;
+    }
+
+    .header-extra-menus {
+        padding: 0;
+    }
+
     #main-collection-filters .facets-container facet-filters-form .facets__form-vertical #FacetsWrapperDesktop {
         overflow-x: auto !important;
     }
@@ -1383,9 +1388,10 @@ sticky-header {
 }
 
 @media (max-width: 756px) {
-    .main-product_text-style_caption{
+    .main-product_text-style_caption {
         font-size: 1.6rem;
     }
+
     product-info .product__title h1 {
         font-size: 2.5rem;
     }
