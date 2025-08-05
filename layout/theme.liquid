@@ -970,13 +970,13 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             };
 
             // Send to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxgmwJsoh9ZxczCQqJxC4topXUmIHuxn3RJal4ZmS6Yyve1pS8K8pGXhjGers2fbppifA/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbyktaxk_Xz7vsUUARUfVVG5mN_NhKDpZzCadRiOgky53YVCK6vZDt1xMOYHVGVi4SKKAg/exec', {
               method: 'POST',
               mode: 'no-cors',
               headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
               },
-              body: JSON.stringify(formData)
+              body: 'data=' + encodeURIComponent(JSON.stringify(formData))
             })
             .then(() => {
               // Proceed with video trial booking
