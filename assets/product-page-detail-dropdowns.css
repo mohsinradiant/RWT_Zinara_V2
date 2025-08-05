@@ -191,20 +191,12 @@
     gap: 10px;
   }
 
-  .product-page-details-list-container {
-    width: fit-content;
-  }
-
   .product-page-details-list-parent {
     gap: 100px;
   }
 
   .product-page-details-parent-child {
     overflow-x: auto;
-  }
-
-  .product-page-details-list-container {
-    min-width: 310px;
   }
 }
 
