@@ -20,7 +20,7 @@
     </div>
   </div>
 </section>
-{% if template == 'products' %}
+{% if template contains 'product' %}
   <style>
     @media (max-width: 756px) {
       .zinara_experience-section {
@@ -29,6 +29,7 @@
     }
   </style>
 {% endif %}
+
 <style>
   .zinara_experience-section {
     text-align: center;
