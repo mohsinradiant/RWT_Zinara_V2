@@ -476,9 +476,9 @@ document.getElementById('cart-icon-bubble').addEventListener('click', async func
 
 
   {% if template == 'index' %}
-  <div class="mobile-search">
+  {% comment %} <div class="mobile-search">
     {% render 'header-search', input_id: 'Search-In-Modal' %}
-  </div>
+  </div> {% endcomment %}
   {% endif %}
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
