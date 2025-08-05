@@ -1500,9 +1500,9 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
 
     {% comment %} Video Trial Form Modal {% endcomment %}
     <div id="videoTrialFormModal" class="video-trial-modal" style="display: none;">
-      <div class="video-trial-modal-content">
+      <div class="try-at-home-pincode-popup">
         <div class="video-trial-modal-header">
-          <h3>Book Video Trial</h3>
+          <h3 class="try-at-home-title">Book Video Trial</h3>
           <button class="video-trial-close-btn" onclick="hideVideoTrialForm()">&times;</button>
         </div>
         <div class="video-trial-modal-body">
@@ -1554,83 +1554,79 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 20px 0 20px;
         border-bottom: 1px solid #eee;
       }
 
-      .video-trial-modal-header h3 {
-        margin: 0;
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #333;
-      }
-
       .video-trial-close-btn {
-        background: none;
         border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: #666;
         padding: 0;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+            background: none;
+    font-size: 4rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 0;
+    color: #712242;
       }
 
       .video-trial-close-btn:hover {
         color: #333;
       }
 
-      .video-trial-modal-body {
-        padding: 20px;
-      }
-
       .video-trial-modal-body p {
-        margin-bottom: 20px;
-        color: #666;
-        font-size: 0.9rem;
-      }
+margin-top: 13px;
+margin-bottom: 20px;
+    color: #000;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    text-align: left;
+    line-height: 1.9rem;      }
 
       .form-group {
-        margin-bottom: 20px;
-      }
+    margin-bottom: 20px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    letter-spacing: 0;      }
 
       .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 500;
-        color: #333;
-      }
+    display: block;
+    font-weight: 400;
+    font-family: var(--font-heading-family);
+    color: #000;
+    font-size: 1.6rem;
+    margin: 0;      }
 
       .form-group input {
         width: 100%;
         padding: 12px;
         border: 1px solid #ddd;
         border-radius: 4px;
-        font-size: 1rem;
+        font-size: 1.4rem;
         box-sizing: border-box;
       }
 
       .form-group input:focus {
         outline: none;
-        border-color: #007cba;
+        border-color: #712242;
         box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
       }
 
       .form-actions {
-        display: flex;
-        gap: 12px;
-        justify-content: flex-end;
-        margin-top: 30px;
-      }
+display: flex
+;
+    gap: 12px;
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    width: 100%;      }
 
       .cancel-btn, .proceed-btn {
         padding: 12px 24px;
         border: none;
         border-radius: 4px;
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-weight: 500;
         cursor: pointer;
         transition: all 0.2s ease;
@@ -1647,22 +1643,18 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
       }
 
       .proceed-btn {
-        background-color: #007cba;
+        background-color: #712242;
         color: white;
       }
 
       .proceed-btn:hover {
-        background-color: #005a8b;
+        background-color: #712242;
       }
 
       @media (max-width: 768px) {
         .video-trial-modal-content {
           width: 95%;
           margin: 20px;
-        }
-        
-        .form-actions {
-          flex-direction: column;
         }
         
         .cancel-btn, .proceed-btn {
