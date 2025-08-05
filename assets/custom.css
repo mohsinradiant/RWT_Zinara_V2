@@ -1357,10 +1357,14 @@ sticky-header {
 
 @media(max-width:756px) {
     .pdp-brand-usp-text {
-    font-size: 1.1rem;
-}
+        font-size: 1.1rem;
+
+    }
+
     .pdp-brand-usps-container {
         padding: 15px 10px;
+        margin-bottom: 30px;
+        margin-top: 10px;
     }
 
     .variant-dropdown-option-name-span,
