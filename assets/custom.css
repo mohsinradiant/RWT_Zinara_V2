@@ -1699,7 +1699,7 @@ sticky-header {
 
     header .header__search {
         display: block;
-        width: fit-content !important;
+        /* width: fit-content !important; */
     }
 
     header .header__icon--search {
