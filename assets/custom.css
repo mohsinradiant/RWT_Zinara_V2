@@ -1356,7 +1356,12 @@ sticky-header {
 }
 
 @media(max-width:756px) {
-    .variant-dropdown-option-name-span, product-info variant-selects select {
+    .pdp-brand-usps-container {
+        padding: 15px 10px;
+    }
+
+    .variant-dropdown-option-name-span,
+    product-info variant-selects select {
         font-size: 1.5rem !important;
     }
 
