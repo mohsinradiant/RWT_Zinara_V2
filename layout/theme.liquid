@@ -829,7 +829,8 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
   localStorage.setItem('user_tryathomepincode', window.globalTryAtHomePincode);
   console.log(window.globalTryAtHomePincode);
   overlay.style.display = 'flex';
-  showTrialButtons(window.globalTryAtHomePincode);
+              showTrialButtons(window.globalTryAtHomePincode);
+            handleTrialButtonClicks();
 } else {
   overlay.style.display = 'flex';
   lastClickedButton = 'try-at-home';
@@ -995,6 +996,12 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             });
           }
 
+          // Make functions globally accessible
+          window.showVideoTrialForm = showVideoTrialForm;
+          window.hideVideoTrialForm = hideVideoTrialForm;
+          window.submitVideoTrialForm = submitVideoTrialForm;
+          window.handleTrialButtonClicks = handleTrialButtonClicks;
+
           // Button submit logic
              function handlePincodeCheck() {
           submitButton.addEventListener('click', () => {
@@ -1011,6 +1018,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             console.log(window.globalTryAtHomePincode);
       
             showTrialButtons(zipcode); // Show buttons instead of direct redirect
+            handleTrialButtonClicks();
           });
              }
              // Only allow digits in input
