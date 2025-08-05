@@ -959,7 +959,14 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
               return;
             }
 
-            // Store data in Google Sheet
+            // Create a hidden form and submit it
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'https://script.google.com/macros/s/AKfycbz2tCwZV4OzdRrABXwva6vMlXvJbLzANcVhvwSrN_wvLjidq6zqRr5KCaSi8O5VzAlWrg/exec';
+            form.target = '_blank';
+            form.style.display = 'none';
+
+            // Add form data
             const formData = {
               name: name,
               mobile: mobile,
@@ -969,36 +976,25 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
               productHandle: '{{ product.handle }}'
             };
 
-            // Send to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbz2tCwZV4OzdRrABXwva6vMlXvJbLzANcVhvwSrN_wvLjidq6zqRr5KCaSi8O5VzAlWrg/exec', {
-              method: 'POST',
-              mode: 'no-cors',
-              headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-              },
-              body: 'data=' + encodeURIComponent(JSON.stringify(formData))
-            })
-            .then(() => {
-              // Proceed with video trial booking
-              const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
-              if (!isLoggedIn()) {
-                const loginUrl = `/account/login?return_url=${encodeURIComponent(videoTrialUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(videoTrialUrl)}`;
-                window.location.href = loginUrl;
-              } else {
-                window.location.href = videoTrialUrl;
-              }
-            })
-            .catch((error) => {
-              console.error('Error submitting form:', error);
-              // Still proceed with video trial booking even if sheet storage fails
-              const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
-              if (!isLoggedIn()) {
-                const loginUrl = `/account/login?return_url=${encodeURIComponent(videoTrialUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(videoTrialUrl)}`;
-                window.location.href = loginUrl;
-              } else {
-                window.location.href = videoTrialUrl;
-              }
-            });
+            const dataInput = document.createElement('input');
+            dataInput.type = 'hidden';
+            dataInput.name = 'data';
+            dataInput.value = JSON.stringify(formData);
+            form.appendChild(dataInput);
+
+            // Add form to page and submit
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+
+            // Proceed with video trial booking
+            const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
+            if (!isLoggedIn()) {
+              const loginUrl = `/account/login?return_url=${encodeURIComponent(videoTrialUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(videoTrialUrl)}`;
+              window.location.href = loginUrl;
+            } else {
+              window.location.href = videoTrialUrl;
+            }
           }
 
           // Make functions globally accessible
