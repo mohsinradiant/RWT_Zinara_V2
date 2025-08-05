@@ -1502,7 +1502,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
     <div id="videoTrialFormModal" class="video-trial-modal" style="display: none;">
       <div class="video-trial-modal-content">
         <div class="video-trial-modal-header">
-          <h3>Book Video Trial</h3>
+          <h3 class="try-at-home-title">Book Video Trial</h3>
           <button class="video-trial-close-btn" onclick="hideVideoTrialForm()">&times;</button>
         </div>
         <div class="video-trial-modal-body">
@@ -1566,17 +1566,15 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
       }
 
       .video-trial-close-btn {
-        background: none;
         border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: #666;
         padding: 0;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+            background: none;
+    font-size: 4rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 0;
+    color: #712242;
       }
 
       .video-trial-close-btn:hover {
