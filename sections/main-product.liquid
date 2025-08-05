@@ -3423,41 +3423,27 @@
     }
 
     // Handle redirection using provided pincode
-function handleDirectRedirect(zipcode) {
-  const tryAtHomeUrl = `/pages/try-at-home?view=try-at-home&product_handle={{ product.handle }}`;
-  const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
+    function handleDirectRedirect(zipcode) {
+      const tryAtHomeUrl = `/pages/try-at-home?view=try-at-home&product_handle={{ product.handle }}`;
+      const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
 
-  res.innerHTML = '';
-  res.className = 'try-at-home-pincode-result';
+      if (!isLoggedIn()) {
+        const targetUrl = validPincodes.includes(zipcode) ? tryAtHomeUrl : videoTrialUrl;
+        const loginUrl = `/account/login?return_url=${encodeURIComponent(targetUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(targetUrl)}`;
+        window.location.href = loginUrl;
+        return;
+      }
 
-  const showButton = (text, url) => {
-    const btn = document.createElement('button');
-    btn.textContent = text;
-    btn.className = 'trial-btn';
-    btn.addEventListener('click', () => {
-      const finalRedirectUrl = isLoggedIn()
-        ? url
-        : `/account/login?return_url=${encodeURIComponent(url)}&kp_login=true&kp_redirect=${encodeURIComponent(url)}`;
-      window.location.href = finalRedirectUrl;
-    });
-    res.appendChild(btn);
-  };
-
-  // Always show Video Trial
-  showButton('Video Trial', videoTrialUrl);
-
-  // Show Home Trial only for allowed pincodes
-  if (validPincodes.includes(zipcode)) {
-    res.classList.add('available');
-    showButton('Home Trial', tryAtHomeUrl);
-  } else {
-    res.classList.add('unavailable');
-    const msg = document.createElement('p');
-    msg.textContent = 'Home trial not available for this pincode.';
-    res.appendChild(msg);
-  }
-}
-
+      if (validPincodes.includes(zipcode)) {
+        res.textContent = 'Available';
+        res.className = 'try-at-home-pincode-result available';
+        window.location.href = tryAtHomeUrl;
+      } else {
+        res.textContent = 'Pincode Not Available';
+        res.className = 'try-at-home-pincode-result unavailable';
+        window.location.href = videoTrialUrl;
+      }
+    }
 
     // ✨ MODIFIED: Enhanced togglePopup logic to check for global pincode
     function togglePopup(buttonId) {
