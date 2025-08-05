@@ -959,11 +959,17 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
               return;
             }
 
+            // Create a hidden iframe for silent submission
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.name = 'hidden-iframe';
+            document.body.appendChild(iframe);
+
             // Create a hidden form and submit it
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = 'https://script.google.com/macros/s/AKfycbwXlP51gPGbGDWFnPGCa82BufYzqE8l-ImOF5sVriuCvYk4msBvksIQhk2cBdCX6HQwHw/exec';
-            form.target = '_blank';
+            form.target = 'hidden-iframe';
             form.style.display = 'none';
 
             // Add form data
@@ -985,7 +991,16 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             // Add form to page and submit
             document.body.appendChild(form);
             form.submit();
-            document.body.removeChild(form);
+            
+            // Remove form and iframe after a short delay
+            setTimeout(() => {
+              if (document.body.contains(form)) {
+                document.body.removeChild(form);
+              }
+              if (document.body.contains(iframe)) {
+                document.body.removeChild(iframe);
+              }
+            }, 1000);
 
             // Proceed with video trial booking
             const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
