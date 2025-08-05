@@ -57,6 +57,7 @@ slideshow-component .slideshow {
 
 .header__search .link {
     text-decoration: none !important;
+    width: fit-content;
 }
 
 .header__icon--search .svg-wrapper {
