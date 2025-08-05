@@ -899,6 +899,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
               // Show both buttons for valid pincodes
               res.textContent = 'Available - Choose your trial option';
               res.className = 'try-at-home-pincode-result available';
+              homeTrialBtn.style.display = 'block'; // Ensure home trial button is visible
               buttonsContainer.style.display = 'flex';
             } else {
               // Show only video trial for invalid pincodes
