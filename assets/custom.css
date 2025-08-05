@@ -1356,6 +1356,10 @@ sticky-header {
 }
 
 @media(max-width:756px) {
+    .price-breakdown-container {
+        margin-top: 30px;
+    }
+
     .pdp-brand-usp-text {
         font-size: 1.1rem;
 
