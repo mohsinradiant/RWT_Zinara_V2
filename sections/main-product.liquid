@@ -3552,6 +3552,7 @@
         if (globalPin && pincodeRegex.test(globalPin)) {
           zipcodeInput.value = globalPin; // For consistency
           localStorage.setItem('user_tryathomepincode', globalPin);
+          overlay.style.display = 'flex'; // Show popup first
           showTrialButtons(globalPin);
         } else {
           overlay.style.display = 'flex'; // Show popup if no valid global pin
