@@ -3112,6 +3112,22 @@
       Check Availability
     </button>
     <div id="tryAtHomeRes" class="try-at-home-pincode-result"></div>
+    <div id="tryAtHomeButtons" class="try-at-home-buttons" style="display: none;">
+      <button
+        id="videoTrialBtn"
+        type="button"
+        class="try-at-home-trial-button video-trial-button"
+      >
+        Video Trial
+      </button>
+      <button
+        id="homeTrialBtn"
+        type="button"
+        class="try-at-home-trial-button home-trial-button"
+      >
+        Home Trial
+      </button>
+    </div>
   </div>
 </div>
 <style>
@@ -3230,6 +3246,34 @@
   .try-at-home-pincode-result.unavailable {
     color: orange;
   }
+
+  /* Trial buttons container */
+  .try-at-home-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+   /* Trial buttons */
+        .try-at-home-trial-button {
+          background: transparent;
+          color: #712242;
+          padding: 12px 20px;
+          border: solid 1px #712242;
+          border-radius: 4px;
+          font-size: 1.4rem;
+          cursor: pointer;
+          width: 100%;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        }
+
+        .try-at-home-trial-button:hover {
+          background: #712242;
+          color: #fff;
+        }
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -3445,6 +3489,53 @@
       }
     }
 
+    // New function to show trial buttons after pincode check
+    function showTrialButtons(zipcode) {
+      const buttonsContainer = document.getElementById('tryAtHomeButtons');
+      const videoTrialBtn = document.getElementById('videoTrialBtn');
+      const homeTrialBtn = document.getElementById('homeTrialBtn');
+      
+      if (validPincodes.includes(zipcode)) {
+        // Show both buttons for valid pincodes
+        res.textContent = 'Available - Choose your trial option';
+        res.className = 'try-at-home-pincode-result available';
+        homeTrialBtn.style.display = 'block'; // Ensure home trial button is visible
+        buttonsContainer.style.display = 'flex';
+      } else {
+        // Show only video trial for invalid pincodes
+        res.textContent = 'Pincode Not Available - Video Trial Only';
+        res.className = 'try-at-home-pincode-result unavailable';
+        homeTrialBtn.style.display = 'none';
+        buttonsContainer.style.display = 'flex';
+      }
+    }
+
+    // Handle trial button clicks
+    function handleTrialButtonClicks() {
+      const videoTrialBtn = document.getElementById('videoTrialBtn');
+      const homeTrialBtn = document.getElementById('homeTrialBtn');
+      const tryAtHomeUrl = `/pages/try-at-home?view=try-at-home&product_handle={{ product.handle }}`;
+      const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
+
+      videoTrialBtn.addEventListener('click', () => {
+        if (!isLoggedIn()) {
+          const loginUrl = `/account/login?return_url=${encodeURIComponent(videoTrialUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(videoTrialUrl)}`;
+          window.location.href = loginUrl;
+        } else {
+          window.location.href = videoTrialUrl;
+        }
+      });
+
+      homeTrialBtn.addEventListener('click', () => {
+        if (!isLoggedIn()) {
+          const loginUrl = `/account/login?return_url=${encodeURIComponent(tryAtHomeUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(tryAtHomeUrl)}`;
+          window.location.href = loginUrl;
+        } else {
+          window.location.href = tryAtHomeUrl;
+        }
+      });
+    }
+
     // ✨ MODIFIED: Enhanced togglePopup logic to check for global pincode
     function togglePopup(buttonId) {
       document.getElementById(buttonId).addEventListener('click', () => {
@@ -3453,23 +3544,36 @@
 
         // ✨ If valid global pincode exists, use it directly
         if (globalPin && pincodeRegex.test(globalPin)) {
-  zipcodeInput.value = globalPin; // For consistency
-  localStorage.setItem('user_tryathomepincode', globalPin);
-  handleDirectRedirect(globalPin);
-} else {
-  overlay.style.display = 'flex'; // Show popup if no valid global pin
-  lastClickedButton = buttonId;
-}
+          zipcodeInput.value = globalPin; // For consistency
+          localStorage.setItem('user_tryathomepincode', globalPin);
+          overlay.style.display = 'flex'; // Show popup first
+          showTrialButtons(globalPin);
+        } else {
+          overlay.style.display = 'flex'; // Show popup if no valid global pin
+          lastClickedButton = buttonId;
+        }
 
       });
 
       closeButton.addEventListener('click', () => {
         overlay.style.display = 'none';
+        // Reset the form when closing
+        zipcodeInput.value = '';
+        res.textContent = '';
+        res.className = 'try-at-home-pincode-result';
+        document.getElementById('tryAtHomeButtons').style.display = 'none';
+        document.getElementById('homeTrialBtn').style.display = 'block';
       });
 
       overlay.addEventListener('click', (e) => {
         if (!pincodePopup.contains(e.target)) {
           overlay.style.display = 'none';
+          // Reset the form when closing
+          zipcodeInput.value = '';
+          res.textContent = '';
+          res.className = 'try-at-home-pincode-result';
+          document.getElementById('tryAtHomeButtons').style.display = 'none';
+          document.getElementById('homeTrialBtn').style.display = 'block';
         }
       });
     }
@@ -3486,8 +3590,8 @@
           return;
         }
 
-       localStorage.setItem('user_tryathomepincode', zipcode);
-        handleDirectRedirect(zipcode); // Reuse same logic
+        localStorage.setItem('user_tryathomepincode', zipcode);
+        showTrialButtons(zipcode); // Show buttons instead of direct redirect
       });
     }
 
@@ -3536,6 +3640,7 @@
 
     initializeButton('tryAtHomeButton', true);
     handlePincodeCheck();
+    handleTrialButtonClicks();
   });
 </script>
 <script>

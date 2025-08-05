@@ -453,6 +453,22 @@
             Check Availability
           </button>
           <div id="tryAtHomeRes_2" class="try-at-home-pincode-result"></div>
+          <div id="tryAtHomeButtons_2" class="try-at-home-buttons" style="display: none;">
+            <button
+              id="videoTrialBtn_2"
+              type="button"
+              class="try-at-home-trial-button video-trial-button"
+            >
+              Video Trial
+            </button>
+            <button
+              id="homeTrialBtn_2"
+              type="button"
+              class="try-at-home-trial-button home-trial-button"
+            >
+              Home Trial
+            </button>
+          </div>
         </div>
       </div>
       <style>
@@ -570,6 +586,34 @@
 
         .try-at-home-pincode-result.unavailable {
           color: orange;
+        }
+
+        /* Trial buttons container */
+        .try-at-home-buttons {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        /* Trial buttons */
+        .try-at-home-trial-button {
+          background: transparent;
+          color: #712242;
+          padding: 12px 20px;
+          border: solid 1px #712242;
+          border-radius: 4px;
+          font-size: 1.4rem;
+          cursor: pointer;
+          width: 100%;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        }
+
+        .try-at-home-trial-button:hover {
+          background: #712242;
+          color: #fff;
         }
       </style>
       <script>
@@ -771,7 +815,7 @@
                     }
                   function togglePopup() {
             const tryAtHomeLinks = document.querySelectorAll(
-              '.c-menu2 a[href*="experience-the-product"], .menu-drawer__navigation .menu-item #HeaderDrawer-try-at-home, #tryAtHomeButton'
+              '.c-menu3 a[href*="try-at-home"], .menu-drawer__navigation .menu-item #HeaderDrawer-try-at-home, #tryAtHomeButton'
             );
 
             tryAtHomeLinks.forEach((link) => {
@@ -783,7 +827,8 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
   zipcodeInput.value = window.globalTryAtHomePincode;
   localStorage.setItem('user_tryathomepincode', window.globalTryAtHomePincode);
   console.log(window.globalTryAtHomePincode);
-  handleDirectRedirect(window.globalTryAtHomePincode);
+  overlay.style.display = 'flex';
+  showTrialButtons(window.globalTryAtHomePincode);
 } else {
   overlay.style.display = 'flex';
   lastClickedButton = 'try-at-home';
@@ -794,11 +839,23 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
 
             closeButton.addEventListener('click', () => {
               overlay.style.display = 'none';
+              // Reset the form when closing
+              zipcodeInput.value = '';
+              res.textContent = '';
+              res.className = 'try-at-home-pincode-result';
+              document.getElementById('tryAtHomeButtons_2').style.display = 'none';
+              document.getElementById('homeTrialBtn_2').style.display = 'block';
             });
 
             overlay.addEventListener('click', (e) => {
               if (!pincodePopup.contains(e.target)) {
                 overlay.style.display = 'none';
+                // Reset the form when closing
+                zipcodeInput.value = '';
+                res.textContent = '';
+                res.className = 'try-at-home-pincode-result';
+                document.getElementById('tryAtHomeButtons_2').style.display = 'none';
+                document.getElementById('homeTrialBtn_2').style.display = 'block';
               }
             });
           }
@@ -824,6 +881,53 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             window.location.href = videoTrialUrl;
           }
              }
+
+          // New function to show trial buttons after pincode check
+          function showTrialButtons(zipcode) {
+            const buttonsContainer = document.getElementById('tryAtHomeButtons_2');
+            const videoTrialBtn = document.getElementById('videoTrialBtn_2');
+            const homeTrialBtn = document.getElementById('homeTrialBtn_2');
+            
+            if (validPincodes.includes(zipcode)) {
+              // Show both buttons for valid pincodes
+              res.textContent = 'Available - Choose your trial option';
+              res.className = 'try-at-home-pincode-result available';
+              homeTrialBtn.style.display = 'block'; // Ensure home trial button is visible
+              buttonsContainer.style.display = 'flex';
+            } else {
+              // Show only video trial for invalid pincodes
+              res.textContent = 'Pincode Not Available - Video Trial Only';
+              res.className = 'try-at-home-pincode-result unavailable';
+              homeTrialBtn.style.display = 'none';
+              buttonsContainer.style.display = 'flex';
+            }
+          }
+
+          // Handle trial button clicks
+          function handleTrialButtonClicks() {
+            const videoTrialBtn = document.getElementById('videoTrialBtn_2');
+            const homeTrialBtn = document.getElementById('homeTrialBtn_2');
+            const tryAtHomeUrl = `/pages/try-at-home?view=try-at-home&product_handle={{ product.handle }}`;
+            const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
+
+            videoTrialBtn.addEventListener('click', () => {
+              if (!isLoggedIn()) {
+                const loginUrl = `/account/login?return_url=${encodeURIComponent(videoTrialUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(videoTrialUrl)}`;
+                window.location.href = loginUrl;
+              } else {
+                window.location.href = videoTrialUrl;
+              }
+            });
+
+            homeTrialBtn.addEventListener('click', () => {
+              if (!isLoggedIn()) {
+                const loginUrl = `/account/login?return_url=${encodeURIComponent(tryAtHomeUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(tryAtHomeUrl)}`;
+                window.location.href = loginUrl;
+              } else {
+                window.location.href = tryAtHomeUrl;
+              }
+            });
+          }
       
              // Button submit logic
              function handlePincodeCheck() {
@@ -840,7 +944,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             localStorage.setItem('user_tryathomepincode', zipcode);
             console.log(window.globalTryAtHomePincode);
       
-            handleDirectRedirect(zipcode); // Reuse same logic for consistency
+            showTrialButtons(zipcode); // Show buttons instead of direct redirect
           });
              }
              // Only allow digits in input
@@ -893,6 +997,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
              // Initialize for button
              initializeButton('tryAtHomeButton', true);
              handlePincodeCheck(); // Global listener
+             handleTrialButtonClicks(); // Initialize trial button handlers
                  });
       </script>
       <script>
