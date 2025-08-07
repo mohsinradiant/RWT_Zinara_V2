@@ -1,20 +1,27 @@
-<section class="page-width 2_blocks_grid-section-container">
+<section class="page-width two_blocks_grid-section-container">
   {% for block in section.blocks %}
-    <div class="2_blocks_grid-section">
-      <div class="2_blocks_grid-section-left">
+    <div class="two_blocks_grid-section">
+      <div class="two_blocks_grid-section-left">
         <h2 class="section-heading">{{ block.settings.heading }}</h2>
         <p>{{ block.settings.sub_heading }}</p>
         <div>
           <a href="{{ block.settings.url_1 }}">{{ block.settings.button_1 }}</a>
         </div>
       </div>
-      <div class="2_blocks_grid-section-right">
+      <div class="two_blocks_grid-section-right">
         <img src="{{ block.settings.image | img_url: 'master' }}" alt="Try at Home">
       </div>
     </div>
   {% endfor %}
 </section>
-<style></style>
+<style>
+  .two_blocks_grid-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+</style>
 {% schema %}
 {
   "name": "2 Blocks Grid",
