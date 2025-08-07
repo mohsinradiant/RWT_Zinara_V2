@@ -1805,9 +1805,11 @@ sticky-header {
     }
 
     .home-try-at-home-section-left {
-        gap: 10px !important;
-        width: 57% !important;
-    }
+gap: 10px !important;
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;    }
 
     .home-try-at-home-section-left a {
         padding: 9px 28px !important;
