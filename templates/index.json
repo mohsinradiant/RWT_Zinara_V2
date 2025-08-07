@@ -398,6 +398,26 @@
       ],
       "settings": {}
     },
+    "2_blocks_grid_qTWRJf": {
+      "type": "2_blocks_grid",
+      "blocks": {
+        "content_hN3MHT": {
+          "type": "content",
+          "settings": {
+            "heading": "Home Trials?",
+            "sub_heading": "Try Zinara at the comfort of your home.",
+            "button_1": "Try at home",
+            "url_1": "",
+            "image": "shopify://shop_images/003b7591afc3ce03c0175b826f442893b21542a8.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "content_hN3MHT"
+      ],
+      "name": "2 Blocks Grid",
+      "settings": {}
+    },
     "home_shop_by_category_jmQhfR": {
       "type": "home-shop-by-category",
       "blocks": {
@@ -993,25 +1013,6 @@
         "padding_top": 52,
         "padding_bottom": 0
       }
-    },
-    "2_blocks_grid_qTWRJf": {
-      "type": "2_blocks_grid",
-      "blocks": {
-        "content_hN3MHT": {
-          "type": "content",
-          "settings": {
-            "heading": "Get your own design",
-            "sub_heading": "Have another design in mind? Something from a website or a magazine perhaps?",
-            "button_1": "Start Designing",
-            "url_1": ""
-          }
-        }
-      },
-      "block_order": [
-        "content_hN3MHT"
-      ],
-      "name": "2 Blocks Grid",
-      "settings": {}
     }
   },
   "order": [
