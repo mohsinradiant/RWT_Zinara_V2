@@ -531,7 +531,7 @@ header .header__search {
     text-decoration: none;
     color: #fff;
     padding: 12px 60px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     transition: all ease-in 0.3s;
     cursor: pointer;
 }
@@ -1901,10 +1901,6 @@ sticky-header {
 
     #shopify-section-template--24203645747384__collapsible_content_8wA47G .accordion h3 {
         font-family: "Montserrat", sans-serif !important;
-    }
-
-    .home-try-at-home-section-left a {
-        font-size: 1.4rem !important;
     }
 
     .testimonial-carousel-arrow {
