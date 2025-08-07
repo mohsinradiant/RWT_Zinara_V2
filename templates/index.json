@@ -130,51 +130,6 @@
         "button": "Shop now"
       }
     },
-    "home_shop_by_metal_D9mhyD": {
-      "type": "home-shop_by_metal",
-      "blocks": {
-        "block_V4cPai": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/unsplash_pjrPWwwYx1I.jpg",
-            "heading": "Experience our Gold Jewellery",
-            "subheading": "18k BIS Hallmarked Gold",
-            "button": "Shop now",
-            "url": "shopify://collections/daily-hustle"
-          }
-        },
-        "block_rHyewm": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/unsplash_UBeNYvk6ED0.jpg",
-            "heading": "Experience Silver & Gold Jewellery",
-            "subheading": "Silver with 18k gold plated ornaments",
-            "button": "Shop now",
-            "url": "shopify://collections/daily-hustle"
-          }
-        },
-        "block_yTytmE": {
-          "type": "block",
-          "settings": {
-            "image": "shopify://shop_images/unsplash_TSHxee81Ris.jpg",
-            "heading": "Experience our Solitaire Collection",
-            "subheading": "Comes with silver and 18k gold options",
-            "button": "Shop now",
-            "url": "shopify://collections/daily-hustle"
-          }
-        }
-      },
-      "block_order": [
-        "block_V4cPai",
-        "block_rHyewm",
-        "block_yTytmE"
-      ],
-      "name": "Home Shop by Metal",
-      "settings": {
-        "heading": "Shop by Metal",
-        "subheading": "Metal that works for you and makes you feel perfect"
-      }
-    },
     "home_shop_by_category_e99mpQ": {
       "type": "home-shop_by_category",
       "blocks": {
@@ -232,58 +187,50 @@
         "subheading": "Experience best in class lab-grown diamonds and gold, and silver jewellery"
       }
     },
-    "home_image_gallery_carousel_73c7Ep": {
-      "type": "home-image_gallery-carousel",
+    "home_shop_by_metal_D9mhyD": {
+      "type": "home-shop_by_metal",
       "blocks": {
-        "image_picker_wrD7jz": {
-          "type": "image_picker",
+        "block_V4cPai": {
+          "type": "block",
           "settings": {
-            "image": "shopify://shop_images/banner_2_1_47f8f9aa-14f9-47f3-92a3-916f21a1a0b3.png",
-            "alt_text": "Carousel Image",
-            "url": "shopify://collections/under-20k"
+            "image": "shopify://shop_images/unsplash_pjrPWwwYx1I.jpg",
+            "heading": "Experience our Gold Jewellery",
+            "subheading": "18k BIS Hallmarked Gold",
+            "button": "Shop now",
+            "url": "shopify://collections/daily-hustle"
           }
         },
-        "image_picker_gtLymc": {
-          "type": "image_picker",
+        "block_rHyewm": {
+          "type": "block",
           "settings": {
-            "image": "shopify://shop_images/banner_2_2.png",
-            "alt_text": "Carousel Image",
-            "url": "shopify://collections/office-wear-collection"
+            "image": "shopify://shop_images/unsplash_UBeNYvk6ED0.jpg",
+            "heading": "Experience Silver & Gold Jewellery",
+            "subheading": "Silver with 18k gold plated ornaments",
+            "button": "Shop now",
+            "url": "shopify://collections/daily-hustle"
           }
         },
-        "image_picker_zN3d8M": {
-          "type": "image_picker",
+        "block_yTytmE": {
+          "type": "block",
           "settings": {
-            "image": "shopify://shop_images/banner_2_3.png",
-            "alt_text": "Carousel Image",
-            "url": "shopify://collections/home-trial"
-          }
-        },
-        "image_picker_8FC4jK": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify://shop_images/banner_2_4.png",
-            "alt_text": "Carousel Image",
-            "url": "shopify://collections/solitaire-collection"
-          }
-        },
-        "image_picker_rwCCJA": {
-          "type": "image_picker",
-          "disabled": true,
-          "settings": {
-            "alt_text": "Carousel Image",
-            "url": ""
+            "image": "shopify://shop_images/unsplash_TSHxee81Ris.jpg",
+            "heading": "Experience our Solitaire Collection",
+            "subheading": "Comes with silver and 18k gold options",
+            "button": "Shop now",
+            "url": "shopify://collections/daily-hustle"
           }
         }
       },
       "block_order": [
-        "image_picker_wrD7jz",
-        "image_picker_gtLymc",
-        "image_picker_zN3d8M",
-        "image_picker_8FC4jK",
-        "image_picker_rwCCJA"
+        "block_V4cPai",
+        "block_rHyewm",
+        "block_yTytmE"
       ],
-      "settings": {}
+      "name": "Home Shop by Metal",
+      "settings": {
+        "heading": "Shop by Metal",
+        "subheading": "Metal that works for you and makes you feel perfect"
+      }
     },
     "zinara_experience_strip_GDHYPh": {
       "type": "zinara_experience_strip",
@@ -397,6 +344,59 @@
         "heading": "Shop by Occassion",
         "subheading": "Find the perfect piece for every milestone and memory"
       }
+    },
+    "home_image_gallery_carousel_73c7Ep": {
+      "type": "home-image_gallery-carousel",
+      "blocks": {
+        "image_picker_wrD7jz": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_1_47f8f9aa-14f9-47f3-92a3-916f21a1a0b3.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/under-20k"
+          }
+        },
+        "image_picker_gtLymc": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_2.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/office-wear-collection"
+          }
+        },
+        "image_picker_zN3d8M": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_3.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/home-trial"
+          }
+        },
+        "image_picker_8FC4jK": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify://shop_images/banner_2_4.png",
+            "alt_text": "Carousel Image",
+            "url": "shopify://collections/solitaire-collection"
+          }
+        },
+        "image_picker_rwCCJA": {
+          "type": "image_picker",
+          "disabled": true,
+          "settings": {
+            "alt_text": "Carousel Image",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_wrD7jz",
+        "image_picker_gtLymc",
+        "image_picker_zN3d8M",
+        "image_picker_8FC4jK",
+        "image_picker_rwCCJA"
+      ],
+      "settings": {}
     },
     "home_shop_by_category_jmQhfR": {
       "type": "home-shop-by-category",
@@ -703,18 +703,6 @@
         "heading": "Zinara Benefits"
       }
     },
-    "home_tryathome_UAw34q": {
-      "type": "home-tryathome",
-      "settings": {
-        "heading": "Want to see designs personally?",
-        "sub-heading": "Try designs at home if you're in Delhi NCR - or book a virtual consultation from anywhere else!",
-        "button-1": "Try at Home",
-        "url-1": "shopify://collections/home-trial",
-        "button-2": "",
-        "url-2": "",
-        "image": "shopify://shop_images/try_athome.png"
-      }
-    },
     "home_shop_by_category_XPFUnn": {
       "type": "home-shop_by_category",
       "blocks": {
@@ -780,6 +768,19 @@
         "button-1": "Start Designing",
         "url-1": "/pages/get-your-own-design?view=own-design",
         "image": "shopify://shop_images/jewellery_design.png"
+      }
+    },
+    "home_tryathome_UAw34q": {
+      "type": "home-tryathome",
+      "disabled": true,
+      "settings": {
+        "heading": "Want to see designs personally?",
+        "sub-heading": "Try designs at home if you're in Delhi NCR - or book a virtual consultation from anywhere else!",
+        "button-1": "Try at Home",
+        "url-1": "shopify://collections/home-trial",
+        "button-2": "",
+        "url-2": "",
+        "image": "shopify://shop_images/try_athome.png"
       }
     },
     "home_testimonials_iX3QWY": {
@@ -987,17 +988,17 @@
   "order": [
     "slideshow_iE63EG",
     "home_hero_DNAti7",
-    "home_shop_by_metal_D9mhyD",
     "home_shop_by_category_e99mpQ",
-    "home_image_gallery_carousel_73c7Ep",
+    "home_shop_by_metal_D9mhyD",
     "zinara_experience_strip_GDHYPh",
     "home_shop_by_category_xRd7wT",
+    "home_image_gallery_carousel_73c7Ep",
     "home_shop_by_category_jmQhfR",
     "home_shop_by_occasion_WePWCL",
     "home_benefits_pbKiTY",
-    "home_tryathome_UAw34q",
     "home_shop_by_category_XPFUnn",
     "home_own_design_WDng9w",
+    "home_tryathome_UAw34q",
     "home_testimonials_iX3QWY",
     "home_about_hDMerC",
     "collapsible_content_AU8NGL"
