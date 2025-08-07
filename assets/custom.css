@@ -1810,7 +1810,9 @@ gap: 10px !important;
         justify-content: center;
         align-items: center;
         text-align: center;    }
-
+.home-try-at-home-section-right::after{
+    opacity: .5;
+}
     .home-try-at-home-section-left a {
         padding: 9px 28px !important;
     }
