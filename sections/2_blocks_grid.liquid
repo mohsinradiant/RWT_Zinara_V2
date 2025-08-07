@@ -60,6 +60,27 @@
     padding: 13px 35px;
     font-size: 1.4rem;
   }
+  @media (max-width: 756px) {
+    .two_blocks_grid-section-container {
+      flex-direction: column;
+    }
+    .two_blocks_grid-section {
+      width: 100%;
+      flex-direction: column;
+      position: relative;
+    }
+    .two_blocks_grid-section-right {
+      position: relative;
+      width: 100%;
+    }
+    .two_blocks_grid-section-left {
+      padding: 40px;
+      text-align: center;
+    }
+    .two_blocks_grid-section-left h2 {
+      text-align: center !important;
+    }
+  }
 </style>
 {% schema %}
 {
