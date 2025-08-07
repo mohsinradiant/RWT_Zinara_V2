@@ -133,14 +133,7 @@
                 {{- 'products.product.sold_out' | t -}}
               </span>
             {%- endif -%}
-            {%- if card_product.price < card_product.compare_at_price -%}
-              <span
-                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
-                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-              >
-                Sale
-              </span>
-            {%- endif -%}
+
             {%- assign has_inventory = false -%}
             {%- for variant in card_product.variants -%}
               {%- if variant.inventory_quantity > 0 -%}
@@ -148,6 +141,15 @@
                 {%- break -%}
               {%- endif -%}
             {%- endfor -%}
+
+            {%- if card_product.price < card_product.compare_at_price and has_inventory == false -%}
+              <span
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+              >
+                Sale
+              </span>
+            {%- endif -%}
 
             {%- if has_inventory -%}
               <span
