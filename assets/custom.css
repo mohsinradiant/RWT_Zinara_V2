@@ -622,7 +622,7 @@ product-info .price__container span {
     font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 0;
-    margin-bottom: 25px;
+    margin-bottom: .7rem;
 }
 
 .price__container {
