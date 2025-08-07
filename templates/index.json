@@ -375,13 +375,22 @@
             "heading": "Gifting",
             "url": "shopify://collections/all-pendants"
           }
+        },
+        "block_Qa9ty6": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "heading": "Gifting",
+            "url": "shopify://collections/all-pendants"
+          }
         }
       },
       "block_order": [
         "block_iDp34K",
         "block_46988k",
         "block_aiiqNM",
-        "block_EcmD49"
+        "block_EcmD49",
+        "block_Qa9ty6"
       ],
       "name": "Home Shop by Category",
       "settings": {
