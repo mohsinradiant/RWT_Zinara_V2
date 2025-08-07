@@ -1002,13 +1002,12 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
               }
             }, 1000);
 
-            // Proceed with video trial booking
-            const videoTrialUrl = `/pages/video-trial?view=video-trial&product_handle={{ product.handle }}`;
-            if (!isLoggedIn()) {
-              const loginUrl = `/account/login?return_url=${encodeURIComponent(videoTrialUrl)}&kp_login=true&kp_redirect=${encodeURIComponent(videoTrialUrl)}`;
-              window.location.href = loginUrl;
-            } else {
-              window.location.href = videoTrialUrl;
+            // Show thank you message instead of redirecting
+            const formElement = document.getElementById('videoTrialForm');
+            const thankYouElement = document.getElementById('videoTrialThankYou');
+            if (formElement && thankYouElement) {
+              formElement.style.display = 'none';
+              thankYouElement.style.display = 'block';
             }
           }
 
@@ -1521,6 +1520,9 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
               <button type="submit" class="proceed-btn">Proceed with Booking</button>
             </div>
           </form>
+          <div id="videoTrialThankYou" style="display:none; text-align:center; padding: 30px 0; font-size: 1.5rem; color: #2e7d32; font-weight: 600;">
+            THANK YOU! Your request has been submitted successfully.<br>We'll contact you shortly.
+          </div>
         </div>
       </div>
     </div>
