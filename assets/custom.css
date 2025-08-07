@@ -94,13 +94,16 @@ header .header__search {
 .section-heading,
 .collapsible-content__heading,
 .jdgm-rev-widg__title {
-    text-align: left !important;
+    /* text-align: left !important; */
     margin-bottom: 40px !important;
     margin-top: 0 !important;
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
     font-weight: 500 !important;
 }
 
+.section-heading {
+    text-align: center !important;
+}
 
 .related-products__heading {
     text-align: center !important;
@@ -177,10 +180,10 @@ header .header__search {
 }
 
 .home-try-at-home-section-left p {
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin: 0;
-    color: #000;
-    line-height: 3rem;
+    color: #fff;
+    line-height: 1.5rem;
     width: 90%;
     font-weight: 400;
 }
@@ -425,15 +428,15 @@ header .header__search {
     font-family: "Montserrat", sans-serif !important;
     font-weight: 500;
     letter-spacing: 0;
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 .collapsible-content__grid .accordion p {
     font-family: "Montserrat", sans-serif !important;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 2rem;
-    font-size: 1.6rem;
+    line-height: 1.7rem;
+    font-size: 1.4rem;
 }
 
 .collection-hero__text-wrapper {
@@ -451,13 +454,14 @@ header .header__search {
 }
 
 .home-try-at-home-section-container {
-    background-color: #f4eeeb;
-    padding: 30px 0 !important;
     margin: 50px 0;
+    overflow: hidden;
 }
 
 .home-try-at-home-section-container .section-heading {
     margin: 0 !important;
+    color: #fff;
+    font-size: 2rem;
 }
 
 .pdp-try-at-home-section-container {
@@ -473,6 +477,20 @@ header .header__search {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    padding: 110px 80px;
+}
+.home-try-at-home-section-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.35; /* adjust for transparency */
+  z-index: 1; /* make sure it sits above the background but below the content */
+  pointer-events: none; /* so it doesn't block clicks */
 }
 
 .home-try-at-home-section-left {
@@ -490,10 +508,15 @@ header .header__search {
 }
 
 .home-try-at-home-section-right {
-    width: 30%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
 }
 
 .home-try-at-home-section-right img {
@@ -503,19 +526,19 @@ header .header__search {
 
 
 .home-try-at-home-section-left a {
-    border: solid 2px #610c27;
+    border: solid 2px #fff;
     background: transparent;
     text-decoration: none;
-    color: #610c27;
+    color: #fff;
     padding: 12px 60px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     transition: all ease-in 0.3s;
     cursor: pointer;
 }
 
 .home-try-at-home-section-left a:hover {
-    background: #610c27;
-    color: white;
+    background: #fff;
+    color: #000;
 }
 
 product-info media-gallery {
@@ -1356,6 +1379,10 @@ sticky-header {
 }
 
 @media(max-width:756px) {
+    .home-try-at-home-section{
+        padding: 110px 20px;
+        justify-content: center;
+    }
     .price-breakdown-container {
         margin-top: 30px;
     }
@@ -1415,16 +1442,6 @@ sticky-header {
     product-info .price__container span {
         font-size: 2.3rem !important;
     }
-
-    .collapsible-content__grid .accordion h3 {
-        font-size: 1.4rem;
-    }
-
-    .collapsible-content__grid .accordion p {
-        line-height: 1.7rem;
-        font-size: 1.4rem;
-    }
-
 
     summary .icon-caret {
         top: calc(50% - .5rem);
@@ -1499,7 +1516,7 @@ sticky-header {
     }
 
     .home-try-at-home-section-container {
-        padding: 15px 0 !important;
+        padding: 0 !important;
     }
 
     .product-grid-container facet-filters-form {
@@ -1650,22 +1667,8 @@ sticky-header {
         padding: 6px 0 !important;
     }
 
-    .section-heading,
-    .collapsible-content__heading,
-    .jdgm-rev-widg__title,
-    .related-products__heading {
-        font-size: 2.4rem !important;
-    }
-
     .home-try-at-home-section-left p {
-        font-size: 1.4rem;
         width: 100%;
-        font-weight: 400;
-        line-height: 1.5rem;
-    }
-
-    .home-try-at-home-section-right img {
-        border-radius: 35px 0 35px 0;
     }
 
     .home-try-at-home-section-left div {
@@ -1801,15 +1804,15 @@ sticky-header {
         display: none;
     }
 
-    .home-try-at-home-section-right {
-        width: 41% !important;
-    }
-
     .home-try-at-home-section-left {
-        gap: 10px !important;
-        width: 57% !important;
-    }
-
+gap: 10px !important;
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;    }
+.home-try-at-home-section-right::after{
+    opacity: .5;
+}
     .home-try-at-home-section-left a {
         padding: 9px 28px !important;
     }
@@ -1881,10 +1884,6 @@ sticky-header {
 
     #shopify-section-template--24203645747384__collapsible_content_8wA47G .accordion h3 {
         font-family: "Montserrat", sans-serif !important;
-    }
-
-    .home-try-at-home-section-left a {
-        font-size: 1.4rem !important;
     }
 
     .testimonial-carousel-arrow {
