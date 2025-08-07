@@ -469,7 +469,7 @@
               >
                 <div
                   role="dialog"
-                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
+                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title  | escape | truncate: 15  }}"
                   aria-modal="true"
                   class="quick-add-modal__content quick-add-modal__content--bulk global-settings-popup"
                   tabindex="-1"
