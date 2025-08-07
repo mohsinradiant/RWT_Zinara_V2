@@ -1,35 +1,35 @@
-<section class="page-width home-about-us-container">
+<section class="page-width home-about-us_2-container">
   <h2 class="section-heading">{{ section.settings.heading }}</h2>
-  <div class="home-about-us">
-    <div class="home-about-us-left">
+  <div class="home-about-us_2">
+    <div class="home-about-us_2-left">
       <img src="{{ section.settings.image | image_url }}">
     </div>
-    <div class="home-about-us-right">
+    <div class="home-about-us_2-right">
       <p>{{ section.settings.content }}</p>
     </div>
   </div>
 </section>
 
 <style>
-  .home-about-us {
+  .home-about-us_2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .home-about-us-left {
+  .home-about-us_2-left {
     width: 47%;
     align-items: end;
     display: flex;
   }
-  .home-about-us-left img {
+  .home-about-us_2-left img {
     transition: all 0.3s ease-in;
     cursor: pointer;
     width: 100%;
   }
-  .home-about-us-right {
+  .home-about-us_2-right {
     width: 50%;
   }
-  .home-about-us p {
+  .home-about-us_2 p {
     font-size: 1.6rem;
     margin: 0;
     letter-spacing: 0;
@@ -38,10 +38,14 @@
   }
 
   @media (max-width: 756px) {
-    /* .home-about-us-left img {
+    /* .home-about-us_2-left img {
       width: 100% !important;
     } */
-    .home-about-us p {
+    .home-about-us_2 {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .home-about-us_2 p {
       font-size: 1.4rem;
       margin: 0;
       letter-spacing: 0;
