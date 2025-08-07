@@ -39,7 +39,7 @@ variant-selects {
 }
 
 .product-form__input--dropdown {
-  --swatch-input--size: 2rem;
+  --swatch-input--size: 2.3rem;
   margin-bottom: 1.6rem;
 }
 
