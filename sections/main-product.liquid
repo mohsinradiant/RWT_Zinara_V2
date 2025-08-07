@@ -1103,22 +1103,7 @@
                           >
                         </div>
                         <div class="product-page-details-list_body collapsible product-page-details-list_body-product-info">
-                          <img
-                            src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601469.jpg?v=1754308974"
-                            alt="Product info image 1"
-                            loading="lazy"
-                            width="2048"
-                            height="auto"
-                          >
-                          {% unless product.tags contains 'gold' %}
-                            <img
-                              src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601518.jpg?v=1754308972"
-                              alt="Product info image 2"
-                              loading="lazy"
-                              width="2048"
-                              height="auto"
-                            >
-                          {% endunless %}
+                          <p class="product-description-paragraph">{{ product.description }}</p>
                         </div>
                       </div>
                     </div>
@@ -2808,6 +2793,24 @@
                 </p>
             {%- endcase -%}
           {%- endfor -%}
+          <img
+            src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601469.jpg?v=1754308974"
+            alt="Product info image 1"
+            loading="lazy"
+            width="2048"
+            height="auto"
+            class="product__info-image"
+          >
+          {% unless product.tags contains 'gold' %}
+            <img
+              src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601518.jpg?v=1754308972"
+              alt="Product info image 2"
+              loading="lazy"
+              width="2048"
+              height="auto"
+            class="product__info-image"
+            >
+          {% endunless %}
           <style>
             .truncated-text {
               display: none;
