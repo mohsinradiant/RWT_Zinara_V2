@@ -182,7 +182,7 @@ header .header__search {
 .home-try-at-home-section-left p {
     font-size: 2rem;
     margin: 0;
-    color: #000;
+    color: #fff;
     line-height: 3rem;
     width: 90%;
     font-weight: 400;
@@ -460,6 +460,7 @@ header .header__search {
 
 .home-try-at-home-section-container .section-heading {
     margin: 0 !important;
+    color: #fff;
 }
 
 .pdp-try-at-home-section-container {
