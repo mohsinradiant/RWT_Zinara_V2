@@ -617,7 +617,10 @@ product-info .price__container span {
     letter-spacing: normal;
     font-size: 1.4rem;
 }
-
+.product__info-image{
+    width:100%;
+    height:auto;
+}
 .product-card-specs {
     font-size: 1.4rem;
     font-weight: 400;
