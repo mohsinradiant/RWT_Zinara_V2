@@ -100,7 +100,8 @@ header .header__search {
     font-size: 2.2rem !important;
     font-weight: 500 !important;
 }
-.section-heading{
+
+.section-heading {
     text-align: center !important;
 }
 
@@ -454,6 +455,7 @@ header .header__search {
 
 .home-try-at-home-section-container {
     margin: 50px 0;
+    overflow: hidden;
 }
 
 .home-try-at-home-section-container .section-heading {
@@ -474,6 +476,7 @@ header .header__search {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 110px 80px;
 }
 
 .home-try-at-home-section-left {
@@ -499,6 +502,7 @@ header .header__search {
     left: 0;
     top: 0;
     height: 100%;
+    z-index: -1;
 }
 
 .home-try-at-home-section-right img {
