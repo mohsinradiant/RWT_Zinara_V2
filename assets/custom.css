@@ -968,7 +968,9 @@ body.no-scroll {
     letter-spacing: 0;
     font-family: "Montserrat", sans-serif;
 }
-
+#tryAtHomeOverlay{
+    display: none !important;
+}
 .facets .disclosure-has-popup[open]>summary+* {
     padding: 2rem 3.3rem 2rem 2rem;
 }
