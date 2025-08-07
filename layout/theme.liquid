@@ -1009,6 +1009,11 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
               formElement.style.display = 'none';
               thankYouElement.style.display = 'block';
             }
+            // Use the close button's click handler to hide the popup properly
+            const closeBtn = document.getElementById('tryAtHomeClose_2');
+            if (closeBtn) {
+              closeBtn.click();
+            }
           }
 
           // Make functions globally accessible
@@ -1521,7 +1526,8 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             </div>
           </form>
           <div id="videoTrialThankYou" style="display:none; text-align:center; padding: 30px 0; font-size: 1.5rem; color: #2e7d32; font-weight: 600;">
-            THANK YOU! Your request has been submitted successfully.<br>We'll contact you shortly.
+            <span>THANK YOU! Your request has been submitted successfully.</span><br>
+            <span>We'll contact you shortly.</span>
           </div>
         </div>
       </div>
