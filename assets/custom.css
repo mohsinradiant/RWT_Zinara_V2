@@ -435,8 +435,8 @@ header .header__search {
     font-family: "Montserrat", sans-serif !important;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 2rem;
-    font-size: 1.6rem;
+    line-height: 1.7rem;
+    font-size: 1.4rem;
 }
 
 .collection-hero__text-wrapper {
@@ -1438,12 +1438,6 @@ sticky-header {
     product-info .price__container span {
         font-size: 2.3rem !important;
     }
-
-    .collapsible-content__grid .accordion p {
-        line-height: 1.7rem;
-        font-size: 1.4rem;
-    }
-
 
     summary .icon-caret {
         top: calc(50% - .5rem);
