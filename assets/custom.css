@@ -183,7 +183,7 @@ header .header__search {
     font-size: 1.4rem;
     margin: 0;
     color: #fff;
-    line-height: 3rem;
+    line-height: 1.5rem;
     width: 90%;
     font-weight: 400;
 }
@@ -1681,10 +1681,7 @@ sticky-header {
     }
 
     .home-try-at-home-section-left p {
-        font-size: 1.4rem;
         width: 100%;
-        font-weight: 400;
-        line-height: 1.5rem;
     }
 
     .home-try-at-home-section-right img {
