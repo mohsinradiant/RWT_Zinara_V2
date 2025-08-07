@@ -428,7 +428,7 @@ header .header__search {
     font-family: "Montserrat", sans-serif !important;
     font-weight: 500;
     letter-spacing: 0;
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 .collapsible-content__grid .accordion p {
@@ -1437,10 +1437,6 @@ sticky-header {
 
     product-info .price__container span {
         font-size: 2.3rem !important;
-    }
-
-    .collapsible-content__grid .accordion h3 {
-        font-size: 1.4rem;
     }
 
     .collapsible-content__grid .accordion p {
