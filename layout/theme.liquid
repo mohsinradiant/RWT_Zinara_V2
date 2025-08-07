@@ -1005,6 +1005,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             // Show thank you message instead of redirecting
             const formElement = document.getElementById('videoTrialForm');
             const thankYouElement = document.getElementById('videoTrialThankYou');
+            const instructionPara = document.querySelector('.video-trial-modal-body p');
             if (formElement && thankYouElement) {
               formElement.style.display = 'none';
               thankYouElement.style.display = 'block';
