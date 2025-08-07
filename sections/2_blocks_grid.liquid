@@ -2,14 +2,14 @@
   {% for block in section.blocks %}
     <div class="2_blocks_grid-section">
       <div class="2_blocks_grid-section-left">
-        <h2 class="section-heading">{{ section.settings.heading }}</h2>
-        <p>{{ section.settings['sub-heading'] }}</p>
+        <h2 class="section-heading">{{ block.settings.heading }}</h2>
+        <p>{{ block.settings.sub_heading }}</p>
         <div>
-          <a href="{{section.settings.url-1}}">{{ section.settings['button-1'] }}</a>
+          <a href="{{ block.settings.url_1 }}">{{ block.settings.button_1 }}</a>
         </div>
       </div>
       <div class="2_blocks_grid-section-right">
-        <img src="{{ section.settings.image | img_url: 'master' }}" alt="Try at Home">
+        <img src="{{ block.settings.image | img_url: 'master' }}" alt="Try at Home">
       </div>
     </div>
   {% endfor %}
@@ -18,40 +18,51 @@
 {% schema %}
 {
   "name": "2 Blocks Grid",
-  "settings": [
+  "blocks": [
     {
-      "type": "text",
-      "id": "heading",
-      "label": "Section Heading",
-      "default": "Get your own design"
-    },
-    {
-      "type": "text",
-      "id": "sub-heading",
-      "label": "Sub Heading",
-      "default": "Have another design in mind? Something from a website or a magazine perhaps?"
-    },
-    {
-      "type": "text",
-      "id": "button-1",
-      "label": "Button 1 Text",
-      "default": "Start Designing"
-    },
-    {
-      "type": "url",
-      "id": "url-1",
-      "label": "Button 1 URL"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image"
+      "type": "content",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Section Heading",
+          "default": "Get your own design"
+        },
+        {
+          "type": "text",
+          "id": "sub_heading",
+          "label": "Sub Heading",
+          "default": "Have another design in mind? Something from a website or a magazine perhaps?"
+        },
+        {
+          "type": "text",
+          "id": "button_1",
+          "label": "Button 1 Text",
+          "default": "Start Designing"
+        },
+        {
+          "type": "url",
+          "id": "url_1",
+          "label": "Button 1 URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
     }
   ],
   "presets": [
     {
       "name": "2 Blocks Grid",
-      "category": "Custom"
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "content"
+        }
+      ]
     }
   ]
 }
