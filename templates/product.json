@@ -264,6 +264,7 @@
     },
     "pdp_tryathome_FpgbpJ": {
       "type": "pdp-tryathome",
+      "disabled": true,
       "settings": {
         "heading": "Get your own design",
         "sub-heading": "Have another design in mind? Something from a website or a magazine perhaps?",
@@ -271,6 +272,16 @@
         "url-1": "/pages/get-your-own-design?view=own-design",
         "button-2": "",
         "url-2": "",
+        "image": "shopify://shop_images/jewellery_design.png"
+      }
+    },
+    "home_own_design_99mUA8": {
+      "type": "home-own_design",
+      "settings": {
+        "heading": "Get your own design",
+        "sub-heading": "Have another design in mind? Something from a website or a magazine perhaps?",
+        "button-1": "Start Designing",
+        "url-1": "/pages/get-your-own-design?view=own-design",
         "image": "shopify://shop_images/jewellery_design.png"
       }
     },
@@ -484,6 +495,7 @@
     "zinara_experience_strip_6YExDg",
     "related-products",
     "pdp_tryathome_FpgbpJ",
+    "home_own_design_99mUA8",
     "home_testimonials_zmE9Ch",
     "pdp_image_carousel_76BdGX",
     "1738792743f5d3661f",
