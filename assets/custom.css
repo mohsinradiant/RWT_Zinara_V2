@@ -453,8 +453,6 @@ header .header__search {
 }
 
 .home-try-at-home-section-container {
-    background-color: #f4eeeb;
-    padding: 30px 0 !important;
     margin: 50px 0;
 }
 
@@ -475,6 +473,7 @@ header .header__search {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .home-try-at-home-section-left {
@@ -492,10 +491,14 @@ header .header__search {
 }
 
 .home-try-at-home-section-right {
-    width: 30%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
 }
 
 .home-try-at-home-section-right img {
