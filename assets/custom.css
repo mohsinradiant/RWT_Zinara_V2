@@ -525,10 +525,10 @@ header .header__search {
 
 
 .home-try-at-home-section-left a {
-    border: solid 2px #610c27;
+    border: solid 2px #fff;
     background: transparent;
     text-decoration: none;
-    color: #610c27;
+    color: #fff;
     padding: 12px 60px;
     font-size: 1.6rem;
     transition: all ease-in 0.3s;
@@ -536,8 +536,8 @@ header .header__search {
 }
 
 .home-try-at-home-section-left a:hover {
-    background: #610c27;
-    color: white;
+    background: #fff;
+    color: #fff;
 }
 
 product-info media-gallery {
