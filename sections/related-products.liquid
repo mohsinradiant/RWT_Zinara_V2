@@ -75,7 +75,7 @@
   .related-products .full-unstyled-link {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0;
-    font-size: 1.8rem !important;
+    /* font-size: 1.2rem !important; */
     font-weight: 400;
   }
   .related-products .price__regular .price-item--regular {
@@ -90,12 +90,13 @@
   .related-products .related-products__heading {
     width: 100%;
     margin-bottom: 10px !important;
+    font-size: 2rem;
   }
   .pdp-product-recommendations-ul {
     margin-bottom: 0 !important;
   }
   @media (min-width: 756px) {
-    .pdp-product-recommendations-ul .grid__item:nth-child(n + 4) {
+    .pdp-product-recommendations-ul .grid__item:nth-child(n + 5) {
       opacity: 0;
       visibility: hidden;
       max-height: 0;
@@ -189,7 +190,7 @@
 
         // Initially hide items after the third one
         items.forEach((item, index) => {
-          if (index >= 3) {
+          if (index >= 4) {
             item.classList.add('hidden-item');
           }
         });
@@ -199,7 +200,7 @@
           expanded = !expanded;
 
           items.forEach((item, index) => {
-            if (index >= 3) {
+            if (index >= 4) {
               if (expanded) {
                 item.classList.remove('hidden-item');
                 item.classList.add('visible-item');

@@ -250,7 +250,7 @@
         "heading": "View Similar",
         "heading_size": "h2",
         "products_to_show": 10,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "color_scheme": "scheme-6c93e2fc-3aa7-4682-a176-b96389e5e81e",
         "image_ratio": "square",
         "image_shape": "default",
