@@ -615,14 +615,14 @@ product-info .price__container span {
 .prices-container-subheading {
     font-weight: 400;
     letter-spacing: normal;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .product-card-specs {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 0;
-    margin-bottom: 25px;
+    margin-bottom: .7rem;
 }
 
 .price__container {
@@ -631,11 +631,12 @@ product-info .price__container span {
 
 .collection-hero__title {
     text-wrap: nowrap;
+    font-size: 1.4rem;
 }
 
 .product-info-price-subtitle {
     margin: -7px 0 1rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     letter-spacing: 0;
     font-weight: 400;
 }
@@ -943,7 +944,7 @@ body.no-scroll {
 }
 
 .product-card-wrapper .card__content .full-unstyled-link {
-    font-size: 1.55rem;
+    font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0;
     font-family: "Montserrat", sans-serif;

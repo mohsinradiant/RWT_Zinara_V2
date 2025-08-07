@@ -2833,13 +2833,13 @@
                 flex-direction: column;
               }
               .product__info-container .product__title {
-                order: 1;
-              }
-              .main-product_text-style_caption {
                 order: 2;
               }
-              .product__info-container .product__info-container-price-container {
+              .main-product_text-style_caption {
                 order: 3;
+              }
+              .product__info-container .product__info-container-price-container {
+                order: 1;
                 margin-top: 10px;
               }
               // .product__info-container .price-breakdown-popup {
@@ -3113,7 +3113,7 @@
     </button>
     <div id="tryAtHomeRes" class="try-at-home-pincode-result"></div>
     <div id="tryAtHomeButtons" class="try-at-home-buttons" style="display: none;">
-          <button
+      <button
         id="homeTrialBtn"
         type="button"
         class="try-at-home-trial-button home-trial-button"
@@ -3127,7 +3127,6 @@
       >
         Book a Video Trial
       </button>
-
     </div>
   </div>
 </div>
@@ -3256,25 +3255,25 @@
     gap: 10px;
   }
 
-   /* Trial buttons */
-        .try-at-home-trial-button {
-          background: transparent;
-          color: #712242;
-          padding: 12px 20px;
-          border: solid 1px #712242;
-          border-radius: 4px;
-          font-size: 1.4rem;
-          cursor: pointer;
-          width: 100%;
-          font-family: "Montserrat", sans-serif;
-          font-weight: 600;
-          transition: all 0.3s ease;
-        }
+  /* Trial buttons */
+  .try-at-home-trial-button {
+    background: transparent;
+    color: #712242;
+    padding: 12px 20px;
+    border: solid 1px #712242;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
 
-        .try-at-home-trial-button:hover {
-          background: #712242;
-          color: #fff;
-        }
+  .try-at-home-trial-button:hover {
+    background: #712242;
+    color: #fff;
+  }
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {

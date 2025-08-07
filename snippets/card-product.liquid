@@ -120,7 +120,7 @@
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
               >
-                {{ card_product.title | escape }}
+                {{ card_product.title | escape | truncate: 25 }}
               </a>
             </h3>
           </div>
@@ -133,14 +133,7 @@
                 {{- 'products.product.sold_out' | t -}}
               </span>
             {%- endif -%}
-            {%- if card_product.price < card_product.compare_at_price -%}
-              <span
-                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
-                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
-              >
-                Sale
-              </span>
-            {%- endif -%}
+
             {%- assign has_inventory = false -%}
             {%- for variant in card_product.variants -%}
               {%- if variant.inventory_quantity > 0 -%}
@@ -148,6 +141,15 @@
                 {%- break -%}
               {%- endif -%}
             {%- endfor -%}
+
+            {%- if card_product.price < card_product.compare_at_price and has_inventory == false -%}
+              <span
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+              >
+                Sale
+              </span>
+            {%- endif -%}
 
             {%- if has_inventory -%}
               <span
@@ -208,7 +210,9 @@
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
             {% if card_product.metafields.custom.product_card_specs_caption != null %}
-              <p class="product-card-specs">Available in: {{ card_product.metafields.custom.product_card_specs_caption }}</p>
+              <p class="product-card-specs">
+                Available in: {{ card_product.metafields.custom.product_card_specs_caption }}
+              </p>
             {% endif %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
@@ -304,7 +308,7 @@
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
-              {{ card_product.title | escape }}
+              {{ card_product.title | escape | truncate: 25 }}
             </a>
           </h3>
         </div>
@@ -340,7 +344,7 @@
               <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
                 <div
                   role="dialog"
-                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
+                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title  | escape | truncate: 25  }}"
                   aria-modal="true"
                   class="quick-add-modal__content global-settings-popup"
                   tabindex="-1"
@@ -467,7 +471,7 @@
               >
                 <div
                   role="dialog"
-                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
+                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title  | escape | truncate: 25  }}"
                   aria-modal="true"
                   class="quick-add-modal__content quick-add-modal__content--bulk global-settings-popup"
                   tabindex="-1"
