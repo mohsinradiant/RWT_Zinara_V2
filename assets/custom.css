@@ -1667,10 +1667,6 @@ sticky-header {
         width: 100%;
     }
 
-    .home-try-at-home-section-right img {
-        border-radius: 35px 0 35px 0;
-    }
-
     .home-try-at-home-section-left div {
         margin-top: 5px !important;
     }
@@ -1802,10 +1798,6 @@ sticky-header {
 
     .home-try-at-home-section-left a:nth-of-type(2) {
         display: none;
-    }
-
-    .home-try-at-home-section-right {
-        width: 41% !important;
     }
 
     .home-try-at-home-section-left {
