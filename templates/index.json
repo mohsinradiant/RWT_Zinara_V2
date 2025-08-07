@@ -209,13 +209,22 @@
             "heading": "Necklaces",
             "url": "shopify://collections/all-pendants"
           }
+        },
+        "block_gny7Ck": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "heading": "Necklaces",
+            "url": "shopify://collections/all-pendants"
+          }
         }
       },
       "block_order": [
         "block_Q64Dq8",
         "block_3E6Knd",
         "block_bmUtTt",
-        "block_mMAQRU"
+        "block_mMAQRU",
+        "block_gny7Ck"
       ],
       "name": "Home Shop by Category",
       "settings": {
@@ -731,13 +740,22 @@
             "heading": "From 16k to 20k",
             "url": "shopify://collections/all-pendants"
           }
+        },
+        "block_BmXN7H": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "heading": "From 16k to 20k",
+            "url": "shopify://collections/all-pendants"
+          }
         }
       },
       "block_order": [
         "block_TyAJxa",
         "block_zgCwV4",
         "block_Xqcg6e",
-        "block_EVXQRt"
+        "block_EVXQRt",
+        "block_BmXN7H"
       ],
       "name": "Home Shop by Category",
       "settings": {
