@@ -993,6 +993,25 @@
         "padding_top": 52,
         "padding_bottom": 0
       }
+    },
+    "2_blocks_grid_qTWRJf": {
+      "type": "2_blocks_grid",
+      "blocks": {
+        "content_hN3MHT": {
+          "type": "content",
+          "settings": {
+            "heading": "Get your own design",
+            "sub_heading": "Have another design in mind? Something from a website or a magazine perhaps?",
+            "button_1": "Start Designing",
+            "url_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_hN3MHT"
+      ],
+      "name": "2 Blocks Grid",
+      "settings": {}
     }
   },
   "order": [
@@ -1003,6 +1022,7 @@
     "zinara_experience_strip_GDHYPh",
     "home_shop_by_category_xRd7wT",
     "home_image_gallery_carousel_73c7Ep",
+    "2_blocks_grid_qTWRJf",
     "home_shop_by_category_jmQhfR",
     "home_shop_by_occasion_WePWCL",
     "home_benefits_pbKiTY",
