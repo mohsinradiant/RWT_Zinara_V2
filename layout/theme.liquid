@@ -1009,6 +1009,9 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
               formElement.style.display = 'none';
               thankYouElement.style.display = 'block';
             }
+            if (instructionPara) {
+              instructionPara.style.display = 'none';
+            }
             // Use the close button's click handler to hide the popup properly
             const closeBtn = document.getElementById('tryAtHomeClose_2');
             if (closeBtn) {
