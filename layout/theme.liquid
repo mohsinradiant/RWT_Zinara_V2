@@ -1005,9 +1005,13 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             // Show thank you message instead of redirecting
             const formElement = document.getElementById('videoTrialForm');
             const thankYouElement = document.getElementById('videoTrialThankYou');
+            const pincodePopup = document.getElementById('tryAtHomePincodePopup_2');
             if (formElement && thankYouElement) {
               formElement.style.display = 'none';
               thankYouElement.style.display = 'block';
+            }
+            if (pincodePopup) {
+              pincodePopup.style.display = 'none';
             }
           }
 
@@ -1521,7 +1525,8 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             </div>
           </form>
           <div id="videoTrialThankYou" style="display:none; text-align:center; padding: 30px 0; font-size: 1.5rem; color: #2e7d32; font-weight: 600;">
-            THANK YOU! Your request has been submitted successfully.<br>We'll contact you shortly.
+            <span>THANK YOU! Your request has been submitted successfully.</span><br>
+            <span>We'll contact you shortly.</span>
           </div>
         </div>
       </div>
