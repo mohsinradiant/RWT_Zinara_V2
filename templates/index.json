@@ -410,10 +410,21 @@
             "url_1": "",
             "image": "shopify://shop_images/003b7591afc3ce03c0175b826f442893b21542a8.jpg"
           }
+        },
+        "content_H3rQGF": {
+          "type": "content",
+          "settings": {
+            "heading": "Video call?",
+            "sub_heading": "See designs over a video call",
+            "button_1": "Book a video call",
+            "url_1": "",
+            "image": "shopify://shop_images/003b7591afc3ce03c0175b826f442893b21542a8.jpg"
+          }
         }
       },
       "block_order": [
-        "content_hN3MHT"
+        "content_hN3MHT",
+        "content_H3rQGF"
       ],
       "name": "2 Blocks Grid",
       "settings": {}
