@@ -94,7 +94,7 @@ header .header__search {
 .section-heading,
 .collapsible-content__heading,
 .jdgm-rev-widg__title {
-    text-align: left !important;
+    /* text-align: left !important; */
     margin-bottom: 40px !important;
     margin-top: 0 !important;
     font-size: 2.2rem !important;
