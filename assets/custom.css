@@ -1663,13 +1663,6 @@ sticky-header {
         padding: 6px 0 !important;
     }
 
-    .section-heading,
-    .collapsible-content__heading,
-    .jdgm-rev-widg__title,
-    .related-products__heading {
-        font-size: 2.4rem !important;
-    }
-
     .home-try-at-home-section-left p {
         width: 100%;
     }
