@@ -623,8 +623,10 @@ product-info .price__container span {
 }
 
 .product__info-image {
-    width: 100%;
+        width: 100%;
     height: auto;
+    order: 16;
+    margin-bottom: 10px;
 }
 
 .product-card-specs {
@@ -967,6 +969,10 @@ body.no-scroll {
     font-weight: 400;
     letter-spacing: 0;
     font-family: "Montserrat", sans-serif;
+}
+
+#tryAtHomeOverlay {
+    display: none !important;
 }
 
 .facets .disclosure-has-popup[open]>summary+* {
