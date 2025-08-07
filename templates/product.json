@@ -62,6 +62,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "price_breakdown_dropdown_EyiwWU": {
