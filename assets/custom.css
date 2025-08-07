@@ -1379,6 +1379,10 @@ sticky-header {
 }
 
 @media(max-width:756px) {
+    .home-try-at-home-section{
+        padding: 110px 20px;
+        justify-content: center;
+    }
     .price-breakdown-container {
         margin-top: 30px;
     }
