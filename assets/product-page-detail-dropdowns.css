@@ -139,9 +139,9 @@
 
 .product-page-details-list_title,
 .product-page-details-list_content {
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
   font-weight: 500;
-  line-height: 3.4rem;
+  line-height: 2.9rem;
 }
 
 .product-page-details-list_content {
