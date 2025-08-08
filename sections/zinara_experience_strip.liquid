@@ -13,7 +13,12 @@
             alt=""
             style="aspect-ratio: {{ block.settings.image.aspect_ratio }};"
           >
-          <h3 class="home-zinara_experience-block-heading">{{ block.settings.heading }}</h3>
+          <h3 class="home-zinara_experience-block-heading home-zinara_experience-block-desktop_heading">
+            {{ block.settings.heading }}
+          </h3>
+          <h3 class="home-zinara_experience-block-heading home-zinara_experience-block-mobile_heading">
+            {{ block.settings.mobile_heading }}
+          </h3>
           <p class="home-zinara_experience-block-subheading">{{ block.settings.subheading }}</p>
         </div>
       {% endfor %}
@@ -31,6 +36,9 @@
 {% endif %}
 
 <style>
+  .home-zinara_experience-block-mobile_heading {
+    display: none;
+  }
   .zinara_experience-section {
     text-align: center;
     margin-bottom: 60px;
@@ -86,6 +94,12 @@
     color: #000;
   }
   @media (max-width: 756px) {
+    .home-zinara_experience-block-mobile_heading {
+      display: flex;
+    }
+    .home-zinara_experience-block-desktop_heading {
+      display: none;
+    }
     .home-zinara_experience-section-heading {
       margin-bottom: 30px !important;
     }
@@ -134,6 +148,11 @@
           "type": "text",
           "id": "heading",
           "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "mobile_heading",
+          "label": "Mobile Heading"
         },
         {
           "type": "text",
