@@ -3,7 +3,7 @@
     <h2 class="home-zinara_experience-section-heading">{{ section.settings.heading }}</h2>
     <div class="home-zinara_experience-section-blocks_container">
       {% for block in section.blocks %}
-        <div class="home-zinara_experience-block">
+        <div class="home-zinara_experience-block {% if block.settings.show_button == true %} home-zinara_experience-mobile-hidden {% endif %}">
           <img
             src="{{ block.settings.image | image_url }}"
             class="home-zinara_experience-block-image lazyload"
@@ -94,6 +94,9 @@
     color: #000;
   }
   @media (max-width: 756px) {
+    .home-zinara_experience-mobile-hidden {
+      display: none;
+    }
     .home-zinara_experience-block-mobile_heading {
       display: flex;
     }
@@ -158,6 +161,12 @@
           "type": "text",
           "id": "subheading",
           "label": "Subheading"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button",
+          "label": "Show on mobile",
+          "default": true
         }
       ]
     }
