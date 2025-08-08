@@ -1339,6 +1339,7 @@ header .menu-drawer {
     font-weight: 500;
     font-size: 1.6rem;
     text-align: center;
+    width: 100%
 }
 
 .assisstance_buttons_images_container {
