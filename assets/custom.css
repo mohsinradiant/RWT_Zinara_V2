@@ -1943,8 +1943,8 @@ sticky-header {
 
     .testimonial-container {
         min-height: 350px;
-        align-items: start;
-        justify-content: start;
+        align-items: start !important;
+        justify-content: start !important;
     }
 
     .home-about-us {
