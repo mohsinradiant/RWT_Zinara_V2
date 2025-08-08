@@ -1234,6 +1234,10 @@ header .menu-drawer {
 }
 
 @media(max-width:1000px) {
+    
+.price-breakdown-list .price_discount {
+    font-size: 1.2rem;
+}
     .facets-vertical .active-facets {
         top: 285px;
     }
@@ -1498,11 +1502,11 @@ sticky-header {
     }
 
     .price-breakdown-list span {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .price_breakdown-left_container_bottom p {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .price-breakdown-list .price-breakdown-total span {
