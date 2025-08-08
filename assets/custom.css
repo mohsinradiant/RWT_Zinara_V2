@@ -1942,7 +1942,8 @@ sticky-header {
     }
 
     .testimonial-container {
-        min-height: 350px
+        min-height: 350px;
+        align-items: start;
     }
 
     .home-about-us {
