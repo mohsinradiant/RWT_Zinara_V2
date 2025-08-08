@@ -335,6 +335,7 @@
         },
         "block_Qa9ty6": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
             "heading": "Gifting",
