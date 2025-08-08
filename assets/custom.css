@@ -1506,11 +1506,11 @@ sticky-header {
     }
 
     .price_breakdown-left_container_bottom p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .price-breakdown-list .price-breakdown-total span {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .price-breakdown-list .price-breakdown-total span:nth-of-type(1) {
