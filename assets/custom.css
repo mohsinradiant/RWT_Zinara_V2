@@ -1459,7 +1459,7 @@ sticky-header {
 
 @media (max-width: 756px) {
     .main-product_text-style_caption {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 
     product-info .product__title h1 {
@@ -1467,7 +1467,7 @@ sticky-header {
     }
 
     product-info .price__container span {
-        font-size: 2.3rem !important;
+        font-size: 2rem !important;
     }
 
     summary .icon-caret {
