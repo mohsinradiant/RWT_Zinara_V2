@@ -250,7 +250,9 @@
           "settings": {
             "image": "shopify://shop_images/Vector_28.png",
             "heading": "Lifetime buyback & exchange",
-            "subheading": "We offer lifetime buyback and exchange on all Zinara orders"
+            "mobile_heading": "Lifetime Buyback & Exchange",
+            "subheading": "We offer lifetime buyback and exchange on all Zinara orders",
+            "show_button": true
           }
         },
         "block_rHr3fm": {
@@ -258,7 +260,9 @@
           "settings": {
             "image": "shopify://shop_images/Vector_29.png",
             "heading": "IGI/SGL certified",
-            "subheading": "All our grown diamonds are IGI/SGL certified ensuring top quality"
+            "mobile_heading": "100% certified jewellery (BIS / IGI / SGL)",
+            "subheading": "All our grown diamonds are IGI/SGL certified ensuring top quality",
+            "show_button": true
           }
         },
         "block_PKMGPR": {
@@ -266,7 +270,9 @@
           "settings": {
             "image": "shopify://shop_images/Vector_30.png",
             "heading": "BIS Hallmarked Gold",
-            "subheading": "We use BIS Hallmarked Gold for all our products"
+            "mobile_heading": "",
+            "subheading": "We use BIS Hallmarked Gold for all our products",
+            "show_button": true
           }
         },
         "block_tFHwqD": {
@@ -274,7 +280,9 @@
           "settings": {
             "image": "shopify://shop_images/Vector_31.png",
             "heading": "Try at home",
-            "subheading": "We’re happy to help you with virtual an in-home trials"
+            "mobile_heading": "",
+            "subheading": "We’re happy to help you with virtual an in-home trials",
+            "show_button": true
           }
         },
         "block_ddpqQk": {
@@ -282,7 +290,9 @@
           "settings": {
             "image": "shopify://shop_images/Vector_32.png",
             "heading": "Insured & free shipping",
-            "subheading": "All your orders and delivered free of cost and are insured"
+            "mobile_heading": "",
+            "subheading": "All your orders and delivered free of cost and are insured",
+            "show_button": true
           }
         }
       },
