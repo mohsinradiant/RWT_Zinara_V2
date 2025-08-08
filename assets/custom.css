@@ -646,9 +646,9 @@ product-info .price__container span {
     font-size: 0;
 }
 
-.price__container {
+/* .price__container {
     font-family: var(--font-heading-family);
-}
+} */
 
 .collection-hero__title {
     text-wrap: nowrap;
