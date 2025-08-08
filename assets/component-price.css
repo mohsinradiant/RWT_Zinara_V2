@@ -1,5 +1,6 @@
 .price {
   font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
@@ -32,11 +33,13 @@
   margin: 0;
   color: #712242;
 }
-.price--large{
+
+.price--large {
   width: fit-content;
-display:flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 @media screen and (min-width: 750px) {
   .price {
     margin-bottom: 0;
