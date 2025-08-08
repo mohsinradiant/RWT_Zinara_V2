@@ -260,7 +260,7 @@
           "settings": {
             "image": "shopify://shop_images/Vector_29.png",
             "heading": "IGI/SGL certified",
-            "mobile_heading": "100% certified jewellery (BIS / IGI / SGL)",
+            "mobile_heading": "BIS / IGI / SGL certified jewellery",
             "subheading": "All our grown diamonds are IGI/SGL certified ensuring top quality",
             "show_button": true
           }
@@ -272,7 +272,7 @@
             "heading": "BIS Hallmarked Gold",
             "mobile_heading": "",
             "subheading": "We use BIS Hallmarked Gold for all our products",
-            "show_button": true
+            "show_button": false
           }
         },
         "block_tFHwqD": {
@@ -280,7 +280,7 @@
           "settings": {
             "image": "shopify://shop_images/Vector_31.png",
             "heading": "Try at home",
-            "mobile_heading": "",
+            "mobile_heading": "Try at home",
             "subheading": "We’re happy to help you with virtual an in-home trials",
             "show_button": true
           }
@@ -290,7 +290,7 @@
           "settings": {
             "image": "shopify://shop_images/Vector_32.png",
             "heading": "Insured & free shipping",
-            "mobile_heading": "",
+            "mobile_heading": "Insured & free shipping",
             "subheading": "All your orders and delivered free of cost and are insured",
             "show_button": true
           }
