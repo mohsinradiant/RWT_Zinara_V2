@@ -172,6 +172,15 @@
             "heading": "Necklaces",
             "url": "shopify://collections/all-pendants"
           }
+        },
+        "block_8ajNRb": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "heading": "Necklaces",
+            "url": "shopify://collections/all-pendants"
+          }
         }
       },
       "block_order": [
@@ -179,7 +188,8 @@
         "block_3E6Knd",
         "block_bmUtTt",
         "block_mMAQRU",
-        "block_gny7Ck"
+        "block_gny7Ck",
+        "block_8ajNRb"
       ],
       "name": "Home Shop by Category",
       "settings": {
