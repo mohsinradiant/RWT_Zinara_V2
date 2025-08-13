@@ -1438,6 +1438,7 @@ sticky-header {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 52%;
 }
 
 .product-info-image__item {
