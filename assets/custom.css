@@ -623,7 +623,7 @@ product-info .price__container span {
 }
 
 .product__info-image {
-        width: 100%;
+    width: 100%;
     height: auto;
     order: 16;
     margin-bottom: 10px;
@@ -1234,10 +1234,11 @@ header .menu-drawer {
 }
 
 @media(max-width:1000px) {
-    
-.price-breakdown-list .price_discount {
-    font-size: 1.2rem;
-}
+
+    .price-breakdown-list .price_discount {
+        font-size: 1.2rem;
+    }
+
     .facets-vertical .active-facets {
         top: 285px;
     }
@@ -1410,7 +1411,71 @@ sticky-header {
     border-bottom: 2px solid #CCCACC;
 }
 
+.product-info-image {
+    padding: 15px 20px;
+    background: #f9f7fa;
+    margin-top: 15px;
+}
+
+.product-info-image__heading {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.product-info-image__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.product-info-image__left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-info-image__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #712242;
+}
+
+.product-info-image__item img {
+    width: 16px;
+    height: auto;
+}
+
+.product-info-image__right {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    height: auto;
+    justify-content: center;
+}
+
+.product-info-image__right img {
+    width: 100%;
+    height: auto;
+}
+
 @media(max-width:756px) {
+    .product-info-image__content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-info-image {
+        order: 16;
+    }
+
     .home-try-at-home-section {
         padding: 110px 20px;
         justify-content: center;
@@ -1465,8 +1530,8 @@ sticky-header {
 
 @media (max-width: 756px) {
     .product-features-badge-text {
-    font-size: 1.4rem;
-}
+        font-size: 1.4rem;
+    }
 
     .main-product_text-style_caption {
         font-size: 1.2rem;
