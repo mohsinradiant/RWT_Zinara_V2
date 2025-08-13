@@ -100,6 +100,17 @@
             "left_text_3": "Durable & long-lasting",
             "right_image": "shopify://shop_images/Group_4_4.png"
           }
+        },
+        "product_info_image_RdddYM": {
+          "type": "product-info-image",
+          "settings": {
+            "heading": "LAB-GROWN DIAMONDS HAVE",
+            "left_image_1": "shopify://shop_images/Vector_34.png",
+            "left_text_1": "Same sparkle as a natural diamond",
+            "left_image_2": "shopify://shop_images/Vector_35.png",
+            "left_text_2": "Same structure and hardness as a natural diamond",
+            "left_text_3": ""
+          }
         }
       },
       "block_order": [
@@ -118,7 +129,8 @@
         "assistance_buttons_NnwHCV",
         "details_dropdown_P4zhGG",
         "se_wishlist_engine_product_page_fTBTnd",
-        "product_info_image_eaCYxw"
+        "product_info_image_eaCYxw",
+        "product_info_image_RdddYM"
       ],
       "settings": {
         "enable_sticky_info": true,
