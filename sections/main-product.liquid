@@ -1144,26 +1144,24 @@
                     <div class="product-info-image__content">
                       <!-- Left Side -->
                       <div class="product-info-image__left">
-                        <div class="product-info-image__item">
-                          {% if block.settings.left_image_1 != blank %}
+                        {% if block.settings.left_image_1 != blank %}
+                          <div class="product-info-image__item">
                             <img src="{{ block.settings.left_image_1 | img_url: '50x' }}" alt="">
-                          {% endif %}
-                          <span>{{ block.settings.left_text_1 }}</span>
-                        </div>
-
-                        <div class="product-info-image__item">
-                          {% if block.settings.left_image_2 != blank %}
+                            <span>{{ block.settings.left_text_1 }}</span>
+                          </div>
+                        {% endif %}
+                        {% if block.settings.left_image_2 != blank %}
+                          <div class="product-info-image__item">
                             <img src="{{ block.settings.left_image_2 | img_url: '50x' }}" alt="">
-                          {% endif %}
-                          <span>{{ block.settings.left_text_2 }}</span>
-                        </div>
-
-                        <div class="product-info-image__item">
-                          {% if block.settings.left_image_3 != blank %}
+                            <span>{{ block.settings.left_text_2 }}</span>
+                          </div>
+                        {% endif %}
+                        {% if block.settings.left_image_3 != blank %}
+                          <div class="product-info-image__item">
                             <img src="{{ block.settings.left_image_3 | img_url: '50x' }}" alt="">
-                          {% endif %}
-                          <span>{{ block.settings.left_text_3 }}</span>
-                        </div>
+                            <span>{{ block.settings.left_text_3 }}</span>
+                          </div>
+                        {% endif %}
                       </div>
 
                       <!-- Right Side -->
