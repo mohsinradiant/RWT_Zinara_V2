@@ -1483,7 +1483,7 @@ sticky-header {
     }
 
     .product-info-image__item {
-        max-width: 48%
+        max-width: 100%
     }
 }
 
