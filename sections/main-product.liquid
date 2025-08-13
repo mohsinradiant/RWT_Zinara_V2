@@ -1125,14 +1125,87 @@
                   });
                 </script>
               {%- when 'product-info-image' -%}
-                <img
-                  src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601469.jpg?v=1754308974"
-                  alt="Product info image 1"
-                  loading="lazy"
-                  width="2048"
-                  height="auto"
-                  class="product__info-image"
-                >
+                <div class="product-info-image">
+                  {% if section.settings.heading != blank %}
+                    <h2 class="product-info-image__heading">{{ section.settings.heading }}</h2>
+                  {% endif %}
+
+                  <div class="product-info-image__content">
+                    <!-- Left Side -->
+                    <div class="product-info-image__left">
+                      <div class="product-info-image__item">
+                        {% if section.settings.left_image_1 != blank %}
+                          <img src="{{ section.settings.left_image_1 | img_url: '50x' }}" alt="">
+                        {% endif %}
+                        <span>{{ section.settings.left_text_1 }}</span>
+                      </div>
+
+                      <div class="product-info-image__item">
+                        {% if section.settings.left_image_2 != blank %}
+                          <img src="{{ section.settings.left_image_2 | img_url: '50x' }}" alt="">
+                        {% endif %}
+                        <span>{{ section.settings.left_text_2 }}</span>
+                      </div>
+
+                      <div class="product-info-image__item">
+                        {% if section.settings.left_image_3 != blank %}
+                          <img src="{{ section.settings.left_image_3 | img_url: '50x' }}" alt="">
+                        {% endif %}
+                        <span>{{ section.settings.left_text_3 }}</span>
+                      </div>
+                    </div>
+
+                    <!-- Right Side -->
+                    <div class="product-info-image__right">
+                      {% if section.settings.right_image != blank %}
+                        <img src="{{ section.settings.right_image | img_url: '500x' }}" alt="">
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+
+                <style>
+                  .product-info-image {
+                    padding: 20px;
+                  }
+                  .product-info-image__heading {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+                  }
+                  .product-info-image__content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 40px;
+                  }
+                  .product-info-image__left {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                  }
+                  .product-info-image__item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 1rem;
+                    color: #6b415e; /* similar to your example text color */
+                  }
+                  .product-info-image__item img {
+                    width: 16px;
+                    height: 16px;
+                  }
+                  .product-info-image__right img {
+                    max-width: 250px;
+                    height: auto;
+                  }
+                  @media (max-width: 768px) {
+                    .product-info-image__content {
+                      flex-direction: column;
+                      gap: 20px;
+                    }
+                  }
+                </style>
               {%- when 'pincode-availability' -%}
                 <div class="pincode-availability-checker-container">
                   <div class="pincode-availability-left">
@@ -2802,24 +2875,7 @@
                 </p>
             {%- endcase -%}
           {%- endfor -%}
-          <img
-            src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601469.jpg?v=1754308974"
-            alt="Product info image 1"
-            loading="lazy"
-            width="2048"
-            height="auto"
-            class="product__info-image"
-          >
-          {% unless product.tags contains 'gold' %}
-            <img
-              src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601518.jpg?v=1754308972"
-              alt="Product info image 2"
-              loading="lazy"
-              width="2048"
-              height="auto"
-              class="product__info-image"
-            >
-          {% endunless %}
+        
           <style>
             .truncated-text {
               display: none;
