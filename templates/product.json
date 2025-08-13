@@ -105,7 +105,7 @@
         "product_info_image_RdddYM": {
           "type": "product-info-image",
           "settings": {
-            "show_only_gold": true,
+            "show_only_gold": false,
             "heading": "LAB-GROWN DIAMONDS HAVE",
             "left_image_1": "shopify://shop_images/Vector_34.png",
             "left_text_1": "Same sparkle as a natural diamond",
