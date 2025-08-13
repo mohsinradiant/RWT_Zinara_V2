@@ -1125,7 +1125,17 @@
                   });
                 </script>
               {%- when 'product-info-image' -%}
-                {% if block.settings.show_only_gold != true or (block.settings.show_only_gold == true and not product.tags contains 'gold') %}
+                {% assign show_block = false %}
+
+                {% if block.settings.show_only_gold != true %}
+                  {% assign show_block = true %}
+                {% else %}
+                  {% unless product.tags contains 'gold' %}
+                    {% assign show_block = true %}
+                  {% endunless %}
+                {% endif %}
+
+                {% if show_block %}
                   <div class="product-info-image">
                     {% if block.settings.heading != blank %}
                       <h2 class="product-info-image__heading">{{ block.settings.heading }}</h2>
