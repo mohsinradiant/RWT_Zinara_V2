@@ -87,6 +87,19 @@
         "se_wishlist_engine_product_page_fTBTnd": {
           "type": "shopify://apps/se-wishlist-engine/blocks/Product-Page/8f7c0857-8e71-463d-a168-8e133094753b",
           "settings": {}
+        },
+        "product_info_image_eaCYxw": {
+          "type": "product-info-image",
+          "settings": {
+            "heading": "Our plating is",
+            "left_image_1": "shopify://shop_images/Vector_36.png",
+            "left_text_1": "Thicker and stronger",
+            "left_image_2": "shopify://shop_images/Vector_36.png",
+            "left_text_2": "Sterling silver base (925)",
+            "left_image_3": "shopify://shop_images/Vector_36.png",
+            "left_text_3": "Durable & long-lasting",
+            "right_image": "shopify://shop_images/Group_4_4.png"
+          }
         }
       },
       "block_order": [
@@ -104,7 +117,8 @@
         "buy_buttons",
         "assistance_buttons_NnwHCV",
         "details_dropdown_P4zhGG",
-        "se_wishlist_engine_product_page_fTBTnd"
+        "se_wishlist_engine_product_page_fTBTnd",
+        "product_info_image_eaCYxw"
       ],
       "settings": {
         "enable_sticky_info": true,
