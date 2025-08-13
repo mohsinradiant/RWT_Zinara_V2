@@ -1125,49 +1125,51 @@
                   });
                 </script>
               {%- when 'product-info-image' -%}
-                <div class="product-info-image">
-                  {% if block.settings.heading != blank %}
-                    <h2 class="product-info-image__heading">{{ block.settings.heading }}</h2>
-                  {% endif %}
+                {% if block.settings.show_only_gold != true %}
+                  <div class="product-info-image">
+                    {% if block.settings.heading != blank %}
+                      <h2 class="product-info-image__heading">{{ block.settings.heading }}</h2>
+                    {% endif %}
 
-                  <div class="product-info-image__content">
-                    <!-- Left Side -->
-                    <div class="product-info-image__left">
-                      <div class="product-info-image__item">
-                        {% if block.settings.left_image_1 != blank %}
-                          <img src="{{ block.settings.left_image_1 | img_url: '50x' }}" alt="">
-                        {% endif %}
-                        <span>{{ block.settings.left_text_1 }}</span>
+                    <div class="product-info-image__content">
+                      <!-- Left Side -->
+                      <div class="product-info-image__left">
+                        <div class="product-info-image__item">
+                          {% if block.settings.left_image_1 != blank %}
+                            <img src="{{ block.settings.left_image_1 | img_url: '50x' }}" alt="">
+                          {% endif %}
+                          <span>{{ block.settings.left_text_1 }}</span>
+                        </div>
+
+                        <div class="product-info-image__item">
+                          {% if block.settings.left_image_2 != blank %}
+                            <img src="{{ block.settings.left_image_2 | img_url: '50x' }}" alt="">
+                          {% endif %}
+                          <span>{{ block.settings.left_text_2 }}</span>
+                        </div>
+
+                        <div class="product-info-image__item">
+                          {% if block.settings.left_image_3 != blank %}
+                            <img src="{{ block.settings.left_image_3 | img_url: '50x' }}" alt="">
+                          {% endif %}
+                          <span>{{ block.settings.left_text_3 }}</span>
+                        </div>
                       </div>
 
-                      <div class="product-info-image__item">
-                        {% if block.settings.left_image_2 != blank %}
-                          <img src="{{ block.settings.left_image_2 | img_url: '50x' }}" alt="">
+                      <!-- Right Side -->
+                      <div class="product-info-image__right">
+                        {% if block.settings.right_image != blank %}
+                          <img src="{{ block.settings.right_image | img_url: '500x' }}" alt="">
                         {% endif %}
-                        <span>{{ block.settings.left_text_2 }}</span>
                       </div>
-
-                      <div class="product-info-image__item">
-                        {% if block.settings.left_image_3 != blank %}
-                          <img src="{{ block.settings.left_image_3 | img_url: '50x' }}" alt="">
-                        {% endif %}
-                        <span>{{ block.settings.left_text_3 }}</span>
-                      </div>
-                    </div>
-
-                    <!-- Right Side -->
-                    <div class="product-info-image__right">
-                      {% if block.settings.right_image != blank %}
-                        <img src="{{ block.settings.right_image | img_url: '500x' }}" alt="">
-                      {% endif %}
                     </div>
                   </div>
-                </div>
-
+                {% endif %}
                 <style>
                   .product-info-image {
                     padding: 15px 20px;
                     background: #f9f7fa;
+                    margin-top: 15px;
                   }
                   .product-info-image__heading {
                     text-align: center;
@@ -1199,14 +1201,11 @@
                   .product-info-image__item img {
                     width: 16px;
                     height: auto;
-<<<<<<< HEAD
                   }
                   .product-info-image__right {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-=======
->>>>>>> f9e6a266eb3642a0624bd3ed54c2ee26ab74fff1
                   }
                   .product-info-image__right {
                     display: flex;
@@ -5443,6 +5442,12 @@
       "type": "product-info-image",
       "name": "Product Info Block",
       "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_only_gold",
+          "default": false,
+          "label": "Show only for Gold"
+        },
         {
           "type": "text",
           "id": "heading",
