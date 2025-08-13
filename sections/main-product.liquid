@@ -1126,6 +1126,8 @@
                 </script>
               {%- when 'product-info-image' -%}
                 {% if block.settings.show_only_gold != true %}
+                {% unless product.tags contains 'gold' %}
+                {% endif %}
                   <div class="product-info-image">
                     {% if block.settings.heading != blank %}
                       <h2 class="product-info-image__heading">{{ block.settings.heading }}</h2>
@@ -1164,6 +1166,8 @@
                       </div>
                     </div>
                   </div>
+                {% if block.settings.show_only_gold != true %}
+                {% endunless %}
                 {% endif %}
                 <style>
                   .product-info-image {
