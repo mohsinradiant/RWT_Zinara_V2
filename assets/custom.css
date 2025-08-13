@@ -1446,7 +1446,9 @@ sticky-header {
     align-items: center;
     gap: 10px;
     font-size: 1.2rem;
+    letter-spacing: 0;
     color: #712242;
+    line-height: 1.6rem;
 }
 
 .product-info-image__item img {
