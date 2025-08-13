@@ -1124,7 +1124,15 @@
                     });
                   });
                 </script>
-{%- when 'product-info-image' -%}
+              {%- when 'product-info-image' -%}
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Frame_1116601469.jpg?v=1754308974"
+                  alt="Product info image 1"
+                  loading="lazy"
+                  width="2048"
+                  height="auto"
+                  class="product__info-image"
+                >
               {%- when 'pincode-availability' -%}
                 <div class="pincode-availability-checker-container">
                   <div class="pincode-availability-left">
@@ -5359,8 +5367,63 @@
     },
     {
       "type": "product-info-image",
-      "name": "Product Info Block"
+      "name": "Product Info Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Block Heading",
+          "default": "Our plating is"
+        },
+        {
+          "type": "header",
+          "content": "Left Side Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "left_image_1",
+          "label": "Left Item 1 Image"
+        },
+        {
+          "type": "text",
+          "id": "left_text_1",
+          "label": "Left Item 1 Text",
+          "default": "Thicker and stronger"
+        },
+        {
+          "type": "image_picker",
+          "id": "left_image_2",
+          "label": "Left Item 2 Image"
+        },
+        {
+          "type": "text",
+          "id": "left_text_2",
+          "label": "Left Item 2 Text",
+          "default": "Sterling silver base (925)"
+        },
+        {
+          "type": "image_picker",
+          "id": "left_image_3",
+          "label": "Left Item 3 Image"
+        },
+        {
+          "type": "text",
+          "id": "left_text_3",
+          "label": "Left Item 3 Text",
+          "default": "Durable & long-lasting"
+        },
+        {
+          "type": "header",
+          "content": "Right Side Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image",
+          "label": "Right Side Image"
+        }
+      ]
     },
+
     {
       "type": "brand-usps",
       "name": "Brand USPs"
