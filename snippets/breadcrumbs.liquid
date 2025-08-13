@@ -82,7 +82,9 @@
 
           {%- if breadcrumb_collection -%}
             <li class="breadcrumbs__item">
-              {{ breadcrumb_collection.title | link_to: breadcrumb_collection.url }}
+              <a class="breadcrumbs__link" href="{{ breadcrumb_collection.url }}">
+                {{ breadcrumb_collection.title }}
+              </a>
             </li>
           {%- endif -%}
 
