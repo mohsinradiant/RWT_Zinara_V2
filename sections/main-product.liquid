@@ -1126,8 +1126,6 @@
                 </script>
               {%- when 'product-info-image' -%}
                 {% if block.settings.show_only_gold != true %}
-                {% unless product.tags contains 'gold' %}
-                {% endif %}
                   <div class="product-info-image">
                     {% if block.settings.heading != blank %}
                       <h2 class="product-info-image__heading">{{ block.settings.heading }}</h2>
@@ -1166,8 +1164,47 @@
                       </div>
                     </div>
                   </div>
-                {% if block.settings.show_only_gold != true %}
-                {% endunless %}
+                {% else %}
+                  {% unless product.tags contains 'gold' %}
+                    <div class="product-info-image">
+                      {% if block.settings.heading != blank %}
+                        <h2 class="product-info-image__heading">{{ block.settings.heading }}</h2>
+                      {% endif %}
+
+                      <div class="product-info-image__content">
+                        <!-- Left Side -->
+                        <div class="product-info-image__left">
+                          <div class="product-info-image__item">
+                            {% if block.settings.left_image_1 != blank %}
+                              <img src="{{ block.settings.left_image_1 | img_url: '50x' }}" alt="">
+                            {% endif %}
+                            <span>{{ block.settings.left_text_1 }}</span>
+                          </div>
+
+                          <div class="product-info-image__item">
+                            {% if block.settings.left_image_2 != blank %}
+                              <img src="{{ block.settings.left_image_2 | img_url: '50x' }}" alt="">
+                            {% endif %}
+                            <span>{{ block.settings.left_text_2 }}</span>
+                          </div>
+
+                          <div class="product-info-image__item">
+                            {% if block.settings.left_image_3 != blank %}
+                              <img src="{{ block.settings.left_image_3 | img_url: '50x' }}" alt="">
+                            {% endif %}
+                            <span>{{ block.settings.left_text_3 }}</span>
+                          </div>
+                        </div>
+
+                        <!-- Right Side -->
+                        <div class="product-info-image__right">
+                          {% if block.settings.right_image != blank %}
+                            <img src="{{ block.settings.right_image | img_url: '500x' }}" alt="">
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  {% endunless %}
                 {% endif %}
                 <style>
                   .product-info-image {
