@@ -1476,7 +1476,6 @@ sticky-header {
 
     .product-info-image__left {
         width: 100%;
-        flex-direction: unset;
     }
 
     .product-info-image__item {
