@@ -89,7 +89,7 @@
 
 /* Headings */
 .sort-aside-heading {
-    font-family: 'Playfair Display';
+    font-family: var(--font-heading-family);
     font-size: 2.5rem;
     font-weight: 600;
     margin: 0;
@@ -97,7 +97,7 @@
 
 .filter-aside-heading {
     margin: 70px 0 30px;
-    font-family: 'Playfair Display';
+    font-family: var(--font-heading-family);
     font-size: 2.5rem;
     font-weight: 600;
 }
