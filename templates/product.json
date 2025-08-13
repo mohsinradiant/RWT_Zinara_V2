@@ -91,7 +91,7 @@
         "product_info_image_eaCYxw": {
           "type": "product-info-image",
           "settings": {
-            "show_only_gold": true,
+            "show_only_gold": false,
             "heading": "OUR PLATING IS",
             "left_image_1": "shopify://shop_images/Vector_36.png",
             "left_text_1": "Thicker and stronger",
