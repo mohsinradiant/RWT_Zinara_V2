@@ -1144,99 +1144,35 @@
                     <div class="product-info-image__content">
                       <!-- Left Side -->
                       <div class="product-info-image__left">
-                        <div class="product-info-image__item">
-                          {% if block.settings.left_image_1 != blank %}
+                        {% if block.settings.left_image_1 != blank %}
+                          <div class="product-info-image__item">
                             <img src="{{ block.settings.left_image_1 | img_url: '50x' }}" alt="">
-                          {% endif %}
-                          <span>{{ block.settings.left_text_1 }}</span>
-                        </div>
-
-                        <div class="product-info-image__item">
-                          {% if block.settings.left_image_2 != blank %}
+                            <span>{{ block.settings.left_text_1 }}</span>
+                          </div>
+                        {% endif %}
+                        {% if block.settings.left_image_2 != blank %}
+                          <div class="product-info-image__item">
                             <img src="{{ block.settings.left_image_2 | img_url: '50x' }}" alt="">
-                          {% endif %}
-                          <span>{{ block.settings.left_text_2 }}</span>
-                        </div>
-
-                        <div class="product-info-image__item">
-                          {% if block.settings.left_image_3 != blank %}
+                            <span>{{ block.settings.left_text_2 }}</span>
+                          </div>
+                        {% endif %}
+                        {% if block.settings.left_image_3 != blank %}
+                          <div class="product-info-image__item">
                             <img src="{{ block.settings.left_image_3 | img_url: '50x' }}" alt="">
-                          {% endif %}
-                          <span>{{ block.settings.left_text_3 }}</span>
-                        </div>
+                            <span>{{ block.settings.left_text_3 }}</span>
+                          </div>
+                        {% endif %}
                       </div>
 
                       <!-- Right Side -->
-                      <div class="product-info-image__right">
                         {% if block.settings.right_image != blank %}
+                      <div class="product-info-image__right">
                           <img src="{{ block.settings.right_image | img_url: '500x' }}" alt="">
-                        {% endif %}
                       </div>
+                        {% endif %}
                     </div>
                   </div>
                 {% endif %}
-
-                <style>
-                  .product-info-image {
-                    padding: 15px 20px;
-                    background: #f9f7fa;
-                    margin-top: 15px;
-                  }
-                  .product-info-image__heading {
-                    text-align: center;
-                    font-size: 1.4rem;
-                    margin-top: 0;
-                    margin-bottom: 20px;
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 600;
-                    letter-spacing: 0;
-                  }
-                  .product-info-image__content {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: 16px;
-                  }
-                  .product-info-image__left {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                  }
-                  .product-info-image__item {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    font-size: 1rem;
-                    color: #712242;
-                  }
-                  .product-info-image__item img {
-                    width: 16px;
-                    height: auto;
-                  }
-                  .product-info-image__right {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  }
-                  .product-info-image__right {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  }
-                  .product-info-image__right img {
-                    max-width: 250px;
-                    height: auto;
-                  }
-                  @media (max-width: 768px) {
-                    .product-info-image__content {
-                      flex-direction: column;
-                      gap: 20px;
-                    }
-                    .product-info-image {
-                      order: 16;
-                    }
-                  }
-                </style>
               {%- when 'pincode-availability' -%}
                 <div class="pincode-availability-checker-container">
                   <div class="pincode-availability-left">
