@@ -315,6 +315,7 @@
     },
     "home_own_design_99mUA8": {
       "type": "home-own_design",
+      "disabled": true,
       "settings": {
         "heading": "Get your own design",
         "sub-heading": "Have another design in mind? Something from a website or a magazine perhaps?",
@@ -403,7 +404,10 @@
       "blocks": {
         "judge_me_reviews_review_widget_qetXF7": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
