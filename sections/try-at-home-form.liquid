@@ -981,6 +981,20 @@ if (event.target.classList.contains('timeslot-btn')) {
         !pincode ||
         !productVariant
       ) {
+        const missing = [];
+
+        if (!timeslot) missing.push('timeslot');
+        if (!name) missing.push('name');
+        if (!email) missing.push('email');
+        if (!phone) missing.push('phone');
+        if (!house) missing.push('house');
+        if (!locality) missing.push('locality');
+        if (!city) missing.push('city');
+        if (!state) missing.push('state');
+        if (!pincode) missing.push('pincode');
+        if (!productVariant) missing.push('productVariant');
+
+        console.log('Missing fields:', missing);
         alert('Please fill in all fields!');
         return;
       }
