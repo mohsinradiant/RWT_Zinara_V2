@@ -1223,6 +1223,7 @@ header .menu-drawer {
 
 .menu-drawer__navigation .menu-item .dropdown-menu .menu-item {
     opacity: 0.6;
+  font-size: 1.4rem !important;
 }
 
 @media(min-width:756px) {
