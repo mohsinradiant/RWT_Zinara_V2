@@ -29,7 +29,7 @@
   color: #712242;
 }
 
-.price:not(.price--show-badge) .price-item--last:last-of-type {
+.price:not(.price--show-badge) .price-item--last {
   margin: 0;
   color: #712242;
 }

@@ -44,11 +44,12 @@
     gap: 3%;
     transition: transform 0.5s ease-in-out;
     align-items: start;
+    height: 250px;
   }
 
   .testimonial-container {
     min-width: 45%;
-    height: auto;
+    height: 100%;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -114,6 +115,11 @@
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.8rem;
+  }
+  @media (max-width: 756px) {
+    .home-testimonials-carousel-parent {
+      height: 300px;
+    }
   }
 </style>
 

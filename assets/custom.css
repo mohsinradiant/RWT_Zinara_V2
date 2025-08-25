@@ -454,7 +454,7 @@ header .header__search {
 }
 
 .home-try-at-home-section-container {
-    margin: 50px 0;
+    margin: 50px auto;
     overflow: hidden;
 }
 
@@ -636,7 +636,7 @@ product-info .price__container span {
     margin-bottom: .7rem;
 }
 
-.product-page-details-container .product-page-details-parent-child .product-description-paragraph {
+.product-page-details-container .product-page-details-parent-child .product-description-paragraph p{
     font-size: 1.2rem !important;
     line-height: 2.4rem;
 }
@@ -1640,7 +1640,7 @@ sticky-header {
 
     .home-try-at-home-section-container {
         padding: 0 !important;
-        margin: 30px 0;
+        margin: 30px auto;
     }
 
     .product-grid-container facet-filters-form {
