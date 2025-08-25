@@ -101,8 +101,11 @@
     overflow-x: auto;
   }
   .pdp-product-recommendations-ul {
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: #be1e28 #111; /* Firefox: thumb | track */
+    /* For Firefox */
+    scrollbar-width: thin; /* makes it slim */
+    scrollbar-color: #712242 #f0f0f0; /* thumb | track */
+    overflow-y: auto; /* ensures scrollbar is always visible vertically */
+    overflow-x: auto; /* ensures scrollbar is always visible horizontally */
   }
 
   /* Chrome, Edge, Safari */
@@ -112,17 +115,17 @@
   }
 
   .pdp-product-recommendations-ul::-webkit-scrollbar-track {
-    background: #111; /* track color */
+    background: #f0f0f0; /* light background for contrast */
     border-radius: 10px;
   }
 
   .pdp-product-recommendations-ul::-webkit-scrollbar-thumb {
-    background: #be1e28; /* thumb color */
+    background: #712242; /* your color */
     border-radius: 10px;
   }
 
   .pdp-product-recommendations-ul::-webkit-scrollbar-thumb:hover {
-    background: #e23640; /* hover color */
+    background: #8d2a53; /* a slightly lighter hover shade */
   }
 
   /* @media (min-width: 756px) {
