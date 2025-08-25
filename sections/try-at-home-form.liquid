@@ -62,7 +62,7 @@
         border: none;
         cursor: pointer;
         color: #ffffff;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Quicksand';
         font-weight: 500;
         font-size: 3.5rem;
         line-height: 13px;
@@ -563,17 +563,17 @@
       <div class="tryAtHomePopup-input_container">
         <h2>Add Address</h2>
         <div style="width:100%" class="input-group">
-          <input type="text" id="house" class="input-field" placeholder="House/Apartment">
+          <input type="text" id="house" class="input-field" placeholder="House/Apartment*">
         </div>
         <div style="width:100%" class="input-group">
-          <input type="text" id="locality" class="input-field" placeholder="Locality/Area/Landmark">
+          <input type="text" id="locality" class="input-field" placeholder="Locality/Area/Landmark*">
         </div>
         <div style="width:100%" class="input-group row">
-          <input style="width: calc(50% - 5px);" type="text" id="city" class="input-field" placeholder="City">
-          <input style="width: calc(50% - 5px);" type="text" id="state" class="input-field" placeholder="State">
+          <input style="width: calc(50% - 5px);" type="text" id="city" class="input-field" placeholder="City*">
+          <input style="width: calc(50% - 5px);" type="text" id="state" class="input-field" placeholder="State*">
         </div>
         <div style="width:100%" class="input-group">
-          <input type="text" id="pincode" class="input-field" placeholder="Pincode">
+          <input type="text" id="pincode" class="input-field" placeholder="Pincode*">
         </div>
 
         {% unless customer.phone %}
@@ -595,11 +595,11 @@
         {% assign unavailable_slots = unavailable_slots | append: slot.slot_date_and_time | append: ',' %}
       {% endfor %}
       <div class="tryAtHomePopup-input_container">
-        <label for="date">Select Date:</label>
+        <label for="date">Select Date* :</label>
         <div class="date-container"></div>
         <!-- Empty container for dates -->
 
-        <label for="timeslot">Select Timeslot:</label>
+        <label for="timeslot">Select Timeslot* :</label>
         <div class="timeslot-container"></div>
         <!-- Empty container for timeslots -->
       </div>
@@ -607,7 +607,7 @@
       <!-- Product Variant -->
       <input type="hidden" id="selectedProductVariant" value="{{ product.selected_or_first_available_variant.id }}">
       <div style="display:none;" class="tryAtHomePopup-input_container">
-        <label for="productVariant">Product Variant:</label>
+        <label for="productVariant">Product Variant :</label>
         <input
           type="text"
           id="productVariant"
@@ -971,9 +971,9 @@ if (event.target.classList.contains('timeslot-btn')) {
 
       if (
         !timeslot ||
-        !name ||
-        !email ||
-        !phone ||
+        // !name ||
+        // !email ||
+        // !phone ||
         !house ||
         !locality ||
         !city ||
@@ -1204,7 +1204,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     text-align: left;
     margin: 15px 0 0 0;
     font-size: 1.6rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 500;
   }
   .address-details {
@@ -1219,7 +1219,7 @@ if (event.target.classList.contains('timeslot-btn')) {
   }
   .address-details p {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 500;
   }
   .address-details p strong {
@@ -1250,7 +1250,7 @@ if (event.target.classList.contains('timeslot-btn')) {
   }
 
   .trial-booked-header h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-size: 2rem;
     font-weight: 500;
     margin: 0;
@@ -1279,13 +1279,13 @@ if (event.target.classList.contains('timeslot-btn')) {
   }
   .product-cards .product-card h4 {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 400;
     font-size: 1.4rem;
   }
   .product-cards .product-card p {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-size: 2rem;
     font-weight: 500;
   }
@@ -1307,7 +1307,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     border: none;
     font-weight: 400;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     margin-right: 12rem;
   }
   @media (max-width: 1290px) {
@@ -1373,7 +1373,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     color: #000;
   }
   .selected-products-container .product-card h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 400;
     font-size: 1.8rem;
   }
@@ -1384,7 +1384,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     width: 100%;
     border: none;
     padding: 10px 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 400;
     cursor: pointer;
   }
@@ -1397,7 +1397,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     line-height: 0;
   }
   .collection-products-container .product-card h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 400;
     font-size: 1.4rem;
   }
@@ -1494,7 +1494,7 @@ if (event.target.classList.contains('timeslot-btn')) {
 
   .ajax_tah_succ_submit_popup p {
     font-size: 1.6rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     color: #000;
     margin: 0 0 15px;
   }
@@ -1552,7 +1552,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     opacity: 50%;
   }
   .tryAtHomePopup-input_container h2 {
-    font-family: var(--font-heading-family);
+    font-family: 'Playfair Display';
     font-size: 2rem;
     margin: 0 0 10px 0;
     font-weight: 500;
@@ -1577,7 +1577,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     text-align: center;
     cursor: pointer;
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     color: #333;
     font-weight: 500;
   }
@@ -1640,7 +1640,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     border: none;
     border-bottom: 1px solid #71224250;
     border-radius: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 500;
   }
 
@@ -1654,7 +1654,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     width: fit-content;
     font-size: 1.6rem;
     font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
   }
   .tryAtHomePopup-input_container {
     display: flex;
@@ -1665,7 +1665,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     width: 49%;
   }
   .tryAtHomePopup-input_container label {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 500;
     font-size: 1.6rem;
     letter-spacing: 0;
@@ -1674,7 +1674,7 @@ if (event.target.classList.contains('timeslot-btn')) {
     color: #000;
   }
   .section-heading-tah-popup {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand';
     font-size: 2.2rem;
     margin: 0;
     font-weight: 600;
