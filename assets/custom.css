@@ -1223,7 +1223,10 @@ header .menu-drawer {
 
 .menu-drawer__navigation .menu-item .dropdown-menu .menu-item {
     opacity: 0.6;
-  font-size: 1.4rem !important;
+}
+
+.menu-drawer__navigation .menu-item .dropdown-menu .menu-item a {
+    font-size: 1.4rem !important;
 }
 
 @media(min-width:756px) {
@@ -1323,7 +1326,8 @@ header .menu-drawer {
     flex-direction: column;
 }
 
-.assisstance_buttons_images_container a, .assisstance_buttons_image_container {
+.assisstance_buttons_images_container a,
+.assisstance_buttons_image_container {
     width: calc(50% - 5px);
     text-decoration: none;
     font-size: 1.6rem;
