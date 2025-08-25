@@ -1352,7 +1352,6 @@ header .menu-drawer {
 }
 
 .assisstance_buttons_image_container {
-    width: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
