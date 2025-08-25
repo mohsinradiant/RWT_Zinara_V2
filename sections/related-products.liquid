@@ -52,11 +52,13 @@
         {% endfor %}
       </ul>
 
-      {% if recommendations.products_count > 3 %}
-        <button id="toggle-btn" class="view-more-btn">
-          View More <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_16.png?v=1744182659">
-        </button>
-      {% endif %}
+      {% comment %}
+        {% if recommendations.products_count > 3 %}
+          <button id="toggle-btn" class="view-more-btn">
+            View More <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_16.png?v=1744182659">
+          </button>
+        {% endif %}
+      {% endcomment %}
     {% endif %}
   </product-recommendations>
   {% if section.settings.image_shape == 'arch' %}
@@ -71,6 +73,7 @@
     justify-content: center;
     align-items: end;
     margin-bottom: 50px;
+    overflow-x: hidden;
   }
   .related-products .full-unstyled-link {
     font-family: 'Montserrat', sans-serif;
@@ -94,8 +97,35 @@
   }
   .pdp-product-recommendations-ul {
     margin-bottom: 0 !important;
+    flex-wrap: unset;
+    overflow-x: auto;
+    padding-bottom: 10px;
   }
-  @media (min-width: 756px) {
+  .pdp-product-recommendations-ul {
+    scrollbar-width: thin; /* slim scrollbar */
+    scrollbar-color: #712242 #f0f0f0; /* thumb | track */
+  }
+
+  /* Chrome, Edge, Safari */
+  .pdp-product-recommendations-ul::-webkit-scrollbar {
+    height: 3px; /* horizontal scrollbar */
+    width: 3px; /* vertical scrollbar */
+  }
+
+  .pdp-product-recommendations-ul::-webkit-scrollbar-track {
+    background: #f0f0f0; /* track color */
+  }
+
+  .pdp-product-recommendations-ul::-webkit-scrollbar-thumb {
+    background: #712242; /* thumb color */
+    border-radius: 10px;
+  }
+
+  .pdp-product-recommendations-ul::-webkit-scrollbar-thumb:hover {
+    background: #8d2a53; /* hover shade */
+  }
+
+  /* @media (min-width: 756px) {
     .pdp-product-recommendations-ul .grid__item:nth-child(n + 5) {
       opacity: 0;
       visibility: hidden;
@@ -103,7 +133,7 @@
       overflow: hidden;
       transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s;
     }
-  }
+  } */
 
   .pdp-product-recommendations-ul.expanded .grid__item:nth-child(n + 4) {
     opacity: 1;

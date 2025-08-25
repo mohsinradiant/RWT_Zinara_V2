@@ -720,10 +720,10 @@
                       {% comment %} <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/whatssapp-big-logo_81279.png?v=1748344489"> {% endcomment %}
                       WhatsApp us
                     </a>
-                    <a href="tel:+918851812814" class="assisstance_buttons_image_container">
+                    <p class="assisstance_buttons_image_container assisstance_buttons_image_container_2">
                       {% comment %} <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/call_4517529.png?v=1748344487"> {% endcomment %}
                       Book a video call
-                    </a>
+                    </p>
                   </div>
                 </div>
               {%- when 'rating' -%}
@@ -1165,11 +1165,11 @@
                       </div>
 
                       <!-- Right Side -->
-                        {% if block.settings.right_image != blank %}
-                      <div class="product-info-image__right">
+                      {% if block.settings.right_image != blank %}
+                        <div class="product-info-image__right">
                           <img src="{{ block.settings.right_image | img_url: '500x' }}" alt="">
-                      </div>
-                        {% endif %}
+                        </div>
+                      {% endif %}
                     </div>
                   </div>
                 {% endif %}
@@ -2935,9 +2935,6 @@
               }
               .assistance_button_heading {
                 font-size: 1.4rem;
-              }
-              .assisstance_buttons_image_container {
-                width: 30px;
               }
               .assisstance_buttons_image_container p {
                 font-size: 1.3rem;

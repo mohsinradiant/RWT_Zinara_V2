@@ -1225,6 +1225,10 @@ header .menu-drawer {
     opacity: 0.6;
 }
 
+.menu-drawer__navigation .menu-item .dropdown-menu .menu-item a {
+    font-size: 1.4rem !important;
+}
+
 @media(min-width:756px) {
     .facets-vertical .facets-wrapper {
         position: sticky;
@@ -1322,7 +1326,8 @@ header .menu-drawer {
     flex-direction: column;
 }
 
-.assisstance_buttons_images_container a {
+.assisstance_buttons_images_container a,
+.assisstance_buttons_image_container {
     width: calc(50% - 5px);
     text-decoration: none;
     font-size: 1.6rem;
@@ -1352,7 +1357,6 @@ header .menu-drawer {
 }
 
 .assisstance_buttons_image_container {
-    width: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
