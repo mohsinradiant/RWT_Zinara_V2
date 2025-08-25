@@ -454,7 +454,7 @@ header .header__search {
 }
 
 .home-try-at-home-section-container {
-    margin: 50px 0;
+    margin: 50px auto;
     overflow: hidden;
 }
 
@@ -1640,7 +1640,7 @@ sticky-header {
 
     .home-try-at-home-section-container {
         padding: 0 !important;
-        margin: 30px 0;
+        margin: 30px auto;
     }
 
     .product-grid-container facet-filters-form {
