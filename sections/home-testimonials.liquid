@@ -44,6 +44,7 @@
     gap: 3%;
     transition: transform 0.5s ease-in-out;
     align-items: start;
+    height: 250px;
   }
 
   .testimonial-container {
@@ -117,136 +118,134 @@
   }
 </style>
 
-{% comment %}
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const testimonialCarouselContainer = document.querySelector('.home-testimonials-carousel');
-      const testimonialCarousel = document.querySelector('.home-testimonials-carousel-parent');
-      const leftArrow = document.querySelector('.testimonial-carousel-arrow.left-arrow');
-      const rightArrow = document.querySelector('.testimonial-carousel-arrow.right-arrow');
-      const testimonials = testimonialCarousel.querySelectorAll('.testimonial-container');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const testimonialCarouselContainer = document.querySelector('.home-testimonials-carousel');
+    const testimonialCarousel = document.querySelector('.home-testimonials-carousel-parent');
+    const leftArrow = document.querySelector('.testimonial-carousel-arrow.left-arrow');
+    const rightArrow = document.querySelector('.testimonial-carousel-arrow.right-arrow');
+    const testimonials = testimonialCarousel.querySelectorAll('.testimonial-container');
 
-      let currentIndex = 0;
-      const transitionDuration = 500;
-      const autoplayInterval = 3000; // 3 seconds
-      const totalTestimonials = testimonials.length;
+    let currentIndex = 0;
+    const transitionDuration = 500;
+    const autoplayInterval = 3000; // 3 seconds
+    const totalTestimonials = testimonials.length;
 
-      function updateCarousel() {
-        const testimonialStyle = window.getComputedStyle(testimonials[0]);
-        let testimonialWidth =
-          testimonials[0].offsetWidth + parseInt(testimonialStyle.marginRight) + parseInt(testimonialStyle.marginLeft);
+    function updateCarousel() {
+      const testimonialStyle = window.getComputedStyle(testimonials[0]);
+      let testimonialWidth =
+        testimonials[0].offsetWidth + parseInt(testimonialStyle.marginRight) + parseInt(testimonialStyle.marginLeft);
 
-        // Add extra 20px scroll for devices with width < 756px
-        if (window.innerWidth < 756) {
-          testimonialWidth += 13;
+      // Add extra 20px scroll for devices with width < 756px
+      if (window.innerWidth < 756) {
+        testimonialWidth += 13;
+      }
+
+      testimonialCarousel.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+      testimonialCarousel.style.transform = `translateX(-${currentIndex * testimonialWidth}px)`;
+
+      setTimeout(setActiveTestimonials, transitionDuration);
+    }
+
+    function setActiveTestimonials() {
+      const containerRect = testimonialCarouselContainer.getBoundingClientRect();
+
+      testimonials.forEach((testimonial) => {
+        const testimonialRect = testimonial.getBoundingClientRect();
+        if (testimonialRect.left >= containerRect.left && testimonialRect.right <= containerRect.right) {
+          testimonial.classList.add('active');
+        } else {
+          testimonial.classList.remove('active');
         }
-
-        testimonialCarousel.style.transition = `transform ${transitionDuration}ms ease-in-out`;
-        testimonialCarousel.style.transform = `translateX(-${currentIndex * testimonialWidth}px)`;
-
-        setTimeout(setActiveTestimonials, transitionDuration);
-      }
-
-      function setActiveTestimonials() {
-        const containerRect = testimonialCarouselContainer.getBoundingClientRect();
-
-        testimonials.forEach((testimonial) => {
-          const testimonialRect = testimonial.getBoundingClientRect();
-          if (testimonialRect.left >= containerRect.left && testimonialRect.right <= containerRect.right) {
-            testimonial.classList.add('active');
-          } else {
-            testimonial.classList.remove('active');
-          }
-        });
-      }
-
-      function moveLeft() {
-        currentIndex = currentIndex > 0 ? currentIndex - 1 : totalTestimonials - 1;
-        updateCarousel();
-      }
-
-      function moveRight() {
-        currentIndex = currentIndex < totalTestimonials - 1 ? currentIndex + 1 : 0;
-        updateCarousel();
-      }
-
-      leftArrow.addEventListener('click', () => {
-        moveLeft();
-        resetAutoplay();
       });
+    }
 
-      rightArrow.addEventListener('click', () => {
-        moveRight();
-        resetAutoplay();
-      });
-
-      window.addEventListener('resize', () => {
-        testimonialCarousel.style.transition = 'none'; // Disable animation during resize
-        updateCarousel();
-      });
-
-      // Initial setup
+    function moveLeft() {
+      currentIndex = currentIndex > 0 ? currentIndex - 1 : totalTestimonials - 1;
       updateCarousel();
+    }
 
-      // Autoplay
-      let autoplay = setInterval(moveRight, autoplayInterval);
+    function moveRight() {
+      currentIndex = currentIndex < totalTestimonials - 1 ? currentIndex + 1 : 0;
+      updateCarousel();
+    }
 
-      function resetAutoplay() {
-        clearInterval(autoplay);
-        autoplay = setInterval(moveRight, autoplayInterval);
-      }
-
-      // --- Touch Swipe Support ---
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      testimonialCarouselContainer.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-      });
-
-      testimonialCarouselContainer.addEventListener('touchmove', (e) => {
-        touchEndX = e.touches[0].clientX;
-      });
-
-      testimonialCarouselContainer.addEventListener('touchend', () => {
-        const swipeDistance = touchStartX - touchEndX;
-        if (swipeDistance > 50) {
-          moveRight(); // Swipe left → move right
-        } else if (swipeDistance < -50) {
-          moveLeft(); // Swipe right → move left
-        }
-        resetAutoplay();
-      });
-
-      // --- Mouse Drag Support ---
-      let isDragging = false;
-      let startX = 0;
-
-      testimonialCarouselContainer.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX;
-      });
-
-      testimonialCarouselContainer.addEventListener('mouseup', (e) => {
-        if (!isDragging) return;
-        let endX = e.clientX;
-        let swipeDistance = startX - endX;
-
-        if (swipeDistance > 50) {
-          moveRight();
-        } else if (swipeDistance < -50) {
-          moveLeft();
-        }
-        isDragging = false;
-        resetAutoplay();
-      });
-
-      testimonialCarouselContainer.addEventListener('mouseleave', () => {
-        isDragging = false;
-      });
+    leftArrow.addEventListener('click', () => {
+      moveLeft();
+      resetAutoplay();
     });
-  </script>
-{% endcomment %}
+
+    rightArrow.addEventListener('click', () => {
+      moveRight();
+      resetAutoplay();
+    });
+
+    window.addEventListener('resize', () => {
+      testimonialCarousel.style.transition = 'none'; // Disable animation during resize
+      updateCarousel();
+    });
+
+    // Initial setup
+    updateCarousel();
+
+    // Autoplay
+    let autoplay = setInterval(moveRight, autoplayInterval);
+
+    function resetAutoplay() {
+      clearInterval(autoplay);
+      autoplay = setInterval(moveRight, autoplayInterval);
+    }
+
+    // --- Touch Swipe Support ---
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    testimonialCarouselContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    });
+
+    testimonialCarouselContainer.addEventListener('touchmove', (e) => {
+      touchEndX = e.touches[0].clientX;
+    });
+
+    testimonialCarouselContainer.addEventListener('touchend', () => {
+      const swipeDistance = touchStartX - touchEndX;
+      if (swipeDistance > 50) {
+        moveRight(); // Swipe left → move right
+      } else if (swipeDistance < -50) {
+        moveLeft(); // Swipe right → move left
+      }
+      resetAutoplay();
+    });
+
+    // --- Mouse Drag Support ---
+    let isDragging = false;
+    let startX = 0;
+
+    testimonialCarouselContainer.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+    });
+
+    testimonialCarouselContainer.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      let endX = e.clientX;
+      let swipeDistance = startX - endX;
+
+      if (swipeDistance > 50) {
+        moveRight();
+      } else if (swipeDistance < -50) {
+        moveLeft();
+      }
+      isDragging = false;
+      resetAutoplay();
+    });
+
+    testimonialCarouselContainer.addEventListener('mouseleave', () => {
+      isDragging = false;
+    });
+  });
+</script>
 
 {% schema %}
 {
