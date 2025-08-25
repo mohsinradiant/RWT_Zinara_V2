@@ -1322,7 +1322,7 @@ header .menu-drawer {
     flex-direction: column;
 }
 
-.assisstance_buttons_images_container a {
+.assisstance_buttons_images_container a, .assisstance_buttons_image_container {
     width: calc(50% - 5px);
     text-decoration: none;
     font-size: 1.6rem;
