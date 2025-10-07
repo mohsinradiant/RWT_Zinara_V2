@@ -314,7 +314,7 @@
         "block_iDp34K": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_Y_bxfTa_iUA.jpg",
+            "image": "shopify://shop_images/Daily_Hustle.png",
             "heading": "Daily wear",
             "url": "shopify://collections/all-rings"
           }
@@ -322,7 +322,7 @@
         "block_46988k": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_-_12be3InkQ.jpg",
+            "image": "shopify://shop_images/Engagement.png",
             "heading": "Engagement",
             "url": "shopify://collections/all-earrings"
           }
@@ -330,7 +330,7 @@
         "block_aiiqNM": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_D9vqwfE7YGI.jpg",
+            "image": "shopify://shop_images/Social_Event.png",
             "heading": "Social events",
             "url": "shopify://collections/all-bracelets"
           }
@@ -338,7 +338,7 @@
         "block_EcmD49": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "image": "shopify://shop_images/Gifting.png",
             "heading": "Gifting",
             "url": "shopify://collections/all-pendants"
           }
