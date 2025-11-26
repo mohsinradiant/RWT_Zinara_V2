@@ -72,7 +72,6 @@
       onload="this.media='all'"
     >
   {%- endif -%}
-  sdfasdcffascdzsd
   {% assign selected_variant_option2 = product.selected_or_first_available_variant.option2 | downcase %}
   {% if selected_variant_option2 contains 'gold' %}
     <style>
@@ -81,6 +80,7 @@
       }
     </style>
   {% endif %}
+  {% assign first_product_info_image_rendered = false %}
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
@@ -1141,6 +1141,11 @@
                   });
                 </script>
               {%- when 'product-info-image' -%}
+                {% assign is_first_product_info_image = false %}
+                {% if first_product_info_image_rendered != true %}
+                  {% assign is_first_product_info_image = true %}
+                  {% assign first_product_info_image_rendered = true %}
+                {% endif %}
                 {% assign show_block = false %}
 
                 {% if block.settings.show_only_gold != true %}
@@ -1152,42 +1157,44 @@
                 {% endif %}
 
                 {% if show_block %}
-                  <div class="product-info-image">
-                    {% if block.settings.heading != blank %}
-                      <h2 class="product-info-image__heading">{{ block.settings.heading }}</h2>
-                    {% endif %}
+                  {% unless selected_variant_option2 contains 'gold' and is_first_product_info_image %}
+                    <div class="product-info-image">
+                      {% if block.settings.heading != blank %}
+                        <h2 class="product-info-image__heading">{{ block.settings.heading }}</h2>
+                      {% endif %}
 
-                    <div class="product-info-image__content">
-                      <!-- Left Side -->
-                      <div class="product-info-image__left">
-                        {% if block.settings.left_image_1 != blank %}
-                          <div class="product-info-image__item">
-                            <img src="{{ block.settings.left_image_1 | img_url: '50x' }}" alt="">
-                            <span>{{ block.settings.left_text_1 }}</span>
-                          </div>
-                        {% endif %}
-                        {% if block.settings.left_image_2 != blank %}
-                          <div class="product-info-image__item">
-                            <img src="{{ block.settings.left_image_2 | img_url: '50x' }}" alt="">
-                            <span>{{ block.settings.left_text_2 }}</span>
-                          </div>
-                        {% endif %}
-                        {% if block.settings.left_image_3 != blank %}
-                          <div class="product-info-image__item">
-                            <img src="{{ block.settings.left_image_3 | img_url: '50x' }}" alt="">
-                            <span>{{ block.settings.left_text_3 }}</span>
+                      <div class="product-info-image__content">
+                        <!-- Left Side -->
+                        <div class="product-info-image__left">
+                          {% if block.settings.left_image_1 != blank %}
+                            <div class="product-info-image__item">
+                              <img src="{{ block.settings.left_image_1 | img_url: '50x' }}" alt="">
+                              <span>{{ block.settings.left_text_1 }}</span>
+                            </div>
+                          {% endif %}
+                          {% if block.settings.left_image_2 != blank %}
+                            <div class="product-info-image__item">
+                              <img src="{{ block.settings.left_image_2 | img_url: '50x' }}" alt="">
+                              <span>{{ block.settings.left_text_2 }}</span>
+                            </div>
+                          {% endif %}
+                          {% if block.settings.left_image_3 != blank %}
+                            <div class="product-info-image__item">
+                              <img src="{{ block.settings.left_image_3 | img_url: '50x' }}" alt="">
+                              <span>{{ block.settings.left_text_3 }}</span>
+                            </div>
+                          {% endif %}
+                        </div>
+
+                        <!-- Right Side -->
+                        {% if block.settings.right_image != blank %}
+                          <div class="product-info-image__right">
+                            <img src="{{ block.settings.right_image | img_url: '500x' }}" alt="">
                           </div>
                         {% endif %}
                       </div>
-
-                      <!-- Right Side -->
-                      {% if block.settings.right_image != blank %}
-                        <div class="product-info-image__right">
-                          <img src="{{ block.settings.right_image | img_url: '500x' }}" alt="">
-                        </div>
-                      {% endif %}
                     </div>
-                  </div>
+                  {% endunless %}
                 {% endif %}
               {%- when 'pincode-availability' -%}
                 <div class="pincode-availability-checker-container">
