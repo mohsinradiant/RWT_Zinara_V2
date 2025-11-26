@@ -1154,18 +1154,25 @@
             '201304',
           ];
           const defaultPincodes = allPincodes;
-          const productPagePincodes =
-            {% if template contains 'product' %}
-              {% if product.tags contains 'gold' %}
-                validPincodesGold
-              {% elsif product.tags contains 'silver' %}
-                validPincodesSilver
-              {% else %}
-                allPincodes
-              {% endif %}
+          const selectedVariantData =
+            {% if template contains 'product' and product %}
+              {{ product.selected_or_first_available_variant | json }}
             {% else %}
-              allPincodes
+              null
             {% endif %};
+          const isProductTemplate = {% if template contains 'product' %}true{% else %}false{% endif %};
+          const option2Value =
+            selectedVariantData && selectedVariantData.option2
+              ? selectedVariantData.option2.toString().toLowerCase()
+              : '';
+          const productPagePincodes =
+            isProductTemplate
+              ? option2Value.indexOf('gold') > -1
+                ? validPincodesGold
+                : option2Value.indexOf('silver') > -1
+                  ? validPincodesSilver
+                  : defaultPincodes
+              : defaultPincodes;
           let currentValidPincodes = defaultPincodes;
          let lastClickedButton = null;
 
