@@ -939,82 +939,91 @@
                   </div>
                 </div>
               {%- when 'price-breakdown-dropdown' -%}
-                <div class="price-breakdown-container">
-                  <span>Price Breakup</span>
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698"
-                    alt="Dropdown Icon"
-                    class="price-breakdown-icon"
-                  >
-                </div>
-                <div class="price-breakdown-popup" id="popup">
-                  {% assign selected_variant_id = request.query.variant %}
-                  {% assign selected_variant = product.variants | where: 'id', selected_variant_id | first %}
-                  {% if selected_variant == null %}
-                    {% assign selected_variant = product.variants.first %}
-                  {% endif %}
+                {% assign variant_option2 = product.selected_or_first_available_variant.option2 | downcase %}
+                {% unless variant_option2 contains 'silver' %}
+                  <div class="price-breakdown-container">
+                    <span>Price Breakup</span>
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698"
+                      alt="Dropdown Icon"
+                      class="price-breakdown-icon"
+                    >
+                  </div>
+                  <div class="price-breakdown-popup" id="popup">
+                    {% assign selected_variant_id = request.query.variant %}
+                    {% assign selected_variant = product.variants | where: 'id', selected_variant_id | first %}
+                    {% if selected_variant == null %}
+                      {% assign selected_variant = product.variants.first %}
+                    {% endif %}
 
-                  <ul class="price-breakdown-list" id="price-breakdown-list">
-                    {% if product.selected_or_first_available_variant.metafields.content.price_breakdown_json.value
-                        != null
-                    %}
-                      {% for item in product.selected_or_first_available_variant.metafields.content.price_breakdown_json.value %}
-                        <li>
-                          <div class="price_breakdown-left_container">
-                            <div class="price_breakdown-left_container_top">
-                              <span>{{ item.title }}</span>
+                    <ul class="price-breakdown-list" id="price-breakdown-list">
+                      {% if product.selected_or_first_available_variant.metafields.content.price_breakdown_json.value
+                          != null
+                      %}
+                        {% for item in product.selected_or_first_available_variant.metafields.content.price_breakdown_json.value %}
+                          <li>
+                            <div class="price_breakdown-left_container">
+                              <div class="price_breakdown-left_container_top">
+                                <span>{{ item.title }}</span>
 
-                              {% if item.compare_at_price and item.selling_price %}
-                                {% assign compare_at_price = item.compare_at_price | times: 1.0 %}
-                                {% assign selling_price = item.selling_price | times: 1.0 %}
-                                {% assign price_difference = compare_at_price | minus: selling_price %}
-                                {% assign percentage_difference = price_difference
-                                  | divided_by: compare_at_price
-                                  | times: 100.0
-                                  | round
-                                %}
-                                {% if percentage_difference > 0 %}
-                                  <span class="price_discount">{{ percentage_difference }}% off</span>
+                                {% if item.compare_at_price and item.selling_price %}
+                                  {% assign compare_at_price = item.compare_at_price | times: 1.0 %}
+                                  {% assign selling_price = item.selling_price | times: 1.0 %}
+                                  {% assign price_difference = compare_at_price | minus: selling_price %}
+                                  {% assign percentage_difference = price_difference
+                                    | divided_by: compare_at_price
+                                    | times: 100.0
+                                    | round
+                                  %}
+                                  {% if percentage_difference > 0 %}
+                                    <span class="price_discount">{{ percentage_difference }}% off</span>
+                                  {% endif %}
                                 {% endif %}
+                              </div>
+                              <div class="price_breakdown-left_container_bottom">
+                                <p>{{ item.subtitle_1 }}</p>
+                                <p>{{ item.subtitle_2 }}</p>
+                              </div>
+                            </div>
+                            <div class="price_breakdown-right_container">
+                              {% if item.selling_price %}
+                                <span>
+                                  ₹{{ item.selling_price | money_without_trailing_zeros | times: 100 | remove: '.0' }}
+                                </span>
+                              {% endif %}
+
+                              {% if item.compare_at_price
+                                and item.compare_at_price != 0
+                                and item.compare_at_price != null
+                                and item.compare_at_price != item.selling_price
+                              %}
+                                <span class="price_breakdown_compare_at_price">
+                                  ₹
+                                  {{-
+                                    item.compare_at_price
+                                    | money_without_trailing_zeros
+                                    | times: 100
+                                    | remove: '.0'
+                                  }}
+                                </span>
                               {% endif %}
                             </div>
-                            <div class="price_breakdown-left_container_bottom">
-                              <p>{{ item.subtitle_1 }}</p>
-                              <p>{{ item.subtitle_2 }}</p>
-                            </div>
-                          </div>
-                          <div class="price_breakdown-right_container">
-                            {% if item.selling_price %}
-                              <span>
-                                ₹{{ item.selling_price | money_without_trailing_zeros | times: 100 | remove: '.0' }}
-                              </span>
-                            {% endif %}
+                          </li>
+                        {% endfor %}
 
-                            {% if item.compare_at_price
-                              and item.compare_at_price != 0
-                              and item.compare_at_price != null
-                              and item.compare_at_price != item.selling_price
-                            %}
-                              <span class="price_breakdown_compare_at_price">
-                                ₹{{ item.compare_at_price | money_without_trailing_zeros | times: 100 | remove: '.0' }}
-                              </span>
-                            {% endif %}
-                          </div>
+                        <li class="price-breakdown-total">
+                          <span>Total Cost</span>
+                          <span>₹{{ product.selected_or_first_available_variant.price | divided_by: 100 }}</span>
                         </li>
-                      {% endfor %}
+                        <span>Lorem Ipsum Dior</span>
+                      {% else %}
+                        <li>No price breakdown available for this variant.</li>
+                      {% endif %}
+                    </ul>
 
-                      <li class="price-breakdown-total">
-                        <span>Total Cost</span>
-                        <span>₹{{ product.selected_or_first_available_variant.price | divided_by: 100 }}</span>
-                      </li>
-                      <span>Lorem Ipsum Dior</span>
-                    {% else %}
-                      <li>No price breakdown available for this variant.</li>
-                    {% endif %}
-                  </ul>
-
-                  <div class="price-breakdown-close-btn">Close</div>
-                </div>
+                    <div class="price-breakdown-close-btn">Close</div>
+                  </div>
+                {% endunless %}
               {%- when 'details-dropdown' -%}
                 {% if product.selected_or_first_available_variant.metafields.content.product_details_list_1_json != null
                 %}
@@ -3318,7 +3327,7 @@
     const inventoryElement = document.querySelector('.product__inventory');
     const productFormButtons = document.querySelector('.product-form__buttons');
 
-    const validPincodes = [
+    const validPincodesGold = [
             '110001',
             '110002',
             '110003',
@@ -3490,7 +3499,187 @@
             '201102',
             '201302',
             '201304',
-          ]; // Example valid pincodes
+          ];
+    const validPincodesSilver = [
+            '110002',
+            '110003',
+            '110004',
+            '110005',
+            '110006',
+            '110007',
+            '110008',
+            '110009',
+            '110010',
+            '110011',
+            '110012',
+            '110013',
+            '110014',
+            '110015',
+            '110016',
+            '110017',
+            '110018',
+            '110019',
+            '110020',
+            '110021',
+            '110022',
+            '110023',
+            '110024',
+            '110025',
+            '110026',
+            '110027',
+            '110028',
+            '110029',
+            '110030',
+            '110031',
+            '110032',
+            '110033',
+            '110034',
+            '110035',
+            '110036',
+            '110037',
+            '110038',
+            '110039',
+            '110040',
+            '110041',
+            '110042',
+            '110043',
+            '110044',
+            '110045',
+            '110046',
+            '110047',
+            '110048',
+            '110049',
+            '110051',
+            '110052',
+            '110053',
+            '110054',
+            '110055',
+            '110056',
+            '110057',
+            '110058',
+            '110059',
+            '110060',
+            '110061',
+            '110062',
+            '110063',
+            '110064',
+            '110065',
+            '110066',
+            '110067',
+            '110068',
+            '110069',
+            '110070',
+            '110071',
+            '110072',
+            '110073',
+            '110074',
+            '110075',
+            '110076',
+            '110077',
+            '110078',
+            '110080',
+            '110081',
+            '110082',
+            '110083',
+            '110084',
+            '110085',
+            '110086',
+            '110087',
+            '110088',
+            '110089',
+            '110090',
+            '110091',
+            '110092',
+            '110093',
+            '110094',
+            '110095',
+            '110096',
+            '110097',
+            '110099',
+            '110110',
+            '122001',
+            '122002',
+            '122003',
+            '122004',
+            '122005',
+            '122006',
+            '122007',
+            '122008',
+            '122009',
+            '122010',
+            '122011',
+            '122012',
+            '122015',
+            '122016',
+            '122017',
+            '122018',
+            '122022',
+            '122051',
+            '122052',
+            '122098',
+            '122101',
+            '122102',
+            '122505',
+            '201020',
+            '201021',
+            '201103',
+            '201301',
+            '201303',
+            '201305',
+            '201306',
+            '201307',
+            '201308',
+            '201309',
+            '201310',
+            '201311',
+            '201312',
+            '201313',
+            '201315',
+            '201316',
+            '201317',
+            '201318',
+            '121001',
+            '121002',
+            '121003',
+            '121005',
+            '121006',
+            '121007',
+            '121008',
+            '121009',
+            '121010',
+            '121012',
+            '121013',
+            '121014',
+            '121015',
+            '121101',
+            '201001',
+            '201002',
+            '201003',
+            '201004',
+            '201005',
+            '201006',
+            '201007',
+            '201009',
+            '201010',
+            '201011',
+            '201012',
+            '201013',
+            '201014',
+            '201016',
+            '201017',
+            '201019',
+            '201102',
+            '201302',
+            '201304',
+          ];
+    const validPincodes =
+      {% if product.tags contains 'gold' %}
+        validPincodesGold
+      {% elsif product.tags contains 'silver' %}
+        validPincodesSilver
+      {% else %}
+        validPincodesGold
+      {% endif %};
      let lastClickedButton = null;
 
     // Check if the user is logged in
