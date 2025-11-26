@@ -930,22 +930,41 @@
                   {% endfor %}
                 </div>
               {%- when 'brand-usps' -%}
+                {% if selected_variant_option2 contains 'gold' %}
                 <div class="pdp-brand-usps-container">
                   <div class="pdp-brand-usp-block">
                     <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_f1eb3d9e-4693-41a4-8653-eb4ee95f5c33.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Lifetime buyback & exchange</p>
+                    <p class="pdp-brand-usp-text">Lifetime buyback & exchange Silver</p>
                   </div>
                   <hr>
                   <div class="pdp-brand-usp-block">
                     <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector-1_fb612368-b411-4b17-8f25-d37684d0e7a0.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Lifetime free plating service</p>
+                    <p class="pdp-brand-usp-text">Lifetime free plating service Silver</p>
                   </div>
                   <hr>
                   <div class="pdp-brand-usp-block">
                     <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector-2.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Easy & hassle free returns</p>
+                    <p class="pdp-brand-usp-text">Easy & hassle free returns Silver</p>
                   </div>
                 </div>
+              {% else %}
+                <div class="pdp-brand-usps-container">
+                  <div class="pdp-brand-usp-block">
+                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_f1eb3d9e-4693-41a4-8653-eb4ee95f5c33.png?v=1754296764">
+                    <p class="pdp-brand-usp-text">Lifetime buyback & exchange Gold</p>
+                  </div>
+                  <hr>
+                  <div class="pdp-brand-usp-block">
+                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector-1_fb612368-b411-4b17-8f25-d37684d0e7a0.png?v=1754296764">
+                    <p class="pdp-brand-usp-text">Lifetime free plating service Gold</p>
+                  </div>
+                  <hr>
+                  <div class="pdp-brand-usp-block">
+                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector-2.png?v=1754296764">
+                    <p class="pdp-brand-usp-text">Easy & hassle free returns Gold</p>
+                  </div>
+                </div>
+              {% endif %}
               {%- when 'price-breakdown-dropdown' -%}
                 {% unless selected_variant_option2 contains 'silver' %}
                   <div class="price-breakdown-container">
