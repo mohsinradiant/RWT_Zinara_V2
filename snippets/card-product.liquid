@@ -209,9 +209,14 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
-            {% assign specs = card_product.metafields.custom.product_card_specs_caption | json %}
-            {% if specs != blank %}
-              <p class="product-card-specs">{{ specs[0] }}</p>
+            {% if card_product.metafields.custom.product_card_specs_caption != blank %}
+              {% assign clean = card_product.metafields.custom.product_card_specs_caption
+                | replace: '[\"', ''
+                | replace: '\"]', ''
+                | replace: '\"', ''
+                | replace: '\/', '/'
+              %}
+              <p class="product-card-specs">{{ clean }}</p>
             {% endif %}
 
             {%- if card_product.quantity_price_breaks_configured? -%}
