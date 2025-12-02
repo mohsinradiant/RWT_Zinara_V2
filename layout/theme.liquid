@@ -410,24 +410,21 @@
     <!-- End Meta Pixel Code -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const els = document.querySelectorAll('.main-product_text-style_caption');
+        const selectors = ['.main-product_text-style_caption', '.product-card-specs'];
+
+        const els = document.querySelectorAll(selectors.join(', '));
 
         els.forEach((el) => {
           let txt = el.textContent.trim();
 
-          // Clean the string
           txt = txt
             .replace(/^\[/, '') // remove leading [
             .replace(/\]$/, '') // remove trailing ]
             .replace(/\\\//g, '/') // convert \/ → /
-            .replace(/\\+/g, '') // remove all \
+            .replace(/\\+/g, '') // remove \\
             .replace(/"/g, ''); // remove quotes
 
-          // Trim again
-          txt = txt.trim();
-
-          // Apply
-          el.textContent = txt;
+          el.textContent = txt.trim();
         });
       });
     </script>
