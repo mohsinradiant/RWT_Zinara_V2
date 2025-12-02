@@ -361,9 +361,13 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     {% comment %} Google Anaylytics {% endcomment %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HTXCELBNX"></script>
@@ -375,25 +379,59 @@
       gtag('js', new Date());
       gtag('config', 'G-9HTXCELBNX');
     </script>
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1058880252490692');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1058880252490692&ev=PageView&noscript=1"
-  /></noscript> 
-  <!-- End Meta Pixel Code -->
-</head>
-</head>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1058880252490692');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=1058880252490692&ev=PageView&noscript=1"
+    ></noscript>
+    <!-- End Meta Pixel Code -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const els = document.querySelectorAll('.main-product_text-style_caption');
+
+        els.forEach((el) => {
+          let txt = el.textContent.trim();
+
+          // Clean the string
+          txt = txt
+            .replace(/^\[/, '') // remove leading [
+            .replace(/\]$/, '') // remove trailing ]
+            .replace(/\\\//g, '/') // convert \/ → /
+            .replace(/\\+/g, '') // remove all \
+            .replace(/"/g, ''); // remove quotes
+
+          // Trim again
+          txt = txt.trim();
+
+          // Apply
+          el.textContent = txt;
+        });
+      });
+    </script>
+  </head>
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
@@ -454,7 +492,7 @@
           </button>
           <div id="tryAtHomeRes_2" class="try-at-home-pincode-result"></div>
           <div id="tryAtHomeButtons_2" class="try-at-home-buttons" style="display: none;">
-                        <button
+            <button
               id="homeTrialBtn_2"
               type="button"
               class="try-at-home-trial-button home-trial-button"
@@ -466,9 +504,8 @@
               type="button"
               class="try-at-home-trial-button video-trial-button"
             >
-            Book a Video Trial
+              Book a Video Trial
             </button>
-
           </div>
         </div>
       </div>
@@ -1486,94 +1523,93 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
           }
         };
       </script>
-     <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const link = document.getElementById('HeaderDrawer-try-at-home');
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const link = document.getElementById('HeaderDrawer-try-at-home');
 
-    if (link) {
-      link.addEventListener('click', function () {
-        const linkText = link.innerText.trim().toLowerCase();
+          if (link) {
+            link.addEventListener('click', function () {
+              const linkText = link.innerText.trim().toLowerCase();
 
-        if (linkText.includes('try at home')) {
-          const sourceUrl = window.location.href;
+              if (linkText.includes('try at home')) {
+                const sourceUrl = window.location.href;
 
-          // Full customer info if available
-          const customer = window.customer || {};
-          const address = customer.default_address || {};
+                // Full customer info if available
+                const customer = window.customer || {};
+                const address = customer.default_address || {};
 
-          const customerInfo = {
-            source: 'Burger Menu',
-            source_url: sourceUrl,
-            customer_id: customer.id || null,
-            customer_email: customer.email || null,
-            customer_name: `${customer.first_name || ''} ${customer.last_name || ''}`.trim(),
-            customer_phone: customer.phone || null,
-            customer_address: `${address.address1 || ''}, ${address.city || ''}, ${address.province || ''}, ${
-              address.zip || ''
-            }, ${address.country || ''}`.trim(),
-          };
+                const customerInfo = {
+                  source: 'Burger Menu',
+                  source_url: sourceUrl,
+                  customer_id: customer.id || null,
+                  customer_email: customer.email || null,
+                  customer_name: `${customer.first_name || ''} ${customer.last_name || ''}`.trim(),
+                  customer_phone: customer.phone || null,
+                  customer_address: `${address.address1 || ''}, ${address.city || ''}, ${address.province || ''}, ${
+                    address.zip || ''
+                  }, ${address.country || ''}`.trim(),
+                };
 
-          // ✅ GA4 event
-          gtag('event', 'try_at_home', customerInfo);
+                // ✅ GA4 event
+                gtag('event', 'try_at_home', customerInfo);
 
-          // ✅ Meta Pixel event
-          if (typeof fbq === 'function') {
-            fbq('trackCustom', 'try_at_home', customerInfo);
+                // ✅ Meta Pixel event
+                if (typeof fbq === 'function') {
+                  fbq('trackCustom', 'try_at_home', customerInfo);
+                }
+
+                console.log('try_at_home sent (Burger Menu):', {
+                  ...customerInfo,
+                });
+              }
+            });
           }
+        });
+      </script>
 
-          console.log('try_at_home sent (Burger Menu):', {
-            ...customerInfo
-          });
-        }
-      });
-    }
-  });
-</script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const link = document.getElementById('HeaderDrawer-about-us');
 
-    <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const link = document.getElementById('HeaderDrawer-about-us');
+          if (link) {
+            link.addEventListener('click', function () {
+              const linkText = link.innerText.trim().toLowerCase();
 
-    if (link) {
-      link.addEventListener('click', function () {
-        const linkText = link.innerText.trim().toLowerCase();
+              if (linkText.includes('about us')) {
+                const sourceUrl = window.location.href;
 
-        if (linkText.includes('about us')) {
-          const sourceUrl = window.location.href;
+                // Full customer info if available
+                const customer = window.customer || {};
+                const address = customer.default_address || {};
 
-          // Full customer info if available
-          const customer = window.customer || {};
-          const address = customer.default_address || {};
+                const eventData = {
+                  source: 'Burger Menu',
+                  source_url: sourceUrl,
+                  customer_id: customer.id || null,
+                  customer_email: customer.email || null,
+                  customer_name: `${customer.first_name || ''} ${customer.last_name || ''}`.trim(),
+                  customer_phone: customer.phone || null,
+                  customer_address: `${address.address1 || ''}, ${address.city || ''}, ${address.province || ''}, ${
+                    address.zip || ''
+                  }, ${address.country || ''}`.trim(),
+                };
 
-          const eventData = {
-            source: 'Burger Menu',
-            source_url: sourceUrl,
-            customer_id: customer.id || null,
-            customer_email: customer.email || null,
-            customer_name: `${customer.first_name || ''} ${customer.last_name || ''}`.trim(),
-            customer_phone: customer.phone || null,
-            customer_address: `${address.address1 || ''}, ${address.city || ''}, ${address.province || ''}, ${
-              address.zip || ''
-            }, ${address.country || ''}`.trim(),
-          };
+                gtag('event', 'about_us', eventData);
 
-          gtag('event', 'about_us', eventData);
+                // ✅ Meta Pixel: send same custom event
+                if (typeof fbq === 'function') {
+                  fbq('trackCustom', 'about_us', eventData);
+                }
 
-          // ✅ Meta Pixel: send same custom event
-          if (typeof fbq === 'function') {
-            fbq('trackCustom', 'about_us', eventData);
+                console.log('about_us sent (Burger Menu):', {
+                  ...eventData,
+                  customer_address: address, // keep full object here for debug if needed
+                });
+              }
+            });
           }
-
-          console.log('about_us sent (Burger Menu):', {
-            ...eventData,
-            customer_address: address, // keep full object here for debug if needed
-          });
-        }
-      });
-    }
-  });
-</script>
-
+        });
+      </script>
     </main>
 
     {% sections 'footer-group' %}
@@ -1801,8 +1837,8 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
       {% endif %}
     {% endcomment %}
     {% render 'kwikpass' %}
-{% comment %} Google Analytics homepage_view + Meta Pixel {% endcomment %}
-<script>
+    {% comment %} Google Analytics homepage_view + Meta Pixel {% endcomment %}
+    <script>
   document.addEventListener('DOMContentLoaded', function () {
     const pageTitle = document.title;
     const pageUrl = window.location.href;
@@ -1876,7 +1912,7 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
       customer_address: customerData.address
     });
   });
-</script>
+    </script>
 
     {% comment %} Video Trial Form Modal {% endcomment %}
     <div id="videoTrialFormModal" class="video-trial-modal" style="display: none;">
@@ -1894,14 +1930,23 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
             </div>
             <div class="form-group">
               <label for="videoTrialMobile">Mobile Number *</label>
-              <input type="tel" id="videoTrialMobile" required placeholder="Enter 10-digit mobile number" maxlength="10">
+              <input
+                type="tel"
+                id="videoTrialMobile"
+                required
+                placeholder="Enter 10-digit mobile number"
+                maxlength="10"
+              >
             </div>
             <div class="form-actions">
               <button type="button" class="cancel-btn" onclick="hideVideoTrialForm()">Cancel</button>
               <button type="submit" class="proceed-btn">Proceed with Booking</button>
             </div>
           </form>
-          <div id="videoTrialThankYou" style="display:none; text-align:center; padding: 30px 0; font-size: 1.5rem; color: #2e7d32; font-weight: 600;">
+          <div
+            id="videoTrialThankYou"
+            style="display:none; text-align:center; padding: 30px 0; font-size: 1.5rem; color: #2e7d32; font-weight: 600;"
+          >
             <span>Your request has been submitted successfully. We'll contact you shortly.</span>
           </div>
         </div>
@@ -1909,141 +1954,141 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
     </div>
 
     <style>
-      .video-trial-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-      }
+            .video-trial-modal {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 9999;
+            }
 
-      .video-trial-modal-content {
-        background: white;
-        border-radius: 8px;
-        padding: 0;
-        max-width: 500px;
-        width: 90%;
-        max-height: 80vh;
-        overflow-y: auto;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      }
+            .video-trial-modal-content {
+              background: white;
+              border-radius: 8px;
+              padding: 0;
+              max-width: 500px;
+              width: 90%;
+              max-height: 80vh;
+              overflow-y: auto;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            }
 
-      .video-trial-modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #eee;
-      }
+            .video-trial-modal-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              border-bottom: 1px solid #eee;
+            }
 
-      .video-trial-close-btn {
-        border: none;
-        padding: 0;
-            background: none;
-    font-size: 4rem;
-    cursor: pointer;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 0;
-    color: #712242;
-      }
+            .video-trial-close-btn {
+              border: none;
+              padding: 0;
+                  background: none;
+          font-size: 4rem;
+          cursor: pointer;
+          font-weight: 500;
+          font-family: 'Montserrat', sans-serif;
+          line-height: 0;
+          color: #712242;
+            }
 
-      .video-trial-close-btn:hover {
-        color: #333;
-      }
+            .video-trial-close-btn:hover {
+              color: #333;
+            }
 
-      .video-trial-modal-body p {
-margin-top: 13px;
-margin-bottom: 20px;
-    color: #000;
-    font-size: 1.4rem;
-    letter-spacing: 0;
-    text-align: left;
-    line-height: 1.9rem;      }
+            .video-trial-modal-body p {
+      margin-top: 13px;
+      margin-bottom: 20px;
+          color: #000;
+          font-size: 1.4rem;
+          letter-spacing: 0;
+          text-align: left;
+          line-height: 1.9rem;      }
 
-      .form-group {
-    margin-bottom: 20px;
-    display: flex
-;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    letter-spacing: 0;      }
+            .form-group {
+          margin-bottom: 20px;
+          display: flex
+      ;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          letter-spacing: 0;      }
 
-      .form-group label {
-    display: block;
-    font-weight: 400;
-    font-family: var(--font-heading-family);
-    color: #000;
-    font-size: 1.6rem;
-    margin: 0;      }
+            .form-group label {
+          display: block;
+          font-weight: 400;
+          font-family: var(--font-heading-family);
+          color: #000;
+          font-size: 1.6rem;
+          margin: 0;      }
 
-      .form-group input {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 1.4rem;
-        box-sizing: border-box;
-      }
+            .form-group input {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              font-size: 1.4rem;
+              box-sizing: border-box;
+            }
 
-      .form-group input:focus {
-        outline: none;
-        border-color: #712242;
-        box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
-      }
+            .form-group input:focus {
+              outline: none;
+              border-color: #712242;
+              box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
+            }
 
-      .form-actions {
-display: flex
-;
-    gap: 12px;
-    margin-top: 30px;
-    flex-direction: column-reverse;
-    width: 100%;      }
+            .form-actions {
+      display: flex
+      ;
+          gap: 12px;
+          margin-top: 30px;
+          flex-direction: column-reverse;
+          width: 100%;      }
 
-      .cancel-btn, .proceed-btn {
-        padding: 12px 24px;
-        border: none;
-        border-radius: 4px;
-        font-size: 1.4rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
+            .cancel-btn, .proceed-btn {
+              padding: 12px 24px;
+              border: none;
+              border-radius: 4px;
+              font-size: 1.4rem;
+              font-weight: 500;
+              cursor: pointer;
+              transition: all 0.2s ease;
+            }
 
-      .cancel-btn {
-        background-color: #f8f9fa;
-        color: #666;
-        border: 1px solid #ddd;
-      }
+            .cancel-btn {
+              background-color: #f8f9fa;
+              color: #666;
+              border: 1px solid #ddd;
+            }
 
-      .cancel-btn:hover {
-        background-color: #e9ecef;
-      }
+            .cancel-btn:hover {
+              background-color: #e9ecef;
+            }
 
-      .proceed-btn {
-        background-color: #712242;
-        color: white;
-      }
+            .proceed-btn {
+              background-color: #712242;
+              color: white;
+            }
 
-      .proceed-btn:hover {
-        background-color: #712242;
-      }
+            .proceed-btn:hover {
+              background-color: #712242;
+            }
 
-      @media (max-width: 768px) {
-        .video-trial-modal-content {
-          width: 95%;
-          margin: 20px;
-        }
-        
-        .cancel-btn, .proceed-btn {
-          width: 100%;
-        }
-      }
+            @media (max-width: 768px) {
+              .video-trial-modal-content {
+                width: 95%;
+                margin: 20px;
+              }
+
+              .cancel-btn, .proceed-btn {
+                width: 100%;
+              }
+            }
     </style>
 
     {% comment %} Whatsapp Floater {% endcomment %}
