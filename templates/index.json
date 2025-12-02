@@ -762,32 +762,32 @@
         "block_TyAJxa": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_Y_bxfTa_iUA.jpg",
-            "heading": "Under 5k",
+            "image": "shopify://shop_images/under_5k.png",
+            "heading": "",
             "url": "shopify://collections/all-rings"
           }
         },
         "block_zgCwV4": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_-_12be3InkQ.jpg",
-            "heading": "From 6k to 10k",
+            "image": "shopify://shop_images/under_10k.png",
+            "heading": "",
             "url": "shopify://collections/all-earrings"
           }
         },
         "block_Xqcg6e": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_D9vqwfE7YGI.jpg",
-            "heading": "From 11k to 15k",
+            "image": "shopify://shop_images/under_15k.png",
+            "heading": "",
             "url": "shopify://collections/all-bracelets"
           }
         },
         "block_EVXQRt": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
-            "heading": "From 16k to 20k",
+            "image": "shopify://shop_images/under_20k.png",
+            "heading": "",
             "url": "shopify://collections/all-pendants"
           }
         },
