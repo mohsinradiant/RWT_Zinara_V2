@@ -161,12 +161,13 @@
           "type": "block",
           "settings": {
             "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
-            "heading": "Necklaces",
+            "heading": "Pendants/Necklace",
             "url": "shopify://collections/all-pendants"
           }
         },
         "block_gny7Ck": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
             "heading": "Necklaces",
