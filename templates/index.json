@@ -136,7 +136,7 @@
         "block_Q64Dq8": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_Y_bxfTa_iUA.jpg",
+            "image": "shopify://shop_images/rings_test.png",
             "heading": "Rings",
             "url": "shopify://collections/all-rings"
           }
@@ -144,7 +144,7 @@
         "block_3E6Knd": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_-_12be3InkQ.jpg",
+            "image": "shopify://shop_images/earrings_test.png",
             "heading": "Earrings",
             "url": "shopify://collections/all-earrings"
           }
@@ -152,7 +152,7 @@
         "block_bmUtTt": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash_D9vqwfE7YGI.jpg",
+            "image": "shopify://shop_images/bracelets_test.png",
             "heading": "Bracelets",
             "url": "shopify://collections/all-bracelets"
           }
@@ -160,7 +160,7 @@
         "block_mMAQRU": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/unsplash__9jskbU4eLA.jpg",
+            "image": "shopify://shop_images/pendantsnecklace_test.png",
             "heading": "Pendants/Necklace",
             "url": "shopify://collections/all-pendants"
           }
