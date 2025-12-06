@@ -173,7 +173,7 @@
       "name": "Home Shop by Category",
       "settings": {
         "heading": "Shop by Category",
-        "subheading": "Experience best in class lab-grown diamonds and gold, and silver jewellery"
+        "subheading": "Experience best in class lab-grown diamonds set in 18 KT gold vermeil and gold"
       }
     },
     "home_shop_by_metal_D9mhyD": {
@@ -183,8 +183,8 @@
           "type": "block",
           "settings": {
             "image": "shopify://shop_images/24-11-2025--andrea00024.jpg",
-            "heading": "Experience our Gold Jewellery",
-            "subheading": "18k BIS Hallmarked Gold",
+            "heading": "18 KT Gold Vermeil",
+            "subheading": "Starting from INR XX",
             "button": "Shop now",
             "url": "shopify://collections/daily-hustle"
           }
@@ -193,8 +193,8 @@
           "type": "block",
           "settings": {
             "image": "shopify://shop_images/24-11-2025--andrea00089.jpg",
-            "heading": "Experience Silver & Gold Jewellery",
-            "subheading": "Silver with 18k gold plated ornaments",
+            "heading": "9KT/14KT Gold",
+            "subheading": "Starting from INR XX",
             "button": "Shop now",
             "url": "shopify://collections/daily-hustle"
           }
@@ -203,8 +203,8 @@
           "type": "block",
           "settings": {
             "image": "shopify://shop_images/24-11-2025--andrea00011.jpg",
-            "heading": "Experience our Solitaire Collection",
-            "subheading": "Comes with silver and 18k gold options",
+            "heading": "Solitaire Collection",
+            "subheading": "Starting from INR XX",
             "button": "Shop now",
             "url": "shopify://collections/daily-hustle"
           }
@@ -250,7 +250,7 @@
             "image": "shopify://shop_images/Vector_30.png",
             "heading": "BIS Hallmarked Gold",
             "mobile_heading": "",
-            "subheading": "We use BIS Hallmarked Gold for all our products",
+            "subheading": "We use BIS Hallmarked Gold for all our gold products",
             "show_button": false
           }
         },
