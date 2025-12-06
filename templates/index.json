@@ -15,9 +15,9 @@
         "slide_HHiCAy": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Selected_Images_Final_Edit_Landscape_2000_x_900_24-11-2025--andrea00001_6.jpg",
+            "image": "shopify://shop_images/home_web_banner.png",
             "image_alt": "",
-            "image_mobile": "shopify://shop_images/mobile_banner_1.png",
+            "image_mobile": "shopify://shop_images/mobile_web_banner.png",
             "image_mobile_alt": "",
             "image_aspect_ratio": true,
             "heading": "Image slide",
@@ -66,7 +66,7 @@
         "block_Q64Dq8": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/rings_test.png",
+            "image": "shopify://shop_images/rings_category.jpg",
             "heading": "Rings",
             "url": "shopify://collections/all-rings"
           }
@@ -74,7 +74,7 @@
         "block_3E6Knd": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/earrings_test.png",
+            "image": "shopify://shop_images/earrings_category.jpg",
             "heading": "Earrings",
             "url": "shopify://collections/all-earrings"
           }
@@ -82,7 +82,7 @@
         "block_bmUtTt": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/bracelets_test.png",
+            "image": "shopify://shop_images/bracelets_category.jpg",
             "heading": "Bracelets",
             "url": "shopify://collections/all-bracelets"
           }
@@ -90,7 +90,7 @@
         "block_mMAQRU": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/pendantsnecklace_test.png",
+            "image": "shopify://shop_images/pendantsnecklace_category.jpg",
             "heading": "Pendants/Necklace",
             "url": "shopify://collections/all-pendants"
           }
@@ -134,7 +134,7 @@
         "block_V4cPai": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/24-11-2025--andrea00024.jpg",
+            "image": "shopify://shop_images/vermeil_metal.jpg",
             "heading": "18 KT Gold Vermeil",
             "subheading": "Starting from INR XX",
             "button": "Shop now",
@@ -144,7 +144,7 @@
         "block_rHyewm": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/24-11-2025--andrea00089.jpg",
+            "image": "shopify://shop_images/gold_metal.jpg",
             "heading": "9KT/14KT Gold",
             "subheading": "Starting from INR XX",
             "button": "Shop now",
@@ -154,7 +154,7 @@
         "block_yTytmE": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/24-11-2025--andrea00011.jpg",
+            "image": "shopify://shop_images/solitaire_metal.jpg",
             "heading": "Solitaire Collection",
             "subheading": "Starting from INR XX",
             "button": "Shop now",
@@ -245,7 +245,7 @@
         "block_iDp34K": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/24-11-2025--andrea00162.jpg",
+            "image": "shopify://shop_images/daily_huslte_occassion.jpg",
             "heading": "Daily wear",
             "url": "shopify://collections/all-rings"
           }
@@ -253,7 +253,7 @@
         "block_46988k": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/24-11-2025--andrea00004_4.jpg",
+            "image": "shopify://shop_images/engagement_occasion.jpg",
             "heading": "Engagement",
             "url": "shopify://collections/all-earrings"
           }
@@ -261,7 +261,7 @@
         "block_aiiqNM": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/24-11-2025--andrea00062_2.jpg",
+            "image": "shopify://shop_images/social_events_occasion.jpg",
             "heading": "Social events",
             "url": "shopify://collections/all-bracelets"
           }
@@ -269,7 +269,7 @@
         "block_EcmD49": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/24-11-2025--andrea00017_3.jpg",
+            "image": "shopify://shop_images/gifting_occasion.jpg",
             "heading": "Gifting",
             "url": "shopify://collections/all-pendants"
           }
@@ -361,7 +361,7 @@
             "sub_heading": "Experience the pieces in your own space, on your own time",
             "button_1": "Try at home",
             "url_1": "",
-            "image": "shopify://shop_images/24-11-2025--andrea00024_2.jpg"
+            "image": "shopify://shop_images/home_trial_web.jpg"
           }
         },
         "content_H3rQGF": {
@@ -371,7 +371,7 @@
             "sub_heading": "See designs up close and get all your questions answered.",
             "button_1": "Book a video call",
             "url_1": "",
-            "image": "shopify://shop_images/24-11-2025--andrea00051_4.jpg"
+            "image": "shopify://shop_images/video_trial_web.jpg"
           }
         }
       },
@@ -693,7 +693,7 @@
         "block_TyAJxa": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/under_5k.png",
+            "image": "shopify://shop_images/under_5k_gifting.png",
             "heading": "",
             "url": "shopify://collections/all-rings"
           }
@@ -701,7 +701,7 @@
         "block_zgCwV4": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/under_10k.png",
+            "image": "shopify://shop_images/under_10k_gifting.png",
             "heading": "",
             "url": "shopify://collections/all-earrings"
           }
@@ -709,7 +709,7 @@
         "block_Xqcg6e": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/under_15k.png",
+            "image": "shopify://shop_images/under_15k_gifting.png",
             "heading": "",
             "url": "shopify://collections/all-bracelets"
           }
@@ -717,7 +717,7 @@
         "block_EVXQRt": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/under_20k.png",
+            "image": "shopify://shop_images/under_20k_gifting.png",
             "heading": "",
             "url": "shopify://collections/all-pendants"
           }
@@ -752,7 +752,7 @@
         "sub-heading": "Share your idea and we’ll shape it into the piece you imagined.",
         "button-1": "Start Designing",
         "url-1": "/pages/get-your-own-design?view=own-design",
-        "image": "shopify://shop_images/24-11-2025--andrea00078_3.jpg"
+        "image": "shopify://shop_images/own_design_web.jpg"
       }
     },
     "home_tryathome_UAw34q": {
