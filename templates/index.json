@@ -405,8 +405,8 @@
         "content_hN3MHT": {
           "type": "content",
           "settings": {
-            "heading": "Home Trials?",
-            "sub_heading": "Try Zinara at the comfort of your home.",
+            "heading": "Free Home Trials",
+            "sub_heading": "Experience the pieces in your own space, on your own time",
             "button_1": "Try at home",
             "url_1": "",
             "image": "shopify://shop_images/24-11-2025--andrea00024_2.jpg"
@@ -415,8 +415,8 @@
         "content_H3rQGF": {
           "type": "content",
           "settings": {
-            "heading": "Video call?",
-            "sub_heading": "See designs over a video call",
+            "heading": "Schedule a Video Call",
+            "sub_heading": "See designs up close and get all your questions answered.",
             "button_1": "Book a video call",
             "url_1": "",
             "image": "shopify://shop_images/24-11-2025--andrea00051_4.jpg"
@@ -797,7 +797,7 @@
       "type": "home-own_design",
       "settings": {
         "heading": "Get your own design",
-        "sub-heading": "Have another design in mind? Something from a website or a magazine perhaps?",
+        "sub-heading": "Share your idea and we’ll shape it into the piece you imagined.",
         "button-1": "Start Designing",
         "url-1": "/pages/get-your-own-design?view=own-design",
         "image": "shopify://shop_images/24-11-2025--andrea00078_3.jpg"
@@ -852,7 +852,7 @@
             "image": "shopify://shop_images/Kumkum_testimonial.png",
             "alt_text": "testimonialcarousel Image",
             "name": "Kumkum",
-            "review": "“I found the perfect ring at Zinara—it’s simple, elegant, and beautifully made. It looks premium, but was still within my budget. I’ve been wearing it almost every day!”"
+            "review": "“I found the perfect ring at Zinara.Iit’s simple, elegant, and beautifully made. It looks premium, but was still within my budget. I’ve been wearing it almost every day!”"
           }
         },
         "image_picker_Ue9JrQ": {
@@ -861,7 +861,7 @@
             "image": "shopify://shop_images/mysha.png",
             "alt_text": "testimonialcarousel Image",
             "name": "Vasudha",
-            "review": "\"I ordered a set of earrings from Zinara and it exceeded my expectations. The design is elegant and it feels so luxurious. The price was a pleasant surprise too—such great value for such a stunning piece!\""
+            "review": "\"I ordered a set of earrings from Zinara and it exceeded my expectations. The design is elegant and it feels so luxurious. The price was a pleasant surprise too such great value for such a stunning piece!\""
           }
         },
         "image_picker_pey7c8": {
@@ -870,7 +870,7 @@
             "image": "shopify://shop_images/Sameeksha_testimonial_5aa98d34-59dc-455d-bccc-09f08406bf8b.png",
             "alt_text": "testimonialcarousel Image",
             "name": "Sameeksha",
-            "review": "“I’ve always found diamond jewellery overwhelming—either too flashy or too expensive. Zinara changed that. I got a beautiful pair of rings that I wear every day. The quality, the elegance, and the service—everything was just perfect.”"
+            "review": "“I’ve always found diamond jewellery overwhelming - either too flashy or too expensive. Zinara changed that. I got a beautiful pair of rings that I wear every day. The quality, the elegance, and the service, everything was just perfect.”"
           }
         }
       },
@@ -883,7 +883,7 @@
         "image_picker_pey7c8"
       ],
       "settings": {
-        "heading": "Testimonials"
+        "heading": "They Tried It. They Loved It!"
       }
     },
     "home_about_us_2_EmErTz": {
