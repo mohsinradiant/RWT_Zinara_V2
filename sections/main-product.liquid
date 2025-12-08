@@ -966,7 +966,7 @@
                 </div>
               {% endif %}
               {%- when 'price-breakdown-dropdown' -%}
-                {% unless product.selected_or_first_available_variant.tags contains 'vermeil' %}
+                {% unless product.tags contains 'vermeil' %}
                   <div class="price-breakdown-container">
                     <span>Price Breakup</span>
                     <img
