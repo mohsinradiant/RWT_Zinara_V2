@@ -422,33 +422,33 @@
     el.textContent = txt.trim();
   }
 
-  function cleanAllSpecs() {
-    document.querySelectorAll('.product-card-specs').forEach((el) => cleanText(el));
+  function runCleaner() {
+    const els = document.querySelectorAll(
+      '.main-product_text-style_caption, .product-card-specs'
+    );
+
+    if (els.length === 0) return;
+
+    let anyUpdated = false;
+
+    els.forEach((el) => {
+      const before = el.textContent;
+      cleanText(el);
+      if (el.textContent !== before) anyUpdated = true;
+    });
+
+    return anyUpdated;
   }
 
-  // Observe when the "similar products" section becomes visible
-  const lazySections = document.querySelectorAll('[data-section-id], .related-products, .similar-products');
+  // run every 300ms until everything is clean
+  const interval = setInterval(() => {
+    const updated = runCleaner();
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      // Run cleaner when section loads
-      cleanAllSpecs();
-
-      // Also listen for HTML updates inside that section
-      new MutationObserver(() => cleanAllSpecs()).observe(entry.target, {
-        childList: true,
-        subtree: true,
-      });
-
-    });
-  }, { threshold: 0.1 });
-
-  lazySections.forEach((sec) => io.observe(sec));
-
-  // Also catch immediate nodes (if already visible)
-  cleanAllSpecs();
+    // stop if nothing changes for 2 consecutive runs
+    if (!updated) {
+      clearInterval(interval);
+    }
+  }, 300);
 </script>
 
   </head>
