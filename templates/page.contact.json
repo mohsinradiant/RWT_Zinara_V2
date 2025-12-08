@@ -93,6 +93,7 @@
             "link_size": 16,
             "border_radius": 8,
             "column_1_enabled": true,
+            "image_1": "shopify://shop_images/phone-call_2014748.png",
             "column_1_icon": "phone",
             "column_1_heading": "Speak directly with our experts.",
             "column_1_link_text": "+91-8851812814",
