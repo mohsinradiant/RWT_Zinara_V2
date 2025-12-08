@@ -931,40 +931,50 @@
                 </div>
               {%- when 'brand-usps' -%}
                 {% if selected_variant_option2 contains 'gold' %}
-                <div class="pdp-brand-usps-container">
-                  <div class="pdp-brand-usp-block">
-                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_f1eb3d9e-4693-41a4-8653-eb4ee95f5c33.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Lifetime buyback & exchange Gold</p>
+                  <div class="pdp-brand-usps-container">
+                    <div class="pdp-brand-usp-block">
+                      <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Layer_2.png?v=1765186965">
+                      <p class="pdp-brand-usp-text">15 day free returns</p>
+                    </div>
+                    <hr>
+                    <div class="pdp-brand-usp-block">
+                      <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/2_e0496e12-6067-41e7-b178-f4ef5abe18f7.png?v=1765186971">
+                      <p class="pdp-brand-usp-text">BIS Hallmarked Gold</p>
+                    </div>
+                    <hr>
+                    <div class="pdp-brand-usp-block">
+                      <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/0.png?v=1765186971">
+                      <p class="pdp-brand-usp-text">IGI Certified Diamonds</p>
+                    </div>
+                    <hr>
+                    <div class="pdp-brand-usp-block">
+                      <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Layer_1.png?v=1765186965">
+                      <p class="pdp-brand-usp-text">Lifetime Buyback and Exchange</p>
+                    </div>
                   </div>
-                  <hr>
-                  <div class="pdp-brand-usp-block">
-                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector-1_fb612368-b411-4b17-8f25-d37684d0e7a0.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Lifetime free plating service Gold</p>
+                {% elsif selected_variant_option2 contains 'vermeil' %}
+                  <div class="pdp-brand-usps-container">
+                    <div class="pdp-brand-usp-block">
+                      <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Layer_2.png?v=1765186965">
+                      <p class="pdp-brand-usp-text">7 day free returns</p>
+                    </div>
+                    <hr>
+                    <div class="pdp-brand-usp-block">
+                      <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/1_145e8f48-cec2-426d-8a9f-0b78adce7aa6.png?v=1765186971">
+                      <p class="pdp-brand-usp-text">SGL certified diamonds</p>
+                    </div>
+                    <hr>
+                    <div class="pdp-brand-usp-block">
+                      <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Layer_3.png?v=1765186965">
+                      <p class="pdp-brand-usp-text">Lifetime free replating service</p>
+                    </div>
+                    <hr>
+                    <div class="pdp-brand-usp-block">
+                      <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Layer_1.png?v=1765186965">
+                      <p class="pdp-brand-usp-text">Lifetime Buyback and Exchange</p>
+                    </div>
                   </div>
-                  <hr>
-                  <div class="pdp-brand-usp-block">
-                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector-2.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Easy & hassle free returns Gold</p>
-                  </div>
-                </div>
-              {% else %}
-                <div class="pdp-brand-usps-container">
-                  <div class="pdp-brand-usp-block">
-                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_f1eb3d9e-4693-41a4-8653-eb4ee95f5c33.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Lifetime buyback & exchange Silver</p>
-                  </div>
-                  <hr>
-                  <div class="pdp-brand-usp-block">
-                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector-1_fb612368-b411-4b17-8f25-d37684d0e7a0.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Lifetime free plating service Silver</p>
-                  </div>
-                  <hr>
-                  <div class="pdp-brand-usp-block">
-                    <img src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector-2.png?v=1754296764">
-                    <p class="pdp-brand-usp-text">Easy & hassle free returns Silver</p>
-                  </div>
-                </div>
-              {% endif %}
+                {% endif %}
               {%- when 'price-breakdown-dropdown' -%}
                 {% unless product.tags contains 'vermeil' %}
                   <div class="price-breakdown-container">
