@@ -136,7 +136,7 @@
           "settings": {
             "image": "shopify://shop_images/vermeil_metal.jpg",
             "heading": "18 KT Gold Vermeil",
-            "subheading": "Starting from INR XX",
+            "subheading": "Starting from INR 3000",
             "button": "Shop now",
             "url": "shopify://collections/daily-hustle"
           }
@@ -146,7 +146,7 @@
           "settings": {
             "image": "shopify://shop_images/gold_metal.jpg",
             "heading": "9KT/14KT Gold",
-            "subheading": "Starting from INR XX",
+            "subheading": "Starting from INR 7000",
             "button": "Shop now",
             "url": "shopify://collections/daily-hustle"
           }
