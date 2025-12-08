@@ -68,6 +68,54 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "17651899824b91f723": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5b3374a_rM6Vgx": {
+          "type": "ai_gen_block_5b3374a",
+          "settings": {
+            "container_width": 1200,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "column_spacing": 30,
+            "mobile_spacing": 20,
+            "column_padding": 30,
+            "background_color": "#ffffff",
+            "column_background": "#f9f7f9",
+            "icon_color": "#712242",
+            "heading_color": "#121212",
+            "link_color": "#712242",
+            "link_hover_color": "#610c27",
+            "icon_size": 50,
+            "icon_spacing": 20,
+            "heading_size": 18,
+            "heading_spacing": 12,
+            "link_size": 16,
+            "border_radius": 8,
+            "column_1_enabled": true,
+            "column_1_icon": "phone",
+            "column_1_heading": "Speak directly with our experts.",
+            "column_1_link_text": "+91-8851812814",
+            "column_1_link": "",
+            "column_2_enabled": true,
+            "column_2_icon": "email",
+            "column_2_heading": "Write to us anytime.",
+            "column_2_link_text": "admin@zinara.in",
+            "column_2_link": "",
+            "column_3_enabled": true,
+            "column_3_icon": "whatsapp",
+            "column_3_heading": "Connect with us on WhatsApp.",
+            "column_3_link_text": "+91-8851812814",
+            "column_3_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5b3374a_rM6Vgx"
+      ],
+      "settings": {}
+    },
     "multicolumn_BtxWf8": {
       "type": "multicolumn",
       "blocks": {
@@ -107,6 +155,7 @@
         "column_cdJXaq",
         "column_mwpPRa"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
@@ -308,6 +357,7 @@
     "main",
     "form",
     "slideshow_diQwJP",
+    "17651899824b91f723",
     "multicolumn_BtxWf8",
     "zinara_experience_strip_AUhWg8",
     "collapsible_content_AhEY3z"
