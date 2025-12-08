@@ -362,7 +362,7 @@
             "button_1": "Try at home",
             "url_1": "",
             "image": "shopify://shop_images/home_trial_web.jpg",
-            "mobile_image": "shopify://shop_images/Selected_Images_Final_Edit_Landscape_2000_x_900_24-11-2025--andrea00001_6_59098840-82b9-4a74-bcc6-aa53d18e24d8.jpg"
+            "mobile_image": "shopify://shop_images/home_trial_mobile.jpg"
           }
         },
         "content_H3rQGF": {
@@ -373,7 +373,7 @@
             "button_1": "Book a video call",
             "url_1": "",
             "image": "shopify://shop_images/video_trial_web.jpg",
-            "mobile_image": "shopify://shop_images/Selected_Images_Final_Edit_Landscape_2000_x_900_24-11-2025--andrea00001_6_59098840-82b9-4a74-bcc6-aa53d18e24d8.jpg"
+            "mobile_image": "shopify://shop_images/video_trial_mobile.jpg"
           }
         }
       },
@@ -755,7 +755,7 @@
         "button-1": "Start Designing",
         "url-1": "/pages/get-your-own-design?view=own-design",
         "image": "shopify://shop_images/own_design_web.jpg",
-        "mobile_image": "shopify://shop_images/Selected_Images_Final_Edit_Landscape_2000_x_900_24-11-2025--andrea00001_6_59098840-82b9-4a74-bcc6-aa53d18e24d8.jpg"
+        "mobile_image": "shopify://shop_images/own_design_mobile.jpg"
       }
     },
     "home_tryathome_UAw34q": {
