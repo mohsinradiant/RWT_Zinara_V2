@@ -91,7 +91,7 @@
         "product_info_image_eaCYxw": {
           "type": "product-info-image",
           "settings": {
-            "show_only_gold": false,
+            "show_only_gold": true,
             "heading": "OUR PLATING IS",
             "left_image_1": "shopify://shop_images/Vector_36.png",
             "left_text_1": "Thicker and stronger",
@@ -406,7 +406,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
-            "max_width": 1200
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
           }
         }
       },
