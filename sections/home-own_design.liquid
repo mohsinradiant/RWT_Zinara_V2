@@ -8,7 +8,8 @@
       </div>
     </div>
     <div class="home-try-at-home-section-right">
-      <img src="{{ section.settings.image | img_url: 'master' }}" alt="Try at Home">
+      <img class="home-try-at-home-section-right-desktop_image" src="{{ section.settings.image | img_url: 'master' }}" alt="Try at Home">
+      <img class="home-try-at-home-section-right-mobile_image" src="{{ section.settings.mobile_image | img_url: 'master' }}" alt="Try at Home">
     </div>
   </div>
 </section>
@@ -43,7 +44,12 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "Desktop Image"
+    },
+        {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
     }
   ],
   "presets": [
