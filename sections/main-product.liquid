@@ -73,11 +73,6 @@
     >
   {%- endif -%}
   {% assign selected_variant_option2 = product.selected_or_first_available_variant.option2 | downcase %}
-  {% if product.tags contains 'gold' %}
-    <script>
-      document.querySelectorAll('.product-info-image')[0].style.display = 'none';
-    </script>
-  {% endif %}
   {% assign first_product_info_image_rendered = false %}
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
