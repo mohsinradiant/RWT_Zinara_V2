@@ -75,9 +75,9 @@
   {% assign selected_variant_option2 = product.selected_or_first_available_variant.option2 | downcase %}
   {% if product.tags contains 'gold' %}
     <style>
-.product-info-image:nth-of-type(1) {
-  display: none !important;
-}
+      .product-info-image:nth-of-type(1) {
+        display: none !important;
+      }
     </style>
   {% endif %}
   {% assign first_product_info_image_rendered = false %}
