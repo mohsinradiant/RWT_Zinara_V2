@@ -111,9 +111,7 @@
       {% if block.settings.column_1_enabled %}
         <div class="ai-contact-column-{{ ai_gen_id }}">
           <div class="ai-contact-icon-{{ ai_gen_id }}">
-            {% if section.settings.image_1 != blank %}
-              {{ section.settings.image_1 | image_url: width: 300 | image_tag }}
-            {% endif %}
+              {{ block.settings.image_1 | image_url: width: 300 | image_tag }}
           </div>
           {% if block.settings.column_1_heading != blank %}
             <h3 class="ai-contact-heading-{{ ai_gen_id }}">{{ block.settings.column_1_heading }}</h3>
