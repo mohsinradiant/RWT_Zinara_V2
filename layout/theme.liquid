@@ -409,48 +409,47 @@
     ></noscript>
     <!-- End Meta Pixel Code -->
 <script>
-  function cleanText(el) {
+  function clean(el) {
     let txt = el.textContent.trim();
 
     txt = txt
-      .replace(/^\[/, '')      // remove leading [
-      .replace(/\]$/, '')      // remove trailing ]
-      .replace(/\\\//g, '/')   // convert \/ to /
-      .replace(/\\+/g, '')     // remove backslashes
-      .replace(/"/g, '');      // remove quotes
+      .replace(/^\[/, '')
+      .replace(/\]$/, '')
+      .replace(/\\\//g, '/')
+      .replace(/\\+/g, '')
+      .replace(/"/g, '');
 
     el.textContent = txt.trim();
   }
 
-  function processAll() {
-    const selectors = ['.main-product_text-style_caption', '.product-card-specs'];
-    document.querySelectorAll(selectors.join(', ')).forEach(cleanText);
+  const selector = '.product-card-specs, .main-product_text-style_caption';
+
+  function process(el) {
+    // Clean immediately
+    clean(el);
+
+    // Observe text changes inside this element
+    new MutationObserver(() => clean(el)).observe(el, {
+      characterData: true,
+      childList: true,
+      subtree: true,
+    });
   }
 
-  // Run once on load
-  document.addEventListener('DOMContentLoaded', processAll);
-
-  // Run when new nodes are added
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      mutation.addedNodes.forEach((node) => {
-        if (!(node instanceof HTMLElement)) return;
-
-        if (
-          node.matches?.('.main-product_text-style_caption, .product-card-specs')
-        ) {
-          cleanText(node);
-        }
-
-        // If an added node contains children
-        node.querySelectorAll?.(
-          '.main-product_text-style_caption, .product-card-specs'
-        ).forEach(cleanText);
-      });
+  function scanAll() {
+    document.querySelectorAll(selector).forEach((el) => {
+      if (!el.__cleaned) {
+        el.__cleaned = true;
+        process(el);
+      }
     });
-  });
+  }
 
-  observer.observe(document.body, {
+  // 1: initial scan
+  document.addEventListener('DOMContentLoaded', scanAll);
+
+  // 2: observe when new elements are added anywhere in the DOM
+  new MutationObserver(() => scanAll()).observe(document.body, {
     childList: true,
     subtree: true,
   });
