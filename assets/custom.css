@@ -589,6 +589,7 @@ product-info .price__container span {
     align-items: center;
     flex-direction: column;
     gap: 15px;
+    width: 25%;
 }
 
 .pdp-brand-usp-block img {
