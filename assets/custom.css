@@ -2,6 +2,10 @@ slideshow-component .slideshow__controls {
     position: unset !important;
 }
 
+#Slider-template--25124286955704__slideshow_diQwJP{
+    aspect-ratio: 2000 / 800 !important;
+}
+
 slideshow-component .slideshow__controls .slideshow__autoplay {
     display: none;
 }
@@ -1389,6 +1393,9 @@ header .menu-drawer {
     }
     .home-try-at-home-section-right-desktop_image{
     display: none;
+}
+#Slider-template--25124286955704__slideshow_diQwJP{
+    aspect-ratio: 400 / 500 !important;
 }
 .home-try-at-home-section-right-mobile_image{
     display: flex;
