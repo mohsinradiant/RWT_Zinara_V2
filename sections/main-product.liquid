@@ -967,7 +967,7 @@
               {% endif %}
               {%- when 'price-breakdown-dropdown' -%}
                 {% unless product.selected_or_first_available_variant.tags contains 'vermeil' %}
-                  <div class="price-breakdown-container">
+                  {% comment %} <div class="price-breakdown-container">
                     <span>Price Breakup</span>
                     <img
                       src="https://cdn.shopify.com/s/files/1/0661/8336/4792/files/Vector_33.png?v=1754303698"
@@ -1048,7 +1048,7 @@
                     </ul>
 
                     <div class="price-breakdown-close-btn">Close</div>
-                  </div>
+                  </div> {% endcomment %}
                 {% endunless %}
               {%- when 'details-dropdown' -%}
                 {% if product.selected_or_first_available_variant.metafields.content.product_details_list_1_json != null
