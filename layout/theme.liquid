@@ -408,49 +408,26 @@
         src="https://www.facebook.com/tr?id=1058880252490692&ev=PageView&noscript=1"
     ></noscript>
     <!-- End Meta Pixel Code -->
-<script>
-  function cleanText(el) {
-    let txt = el.textContent.trim();
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const selectors = ['.main-product_text-style_caption', '.product-card-specs'];
 
-    txt = txt
-      .replace(/^\[/, '')
-      .replace(/\]$/, '')
-      .replace(/\\\//g, '/')
-      .replace(/\\+/g, '')
-      .replace(/"/g, '');
+        const els = document.querySelectorAll(selectors.join(', '));
 
-    el.textContent = txt.trim();
-  }
+        els.forEach((el) => {
+          let txt = el.textContent.trim();
 
-  function runCleaner() {
-    const els = document.querySelectorAll(
-      '.main-product_text-style_caption, .product-card-specs'
-    );
+          txt = txt
+            .replace(/^\[/, '') // remove leading [
+            .replace(/\]$/, '') // remove trailing ]
+            .replace(/\\\//g, '/') // convert \/ → /
+            .replace(/\\+/g, '') // remove \\
+            .replace(/"/g, ''); // remove quotes
 
-    if (els.length === 0) return;
-
-    let anyUpdated = false;
-
-    els.forEach((el) => {
-      const before = el.textContent;
-      cleanText(el);
-      if (el.textContent !== before) anyUpdated = true;
-    });
-
-    return anyUpdated;
-  }
-
-  // run every 300ms until everything is clean
-  const interval = setInterval(() => {
-    const updated = runCleaner();
-
-    // stop if nothing changes for 2 consecutive runs
-    if (!updated) {
-      clearInterval(interval);
-    }
-  }, 300);
-</script>
-
+          el.textContent = txt.trim();
+        });
+      });
+    </script>
   </head>
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
