@@ -411,20 +411,52 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const selectors = ['.main-product_text-style_caption', '.product-card-specs'];
+        const selectorString = selectors.join(', ');
 
-        const els = document.querySelectorAll(selectors.join(', '));
+        const normalizeText = (el) => {
+          if (!el || !el.textContent) return;
 
-        els.forEach((el) => {
-          let txt = el.textContent.trim();
-
-          txt = txt
+          const cleaned = el.textContent
+            .trim()
             .replace(/^\[/, '') // remove leading [
             .replace(/\]$/, '') // remove trailing ]
             .replace(/\\\//g, '/') // convert \/ → /
             .replace(/\\+/g, '') // remove \\
-            .replace(/"/g, ''); // remove quotes
+            .replace(/"/g, '') // remove quotes
+            .trim();
 
-          el.textContent = txt.trim();
+          if (cleaned && el.textContent !== cleaned) {
+            el.textContent = cleaned;
+          }
+        };
+
+        const applyToAll = () => {
+          document.querySelectorAll(selectorString).forEach(normalizeText);
+        };
+
+        applyToAll(); // handle elements present at DOM ready
+
+        // Handle late-loaded elements (in viewport or injected after load)
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (!(node instanceof HTMLElement)) return;
+
+              if (node.matches(selectorString)) normalizeText(node);
+              node.querySelectorAll?.(selectorString).forEach(normalizeText);
+            });
+
+            if (mutation.type === 'characterData' && mutation.target?.parentElement) {
+              const parent = mutation.target.parentElement;
+              if (parent.matches(selectorString)) normalizeText(parent);
+            });
+          });
+        });
+
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+          characterData: true,
         });
       });
     </script>
@@ -543,7 +575,7 @@
           font-size: 4rem;
           cursor: pointer;
           font-weight: 500;
-          font-family: "Montserrat", sans-serif;
+          font-family: 'Montserrat', sans-serif;
           line-height: 0;
           color: #712242;
         }
@@ -563,7 +595,7 @@
           color: #712242;
           font-size: 1.6rem;
           letter-spacing: 0;
-          font-family: "Montserrat", sans-serif;
+          font-family: 'Montserrat', sans-serif;
           font-weight: 600;
           width: 100%;
           margin: 19px 0;
@@ -597,7 +629,7 @@
           font-size: 1.6rem;
           cursor: pointer;
           width: 100%;
-          font-family: "Montserrat", sans-serif;
+          font-family: 'Montserrat', sans-serif;
           font-weight: 600;
         }
 
@@ -641,7 +673,7 @@
           font-size: 1.4rem;
           cursor: pointer;
           width: 100%;
-          font-family: "Montserrat", sans-serif;
+          font-family: 'Montserrat', sans-serif;
           font-weight: 600;
           transition: all 0.3s ease;
         }
@@ -1951,141 +1983,145 @@ if (window.globalTryAtHomePincode && /^[1-9][0-9]{5}$/.test(window.globalTryAtHo
     </div>
 
     <style>
-            .video-trial-modal {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background-color: rgba(0, 0, 0, 0.5);
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              z-index: 9999;
-            }
+      .video-trial-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
 
-            .video-trial-modal-content {
-              background: white;
-              border-radius: 8px;
-              padding: 0;
-              max-width: 500px;
-              width: 90%;
-              max-height: 80vh;
-              overflow-y: auto;
-              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            }
+      .video-trial-modal-content {
+        background: white;
+        border-radius: 8px;
+        padding: 0;
+        max-width: 500px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
 
-            .video-trial-modal-header {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              border-bottom: 1px solid #eee;
-            }
+      .video-trial-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+      }
 
-            .video-trial-close-btn {
-              border: none;
-              padding: 0;
-                  background: none;
-          font-size: 4rem;
-          cursor: pointer;
-          font-weight: 500;
-          font-family: 'Montserrat', sans-serif;
-          line-height: 0;
-          color: #712242;
-            }
+      .video-trial-close-btn {
+        border: none;
+        padding: 0;
+        background: none;
+        font-size: 4rem;
+        cursor: pointer;
+        font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 0;
+        color: #712242;
+      }
 
-            .video-trial-close-btn:hover {
-              color: #333;
-            }
+      .video-trial-close-btn:hover {
+        color: #333;
+      }
 
-            .video-trial-modal-body p {
-      margin-top: 13px;
-      margin-bottom: 20px;
-          color: #000;
-          font-size: 1.4rem;
-          letter-spacing: 0;
-          text-align: left;
-          line-height: 1.9rem;      }
+      .video-trial-modal-body p {
+        margin-top: 13px;
+        margin-bottom: 20px;
+        color: #000;
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        text-align: left;
+        line-height: 1.9rem;
+      }
 
-            .form-group {
-          margin-bottom: 20px;
-          display: flex
-      ;
-          flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          letter-spacing: 0;      }
+      .form-group {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        letter-spacing: 0;
+      }
 
-            .form-group label {
-          display: block;
-          font-weight: 400;
-          font-family: var(--font-heading-family);
-          color: #000;
-          font-size: 1.6rem;
-          margin: 0;      }
+      .form-group label {
+        display: block;
+        font-weight: 400;
+        font-family: var(--font-heading-family);
+        color: #000;
+        font-size: 1.6rem;
+        margin: 0;
+      }
 
-            .form-group input {
-              width: 100%;
-              padding: 12px;
-              border: 1px solid #ddd;
-              border-radius: 4px;
-              font-size: 1.4rem;
-              box-sizing: border-box;
-            }
+      .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1.4rem;
+        box-sizing: border-box;
+      }
 
-            .form-group input:focus {
-              outline: none;
-              border-color: #712242;
-              box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
-            }
+      .form-group input:focus {
+        outline: none;
+        border-color: #712242;
+        box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
+      }
 
-            .form-actions {
-      display: flex
-      ;
-          gap: 12px;
-          margin-top: 30px;
-          flex-direction: column-reverse;
-          width: 100%;      }
+      .form-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 30px;
+        flex-direction: column-reverse;
+        width: 100%;
+      }
 
-            .cancel-btn, .proceed-btn {
-              padding: 12px 24px;
-              border: none;
-              border-radius: 4px;
-              font-size: 1.4rem;
-              font-weight: 500;
-              cursor: pointer;
-              transition: all 0.2s ease;
-            }
+      .cancel-btn,
+      .proceed-btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
 
-            .cancel-btn {
-              background-color: #f8f9fa;
-              color: #666;
-              border: 1px solid #ddd;
-            }
+      .cancel-btn {
+        background-color: #f8f9fa;
+        color: #666;
+        border: 1px solid #ddd;
+      }
 
-            .cancel-btn:hover {
-              background-color: #e9ecef;
-            }
+      .cancel-btn:hover {
+        background-color: #e9ecef;
+      }
 
-            .proceed-btn {
-              background-color: #712242;
-              color: white;
-            }
+      .proceed-btn {
+        background-color: #712242;
+        color: white;
+      }
 
-            .proceed-btn:hover {
-              background-color: #712242;
-            }
+      .proceed-btn:hover {
+        background-color: #712242;
+      }
 
-            @media (max-width: 768px) {
-              .video-trial-modal-content {
-                width: 95%;
-                margin: 20px;
-              }
+      @media (max-width: 768px) {
+        .video-trial-modal-content {
+          width: 95%;
+          margin: 20px;
+        }
 
-              .cancel-btn, .proceed-btn {
-                width: 100%;
-              }
-            }
+        .cancel-btn,
+        .proceed-btn {
+          width: 100%;
+        }
+      }
     </style>
 
     {% comment %} Whatsapp Floater {% endcomment %}
