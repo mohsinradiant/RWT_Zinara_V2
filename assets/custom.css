@@ -527,7 +527,12 @@ header .header__search {
     width: 100%;
     border-radius: 30px 0 30px;
 }
-
+.home-try-at-home-section-right-desktop_image{
+    display: flex;
+}
+.home-try-at-home-section-right-mobile_image{
+    display: none;
+}
 
 .home-try-at-home-section-left a {
     border: solid 2px #fff;
@@ -1382,6 +1387,12 @@ header .menu-drawer {
     .filter-rts-button input {
         margin: -3px 0 -3px 10px;
     }
+    .home-try-at-home-section-right-desktop_image{
+    display: none;
+}
+.home-try-at-home-section-right-mobile_image{
+    display: flex;
+}
 }
 
 .filter-rts-button input::after {
