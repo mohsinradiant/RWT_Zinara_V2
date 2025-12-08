@@ -9,7 +9,16 @@
         </div>
       </div>
       <div class="two_blocks_grid-section-right">
-        <img src="{{ block.settings.image | img_url: 'master' }}" alt="Try at Home">
+        <img
+          class="two_blocks_grid-section-right-desktop_image"
+          src="{{ block.settings.image | img_url: 'master' }}"
+          alt="Try at Home"
+        >
+        <img
+          class="two_blocks_grid-section-right-mobile_image"
+          src="{{ block.settings.mobile_image | img_url: 'master' }}"
+          alt="Try at Home"
+        >
       </div>
     </div>
   {% endfor %}
@@ -116,7 +125,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
         }
       ]
     }
