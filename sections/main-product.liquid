@@ -966,7 +966,7 @@
                 </div>
               {% endif %}
               {%- when 'price-breakdown-dropdown' -%}
-                {% if product.selected_or_first_available_variant.tags contains 'vermeil' %}
+                {% unless product.selected_or_first_available_variant.tags contains 'vermeil' %}
                   <div class="price-breakdown-container">
                     <span>Price Breakup</span>
                     <img
@@ -1049,7 +1049,7 @@
 
                     <div class="price-breakdown-close-btn">Close</div>
                   </div>
-                {% endif %}
+                {% endunless %}
               {%- when 'details-dropdown' -%}
                 {% if product.selected_or_first_available_variant.metafields.content.product_details_list_1_json != null
                 %}
