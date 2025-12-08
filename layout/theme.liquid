@@ -408,26 +408,54 @@
         src="https://www.facebook.com/tr?id=1058880252490692&ev=PageView&noscript=1"
     ></noscript>
     <!-- End Meta Pixel Code -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const selectors = ['.main-product_text-style_caption', '.product-card-specs'];
+<script>
+  function cleanText(el) {
+    let txt = el.textContent.trim();
 
-        const els = document.querySelectorAll(selectors.join(', '));
+    txt = txt
+      .replace(/^\[/, '')      // remove leading [
+      .replace(/\]$/, '')      // remove trailing ]
+      .replace(/\\\//g, '/')   // convert \/ to /
+      .replace(/\\+/g, '')     // remove backslashes
+      .replace(/"/g, '');      // remove quotes
 
-        els.forEach((el) => {
-          let txt = el.textContent.trim();
+    el.textContent = txt.trim();
+  }
 
-          txt = txt
-            .replace(/^\[/, '') // remove leading [
-            .replace(/\]$/, '') // remove trailing ]
-            .replace(/\\\//g, '/') // convert \/ → /
-            .replace(/\\+/g, '') // remove \\
-            .replace(/"/g, ''); // remove quotes
+  function processAll() {
+    const selectors = ['.main-product_text-style_caption', '.product-card-specs'];
+    document.querySelectorAll(selectors.join(', ')).forEach(cleanText);
+  }
 
-          el.textContent = txt.trim();
-        });
+  // Run once on load
+  document.addEventListener('DOMContentLoaded', processAll);
+
+  // Run when new nodes are added
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (!(node instanceof HTMLElement)) return;
+
+        if (
+          node.matches?.('.main-product_text-style_caption, .product-card-specs')
+        ) {
+          cleanText(node);
+        }
+
+        // If an added node contains children
+        node.querySelectorAll?.(
+          '.main-product_text-style_caption, .product-card-specs'
+        ).forEach(cleanText);
       });
-    </script>
+    });
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+</script>
+
   </head>
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
