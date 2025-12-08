@@ -409,7 +409,7 @@
     ></noscript>
     <!-- End Meta Pixel Code -->
 <script>
-  function clean(el) {
+  function cleanText(el) {
     let txt = el.textContent.trim();
 
     txt = txt
@@ -422,37 +422,33 @@
     el.textContent = txt.trim();
   }
 
-  const selector = '.product-card-specs, .main-product_text-style_caption';
-
-  function process(el) {
-    // Clean immediately
-    clean(el);
-
-    // Observe text changes inside this element
-    new MutationObserver(() => clean(el)).observe(el, {
-      characterData: true,
-      childList: true,
-      subtree: true,
-    });
+  function cleanAllSpecs() {
+    document.querySelectorAll('.product-card-specs').forEach((el) => cleanText(el));
   }
 
-  function scanAll() {
-    document.querySelectorAll(selector).forEach((el) => {
-      if (!el.__cleaned) {
-        el.__cleaned = true;
-        process(el);
-      }
+  // Observe when the "similar products" section becomes visible
+  const lazySections = document.querySelectorAll('[data-section-id], .related-products, .similar-products');
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      // Run cleaner when section loads
+      cleanAllSpecs();
+
+      // Also listen for HTML updates inside that section
+      new MutationObserver(() => cleanAllSpecs()).observe(entry.target, {
+        childList: true,
+        subtree: true,
+      });
+
     });
-  }
+  }, { threshold: 0.1 });
 
-  // 1: initial scan
-  document.addEventListener('DOMContentLoaded', scanAll);
+  lazySections.forEach((sec) => io.observe(sec));
 
-  // 2: observe when new elements are added anywhere in the DOM
-  new MutationObserver(() => scanAll()).observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
+  // Also catch immediate nodes (if already visible)
+  cleanAllSpecs();
 </script>
 
   </head>
