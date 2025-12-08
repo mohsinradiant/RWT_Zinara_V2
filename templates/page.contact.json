@@ -243,6 +243,33 @@
         "heading": "The Zinara Experience"
       }
     },
+    "17651914025bf952ef": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_1615592_8NP3Cy": {
+          "type": "ai_gen_block_1615592",
+          "settings": {
+            "heading": "Follow us",
+            "heading_color": "#121212",
+            "icon_size": 40,
+            "icon_spacing": 16,
+            "icon_1_image": "shopify://shop_images/Instagram.png",
+            "icon_1_url": "https://www.instagram.com/heyzinara/",
+            "icon_2_image": "shopify://shop_images/Facebook.png",
+            "icon_2_url": "https://www.facebook.com/people/Zinara/61565232117218/",
+            "icon_3_url": "",
+            "icon_4_url": "",
+            "icon_5_url": "",
+            "icon_6_url": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_1615592_8NP3Cy"
+      ],
+      "settings": {}
+    },
     "collapsible_content_AhEY3z": {
       "type": "collapsible-content",
       "blocks": {
@@ -363,6 +390,7 @@
     "17651899824b91f723",
     "multicolumn_BtxWf8",
     "zinara_experience_strip_AUhWg8",
+    "17651914025bf952ef",
     "collapsible_content_AhEY3z"
   ]
 }
