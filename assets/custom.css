@@ -485,7 +485,7 @@ header .header__search {
     padding: 110px 80px;
 }
 
-.home-try-at-home-section-right::after {
+/* .home-try-at-home-section-right::after {
     content: '';
     position: absolute;
     top: 0;
@@ -494,12 +494,9 @@ header .header__search {
     height: 100%;
     background-color: black;
     opacity: 0.35;
-    /* adjust for transparency */
     z-index: 1;
-    /* make sure it sits above the background but below the content */
     pointer-events: none;
-    /* so it doesn't block clicks */
-}
+} */
 
 .home-try-at-home-section-left {
     display: flex;
@@ -1958,10 +1955,10 @@ sticky-header {
         align-items: center;
         text-align: center;
     }
-
+/* 
     .home-try-at-home-section-right::after {
         opacity: .5;
-    }
+    } */
 
     .home-try-at-home-section-left a {
         padding: 9px 28px !important;
