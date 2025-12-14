@@ -752,6 +752,9 @@
     },
     "home_own_design_WDng9w": {
       "type": "home-own_design",
+      "custom_css": [
+        "img {opacity: 0.8;}"
+      ],
       "settings": {
         "heading": "Get your own design",
         "sub-heading": "Share your idea and we’ll shape it into the piece you imagined.",
