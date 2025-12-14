@@ -34,9 +34,9 @@
         "slide_FD4Jah": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/home_web_banner.png",
+            "image": "shopify://shop_images/contact_us_web.png",
             "image_alt": "",
-            "image_mobile": "shopify://shop_images/mobile_web_banner.png",
+            "image_mobile": "shopify://shop_images/contact_us_mobile.png",
             "image_mobile_alt": "",
             "image_aspect_ratio": true,
             "heading": "Image slide",
