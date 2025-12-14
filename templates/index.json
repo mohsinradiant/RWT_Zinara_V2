@@ -381,7 +381,9 @@
         "content_hN3MHT",
         "content_H3rQGF"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".image-wrapper {background-color: rgba(0, 0, 0, 0.4);}"
+      ],
       "name": "2 Blocks Grid",
       "settings": {}
     },
