@@ -284,6 +284,9 @@
     },
     "related-products": {
       "type": "related-products",
+      "custom_css": [
+        ".product-grid-image,.card__media,.product-card__image {background-color: #ffffff !important;}"
+      ],
       "settings": {
         "heading": "View Similar",
         "heading_size": "h2",
