@@ -381,9 +381,7 @@
         "content_hN3MHT",
         "content_H3rQGF"
       ],
-      "custom_css": [
-        ".image-wrapper {background-color: rgba(0, 0, 0, 0.4);}"
-      ],
+      "custom_css": [],
       "name": "2 Blocks Grid",
       "settings": {}
     },
@@ -752,9 +750,7 @@
     },
     "home_own_design_WDng9w": {
       "type": "home-own_design",
-      "custom_css": [
-        "img {opacity: 0.8;}"
-      ],
+      "custom_css": [],
       "settings": {
         "heading": "Get your own design",
         "sub-heading": "Share your idea and we’ll shape it into the piece you imagined.",
