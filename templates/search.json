@@ -11,6 +11,9 @@
   "sections": {
     "main": {
       "type": "main-search",
+      "custom_css": [
+        ".product-grid-image,.card__media,.product-card__image {background-color: #ffffff !important;}"
+      ],
       "settings": {
         "columns_desktop": 4,
         "image_ratio": "adapt",
