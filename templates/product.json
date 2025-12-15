@@ -46,11 +46,6 @@
           "type": "pincode-availability",
           "settings": {}
         },
-        "inventory_indicator_QcmNEB": {
-          "type": "inventory-indicator",
-          "disabled": true,
-          "settings": {}
-        },
         "inventory_iiPf7W": {
           "type": "inventory",
           "disabled": true,
@@ -75,6 +70,10 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
+        },
+        "inventory_indicator_QcmNEB": {
+          "type": "inventory-indicator",
+          "settings": {}
         },
         "assistance_buttons_NnwHCV": {
           "type": "assistance_buttons",
@@ -123,11 +122,11 @@
         "variant_picker",
         "brand_usps_P3f6Uz",
         "pincode_availability_VEqKEh",
-        "inventory_indicator_QcmNEB",
         "inventory_iiPf7W",
         "description",
         "price_breakdown_dropdown_EyiwWU",
         "buy_buttons",
+        "inventory_indicator_QcmNEB",
         "assistance_buttons_NnwHCV",
         "details_dropdown_P4zhGG",
         "se_wishlist_engine_product_page_fTBTnd",
