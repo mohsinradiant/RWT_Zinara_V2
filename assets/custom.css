@@ -485,7 +485,7 @@ header .header__search {
     padding: 110px 80px;
 }
 
-/* .home-try-at-home-section-right::after {
+.home-try-at-home-section-right::after {
     content: '';
     position: absolute;
     top: 0;
@@ -493,10 +493,10 @@ header .header__search {
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.35;
+    opacity: 0.2;
     z-index: 1;
     pointer-events: none;
-} */
+}
 
 .home-try-at-home-section-left {
     display: flex;
@@ -1954,10 +1954,6 @@ sticky-header {
         justify-content: center;
         align-items: center;
         text-align: center;
-    }
-
-    .home-try-at-home-section-right::after {
-        opacity: .2;
     }
 
     .home-try-at-home-section-left a {
