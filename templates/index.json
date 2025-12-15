@@ -136,9 +136,9 @@
           "settings": {
             "image": "shopify://shop_images/vermeil_metal.jpg",
             "heading": "18 KT Gold Vermeil",
-            "subheading": "Starting from INR 3000",
+            "subheading": "Starting from INR 1999",
             "button": "Shop now",
-            "url": "shopify://collections/daily-hustle"
+            "url": "shopify://collections/18-kt-gold-vermeil"
           }
         },
         "block_rHyewm": {
@@ -148,7 +148,7 @@
             "heading": "9KT/14KT Gold",
             "subheading": "Starting from INR 7000",
             "button": "Shop now",
-            "url": "shopify://collections/daily-hustle"
+            "url": "shopify://collections/9kt-14kt-fine-gold"
           }
         },
         "block_yTytmE": {
@@ -158,7 +158,7 @@
             "heading": "Solitaire Collection",
             "subheading": "Starting from INR XX",
             "button": "Shop now",
-            "url": "shopify://collections/daily-hustle"
+            "url": "shopify://collections/solitaire-collection"
           }
         }
       },
@@ -247,7 +247,7 @@
           "settings": {
             "image": "shopify://shop_images/daily_huslte_occassion.jpg",
             "heading": "Daily wear",
-            "url": "shopify://collections/all-rings"
+            "url": "shopify://collections/daily-hustle"
           }
         },
         "block_46988k": {
@@ -255,7 +255,7 @@
           "settings": {
             "image": "shopify://shop_images/engagement_occasion.jpg",
             "heading": "Engagement",
-            "url": "shopify://collections/all-earrings"
+            "url": "shopify://collections/engagement-rings"
           }
         },
         "block_aiiqNM": {
@@ -263,7 +263,7 @@
           "settings": {
             "image": "shopify://shop_images/social_events_occasion.jpg",
             "heading": "Social events",
-            "url": "shopify://collections/all-bracelets"
+            "url": "shopify://collections/social-events"
           }
         },
         "block_EcmD49": {
@@ -271,7 +271,7 @@
           "settings": {
             "image": "shopify://shop_images/gifting_occasion.jpg",
             "heading": "Gifting",
-            "url": "shopify://collections/all-pendants"
+            "url": "shopify://collections/gifting"
           }
         },
         "block_Qa9ty6": {
@@ -698,7 +698,7 @@
           "settings": {
             "image": "shopify://shop_images/under_5k_gifting.png",
             "heading": "",
-            "url": "shopify://collections/all-rings"
+            "url": "shopify://collections/under-5000"
           }
         },
         "block_zgCwV4": {
@@ -706,7 +706,7 @@
           "settings": {
             "image": "shopify://shop_images/under_10k_gifting.png",
             "heading": "",
-            "url": "shopify://collections/all-earrings"
+            "url": "shopify://collections/under-10000"
           }
         },
         "block_Xqcg6e": {
@@ -714,7 +714,7 @@
           "settings": {
             "image": "shopify://shop_images/under_15k_gifting.png",
             "heading": "",
-            "url": "shopify://collections/all-bracelets"
+            "url": "shopify://collections/under-15000"
           }
         },
         "block_EVXQRt": {
@@ -722,7 +722,7 @@
           "settings": {
             "image": "shopify://shop_images/under_20k_gifting.png",
             "heading": "",
-            "url": "shopify://collections/all-pendants"
+            "url": "shopify://collections/under-20000"
           }
         },
         "block_BmXN7H": {
