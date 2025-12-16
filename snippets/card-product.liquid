@@ -151,7 +151,7 @@
               </span>
             {%- endif -%}
 
-            {%- if has_inventory -%}
+            {%- if has_inventory and card_product.price > 4998 -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
