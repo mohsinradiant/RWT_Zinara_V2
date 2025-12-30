@@ -304,53 +304,53 @@
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+
+    const customerData = {
+      email: {{ customer.email | json | default: null }},
+      id: {{ customer.id | json | default: null }},
+      first_name: {{ customer.first_name | json | default: null }},
+      last_name: {{ customer.last_name | json | default: null }}
+    };
+
     const gridItems = document.querySelectorAll('#product-grid li.grid__item');
 
     gridItems.forEach(function (item) {
       item.addEventListener('click', function () {
-        const title = item.dataset.title || '';
-        const handle = item.dataset.handle || '';
-        const price = item.dataset.price || '';
-        const compareAtPrice = item.dataset.comparePrice || '';
-        const tags = item.dataset.tags ? item.dataset.tags.split(',') : [];
-        const vendor = item.dataset.vendor || '';
 
         const eventData = {
           event_category: 'Product Grid',
-          event_label: title,
-          product_handle: handle,
-          price: price,
-          compare_at_price: compareAtPrice,
-          tags: tags,
-          vendor: vendor,
+          event_label: item.dataset.title || '',
+          product_handle: item.dataset.handle || '',
+          price: item.dataset.price || '',
+          compare_at_price: item.dataset.comparePrice || '',
+          tags: item.dataset.tags ? item.dataset.tags.split(',') : [],
+          vendor: item.dataset.vendor || '',
           page_url: window.location.href,
           page_title: document.title,
-          customer_email: {{ customer.email | json }},
-          customer_id: {{ customer.id | json }},
-          customer_first_name: {{ customer.first_name | json }},
-          customer_last_name: {{ customer.last_name | json }}
+
+          customer_email: customerData.email,
+          customer_id: customerData.id,
+          customer_first_name: customerData.first_name,
+          customer_last_name: customerData.last_name
         };
 
-        // Send event to GA
-        gtag('event', 'product_click', eventData);
+        // GA
+        if (typeof gtag === 'function') {
+          gtag('event', 'product_click', eventData);
+        }
 
-        // ✅ Send event to Meta Pixel
+        // Meta Pixel
         if (typeof fbq === 'function') {
           fbq('trackCustom', 'product_click', eventData);
         }
 
-        console.log('product_click fired:', {
-          title: title,
-          handle: handle,
-          price: price,
-          compareAtPrice: compareAtPrice,
-          tags: tags,
-          vendor: vendor
-        });
+        console.log('product_click fired:', eventData);
       });
     });
+
   });
 </script>
+
 
 {% schema %}
 {
