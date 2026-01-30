@@ -33,10 +33,34 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_aDn7ip": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/valentine26web.png",
+            "image_alt": "",
+            "image_mobile": "shopify://shop_images/valentine26mobile.png",
+            "image_mobile_alt": "",
+            "image_aspect_ratio": true,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_HHiCAy"
+        "slide_HHiCAy",
+        "slide_aDn7ip"
       ],
       "settings": {
         "layout": "full_bleed",
