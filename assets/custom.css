@@ -1700,7 +1700,7 @@ sticky-header {
 
     .facets-vertical .active-facets span {
         text-wrap: nowrap;
-        background-color: #610C270D !important;
+        background-color: #f6f3f4 !important;
     }
 
     .product-grid-container .collection {

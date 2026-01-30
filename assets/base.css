@@ -2952,7 +2952,7 @@ details-disclosure>details {
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: rgb(var(--color-badge-foreground));
   word-break: break-word;
-  background: #610C270D !important;
+  background: #f6f3f4 !important;
   color: #171717 !important;
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
