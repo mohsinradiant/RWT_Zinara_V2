@@ -12,8 +12,31 @@
     "slideshow_iE63EG": {
       "type": "slideshow",
       "blocks": {
+        "slide_gMDJpj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/valentine_web_banner_nonvogue.png",
+            "image_alt": "",
+            "image_mobile": "shopify://shop_images/valentines_mobile_banner_nonvogue.png",
+            "image_mobile_alt": "",
+            "image_aspect_ratio": true,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "shopify://collections/18-kt-gold-vermeil",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_HHiCAy": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/home_web_banner.png",
             "image_alt": "",
@@ -38,9 +61,7 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/valentine26web.png",
             "image_alt": "",
-            "image_mobile": "shopify://shop_images/valentine26mobile.png",
             "image_mobile_alt": "",
             "image_aspect_ratio": true,
             "heading": "Image slide",
@@ -59,6 +80,7 @@
         }
       },
       "block_order": [
+        "slide_gMDJpj",
         "slide_HHiCAy",
         "slide_aDn7ip"
       ],
