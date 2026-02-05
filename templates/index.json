@@ -15,9 +15,9 @@
         "slide_gMDJpj": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/valentine_web_banner_nonvogue.png",
+            "image": "shopify://shop_images/valentine_web_banner_with_vogue.png",
             "image_alt": "",
-            "image_mobile": "shopify://shop_images/valentines_mobile_banner_nonvogue.png",
+            "image_mobile": "shopify://shop_images/valentines_mobile_banner_with_vogue.png",
             "image_mobile_alt": "",
             "image_aspect_ratio": true,
             "heading": "Image slide",
