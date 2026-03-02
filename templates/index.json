@@ -12,8 +12,31 @@
     "slideshow_iE63EG": {
       "type": "slideshow",
       "blocks": {
+        "slide_ki3k4R": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Women_s_Day_Web_Banner.png",
+            "image_alt": "",
+            "image_mobile": "shopify://shop_images/Women_s_Day_Mobile_Banner.png",
+            "image_mobile_alt": "",
+            "image_aspect_ratio": true,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "shopify://collections/18-kt-gold-vermeil",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_gMDJpj": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/valentine_web_banner_with_vogue.png",
             "image_alt": "",
@@ -80,6 +103,7 @@
         }
       },
       "block_order": [
+        "slide_ki3k4R",
         "slide_gMDJpj",
         "slide_HHiCAy",
         "slide_aDn7ip"
