@@ -162,6 +162,11 @@
         "type": "shopify://apps/wishlink/blocks/tracking_app_embed/320d2666-828c-4460-9810-e1526e107d16",
         "disabled": false,
         "settings": {}
+      },
+      "1219337400145039034": {
+        "type": "shopify://apps/kwikpass/blocks/kp_login/603e209b-d585-47ff-8592-837a4faa325b",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
