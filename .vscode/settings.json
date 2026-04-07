@@ -1,9 +1,0 @@
-{
-    "editor.defaultFormatter": null,
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[liquid]": {
-        "editor.defaultFormatter": "Shopify.theme-check-vscode"
-    }
-}
